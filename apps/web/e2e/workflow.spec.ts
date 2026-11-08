@@ -23,7 +23,7 @@ test("upload, seven answers, resume, report, PDF and deletion", async ({ page })
   await page.getByRole("button", { name: "Create cheat sheet" }).click();
   await expect(page.getByRole("heading", { name: "Your interview cheat sheet" })).toBeVisible();
   await page.reload();
-  await page.getByRole("button", { name: /Data Scientist7\/7 answers/ }).first().click();
+  await page.getByRole("button", { name: /Data Scientist.*7\/7 answers/ }).first().click();
   await expect(page.getByRole("heading", { name: "Your interview cheat sheet" })).toBeVisible();
   const downloaded = page.waitForEvent("download");
   await page.getByRole("button", { name: "Download PDF" }).click();
@@ -43,7 +43,7 @@ test("mobile layout and model failure keep the user's input", async ({ page }) =
     else await route.continue();
   });
   await page.getByRole("button", { name: "Prepare my session" }).click();
-  await expect(page.getByRole("alert")).toContainText("Synthetic model outage");
+  await expect(page.getByRole("alert").filter({ hasText: "Synthetic model outage" })).toBeVisible();
   await expect(page.getByLabel("Your CV text")).toHaveValue(cv);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: "artifacts/workspace-mobile.png", fullPage: true });

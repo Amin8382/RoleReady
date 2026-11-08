@@ -36,3 +36,11 @@
 - Validation so far: 15 Python tests passed; TypeScript passed; production web build passed. Browser checks are in progress.
 - **Voice experiment:** Kokoro generated a real WAV. Transcription then failed because PyAV 19 removed an argument still used by faster-whisper 1.2.1. Recorded the failed MLflow run and constrained PyAV below 19. Pinned Kokoro's English language package instead of relying on an implicit download.
 - **Browser setup failure:** Playwright's first Chromium archive download was incomplete. Investigating/retrying installation; no browser pass claimed yet.
+
+## 2026-11-08 M3 Integration fixes and real voice verification
+
+- Retried the voice round trip with PyAV 18.1.0. Kokoro generated a 241,244-byte WAV and Whisper transcribed the public test sentence exactly. This verifies connectivity for one synthetic sentence, not accent/technical-speech accuracy. Exported the successful MLflow run and `reports/voice_smoke.json`.
+- GitHub CI passed Python tests, TypeScript and production build. Its first browser run caught a real upload failure: Next.js normalized its internal URL host, causing valid local browser origins to fail the proxy's origin check. Fixed browser-facing host validation while retaining cross-origin and DNS-rebinding rejection; added four regression tests.
+- Fixed a browser-test locator that also matched Next.js's route-announcement alert.
+- The local headless browser cannot create a required Unix socket in this environment. Browser verification continues through GitHub Actions rather than changing the environment's security controls.
+- Added a direct team handbook covering startup, model endpoints, Supabase/RLS, DagsHub, data limitations and the fine-tuning gate. DagsHub connection check confirms the remote URI is not configured.

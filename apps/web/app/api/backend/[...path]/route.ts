@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { originError } from "@/lib/proxy-policy";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -9,17 +10,10 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
   const route = path.join("/");
   if (!ALLOWED.test(route)) return Response.json({ message: "Route not found." }, { status: 404 });
   const mode = process.env.ROLEREADY_AUTH_MODE || "local";
-  if (process.env.ROLEREADY_ENVIRONMENT === "production" && mode !== "supabase") {
-    return Response.json({ message: "Hosted operation requires Supabase authentication." }, { status: 503 });
-  }
-  // Reject cross-origin state changes, including requests to a local developer workspace.
-  const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin) {
-    return Response.json({ message: "Cross-origin requests are not permitted." }, { status: 403 });
-  }
-  if (mode === "local" && !["127.0.0.1", "localhost", "[::1]"].includes(new URL(request.url).hostname)) {
-    return Response.json({ message: "Local workspace mode is available on localhost only." }, { status: 403 });
-  }
+  const policyError = originError({ url: request.url, host: request.headers.get("host"),
+    origin: request.headers.get("origin"), mode, environment: process.env.ROLEREADY_ENVIRONMENT,
+    webOrigin: process.env.ROLEREADY_WEB_ORIGIN });
+  if (policyError) return Response.json({ message: policyError }, { status: 403 });
   let body: Uint8Array | undefined;
   if (!["GET", "HEAD", "DELETE"].includes(request.method)) {
     const reader = request.body?.getReader();

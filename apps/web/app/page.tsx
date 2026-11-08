@@ -198,7 +198,7 @@ export default function Workspace() {
 
   return <div className="shell">
     <aside className="sidebar">
-      <a className="brand" href="/" aria-label="RoleReady home"><span className="brand-mark">r<span>.</span></span>RoleReady<span className="brand-dot">®</span></a>
+      <a className="brand" href="/" aria-label="RoleReady home"><span className="brand-mark">r<span>.</span></span>RoleReady<span className="brand-dot">β</span></a>
       <div className="workspace-label">YOUR WORKSPACE</div>
       <button className="new-session" disabled={locked} onClick={() => { setSession(null); setStep(0); setQuestionIndex(0); setError(""); }}>＋ New practice session</button>
       <nav aria-label="Session steps" className="steps">{STEPS.map((title, i) => <button key={title} className={step === i ? "active" : ""} disabled={locked || (i > 0 && !session) || (i === 3 && !session?.report)} onClick={() => setStep(i)}><span className="step-number">{i + 1}</span>{title}{step === i && <span className="step-dot" />}</button>)}</nav>
@@ -211,6 +211,7 @@ export default function Workspace() {
     </aside>
     <main>
       <header className="topbar"><div><span className="muted">Workspace</span><span className="slash">/</span>{session ? session.inputs.role : "New session"}</div><div className="topbar-right"><span className="language">EN</span>{caps?.auth_mode === "local" ? <span className="mode-pill">Local workspace</span> : token ? <button className="text-button" disabled={locked} onClick={() => void supabase?.auth.signOut()}>Sign out</button> : null}<span className="avatar" aria-hidden="true">R</span></div></header>
+      {signedIn && <details className="mobile-history"><summary>Saved sessions ({sessions.length})</summary>{sessions.length ? sessions.map(item => <div className="session-row" key={item.id}><button className="session-link" disabled={locked} onClick={() => void openSession(item.id)}><strong>{item.role}</strong><span>{item.answered}/7 answers</span></button><button className="delete-button" disabled={locked} aria-label={`Delete ${item.role} session`} onClick={() => setDeleteId(item.id)}>×</button></div>) : <p className="empty-history">Your saved practice sessions will appear here.</p>}</details>}
       <div className="content">
         <div className="eyebrow"><span /> INTERVIEW PREPARATION, WITH DIRECTION</div>
         <div className="page-heading"><div><h1>{[<>Your next role.<br /><em>Your best preparation.</em></>, <>Know your strengths.<br /><em>Find your focus.</em></>, <>A little practice.<br /><em>A stronger answer.</em></>, <>Take your next step.<br /><em>Keep the good advice.</em></>][step]}</h1><p>{["Bring your experience and a role you want. We’ll help you prepare for the conversation.", "Use the evidence from your CV to focus your practice. An unmentioned skill is a chance to add context.", "Think it through, answer in your own words, and get feedback you can use.", "Seven answers, specific feedback, and a focused plan for your next interview."][step]}</p></div><div className="hero-symbol" aria-hidden="true"><span>↗</span><i /></div></div>

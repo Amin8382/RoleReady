@@ -25,8 +25,8 @@ stages:
       size: 3192
     - path: uv.lock
       hash: md5
-      md5: c80a523a150bd20ca84bbacea2532c27
-      size: 587782
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
     outs:
     - path: data/raw
       hash: md5
@@ -67,8 +67,8 @@ stages:
       size: 3192
     - path: uv.lock
       hash: md5
-      md5: c80a523a150bd20ca84bbacea2532c27
-      size: 587782
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
     outs:
     - path: data/processed
       hash: md5
@@ -108,8 +108,8 @@ stages:
       size: 3192
     - path: uv.lock
       hash: md5
-      md5: c80a523a150bd20ca84bbacea2532c27
-      size: 587782
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
     outs:
     - path: data/index
       hash: md5
@@ -154,8 +154,8 @@ stages:
       size: 3192
     - path: uv.lock
       hash: md5
-      md5: c80a523a150bd20ca84bbacea2532c27
-      size: 587782
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
     outs:
     - path: reports/retrieval_bge.json
       hash: md5

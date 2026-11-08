@@ -35,6 +35,7 @@ jobs:
       - name: Web types and production build
         run: |
           npm run typecheck
+          npm run test:web
           npm run build
       - name: Browser workflow
         run: |
