@@ -44,3 +44,12 @@
 - Fixed a browser-test locator that also matched Next.js's route-announcement alert.
 - The local headless browser cannot create a required Unix socket in this environment. Browser verification continues through GitHub Actions rather than changing the environment's security controls.
 - Added a direct team handbook covering startup, model endpoints, Supabase/RLS, DagsHub, data limitations and the fine-tuning gate. DagsHub connection check confirms the remote URI is not configured.
+
+## 2026-11-08 M4 Clean rebuild verified for integration
+
+- GitHub Actions run [42492017126](https://github.com/Aminebenfadhel14/interview_wingman/actions/runs/42492017126) passed on `071be40b23e567b005921c58aadb459b7dcd025d`: 15 Python tests, four web regression tests, TypeScript, production build and two Chromium browser tests.
+- Browser coverage includes real document parsing through the proxy, seven scored fixture answers, reload/resume, report creation, PDF download, deletion, mobile layout and retained inputs after a model error. Synthetic model fixtures are confined to test code; these checks do not certify Qwen or Prometheus output quality.
+- Verified an actual BGE-backed API session using a synthetic CV/JD: HTTP 201, exactly seven retrieved questions, no claimed generated gap analysis. An unconfigured evaluator returned HTTP 503 and created zero fake answers. Saved `reports/real_api_smoke.json` and the MLflow run.
+- Reviewed desktop/mobile layout captures and added mobile access to saved sessions. No candidate data was used in testing.
+- All old application files have been replaced on the rebuild branch. The PR is ready for integration with milestone commits preserved. GitHub records the subsequent merge outcome.
+- Still external: repository owner must rename the repository; team must connect real Qwen/Prometheus serving, Supabase and DagsHub. Fine-tuning waits for reviewed CV/job pairs and a compatible GPU environment.

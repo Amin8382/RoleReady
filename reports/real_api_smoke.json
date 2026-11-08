@@ -1,0 +1,16 @@
+{
+  "mode": "retrieval",
+  "seven_questions": true,
+  "source_ids": [
+    "5ee0236b966d569325d6fbd60721c3c6ff44d1acc2b6909871167a4eac4d08f2",
+    "3253a88a1c1e5ba01e4ff3f112dd3926fc665d71f3d23a1d4944383fc76c74d8",
+    "3ec58a14936de27f280ea36e2016bc618240114745ce104160a9f69a01685077",
+    "c274d38d470e20e780ba4ae84820b2ebd9e38c898eef78144c3a46c35ed83432",
+    "edf6bcb772a3a0893ee75f03995c775ef9932bcbc6c74c14205ac9c8da2ce371",
+    "2ba9c5c6a5ad50e96726ec5522263c5d40ecc0c970e6669ad729c33507026675",
+    "630d78bc5eca7b631e0aedf78c745e5c565dcae048f7f5c7f26af0488312747d"
+  ],
+  "gap_analysis_claimed": false,
+  "missing_evaluator_status": 503,
+  "fake_answers_created": 0
+}

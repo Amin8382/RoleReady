@@ -51,10 +51,10 @@ The first data run downloads three pinned sources and the BGE embedding model, t
 
 | Area | State |
 | --- | --- |
-| English interface, CV parsing, seven-question session, transcript editing, saved feedback, PDF | Implemented; backend contracts and production build verified |
+| English interface, CV parsing, seven-question session, transcript editing, saved feedback, PDF | Implemented; backend, production build and complete browser workflow verified |
 | BGE + FAISS retrieval, TF-IDF comparison, checksum audit, DVC, local MLflow | Executed on real public data; results in `reports/` |
 | Qwen generation and Prometheus evaluation | Separate adapters implemented; live endpoints and interview-quality calibration still required |
-| Whisper + Kokoro | Local adapters, pinned weights and optional install; smoke-test results recorded in the progress log |
+| Whisper + Kokoro | Real local speech-to-transcript round trip passed; broader voice evaluation still needed |
 | Supabase | Sign-in, server verification, persistence adapter and RLS migration implemented; live project credentials required |
 | DagsHub | MLflow compatibility and connection check implemented; remote repository/token required |
 | Custom LoRA fine-tuning | Reviewed CV/job/question pairs still required; no custom adapter trained or claimed |
@@ -77,6 +77,7 @@ uv run --no-sync ruff check services tests
 uv run --no-sync ruff format --check services tests
 uv run --no-sync pytest -q
 npm run typecheck
+npm run test:web
 npm run build
 npx playwright install chromium
 npx playwright test
