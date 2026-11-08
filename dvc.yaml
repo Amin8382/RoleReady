@@ -1,0 +1,63 @@
+stages:
+  download:
+    cmd: python -m roleready.cli download
+    deps:
+    - configs/datasets.json
+    - services/api/src/roleready/data.py
+    - uv.lock
+    - services/api/src/roleready/cli.py
+    - services/api/src/roleready/paths.py
+    - services/api/src/roleready/tracking.py
+    outs:
+    - data/raw
+    metrics:
+    - reports/download.json:
+        cache: false
+  prepare:
+    cmd: python -m roleready.cli prepare
+    deps:
+    - configs/datasets.json
+    - services/api/src/roleready/data.py
+    - data/raw
+    - uv.lock
+    - services/api/src/roleready/cli.py
+    - services/api/src/roleready/paths.py
+    - services/api/src/roleready/tracking.py
+    outs:
+    - data/processed
+    metrics:
+    - reports/data_audit.json:
+        cache: false
+  index:
+    cmd: python -m roleready.cli index
+    deps:
+    - configs/models.json
+    - services/api/src/roleready/retrieval.py
+    - data/processed/bank.jsonl
+    - uv.lock
+    - services/api/src/roleready/cli.py
+    - services/api/src/roleready/paths.py
+    - services/api/src/roleready/tracking.py
+    outs:
+    - data/index
+    metrics:
+    - reports/index.json:
+        cache: false
+  evaluate:
+    cmd: python -m roleready.cli evaluate-retrieval
+    deps:
+    - data/benchmark/retrieval_queries.json
+    - data/processed/bank.jsonl
+    - data/index
+    - services/api/src/roleready/retrieval.py
+    - uv.lock
+    - services/api/src/roleready/cli.py
+    - services/api/src/roleready/paths.py
+    - services/api/src/roleready/tracking.py
+    metrics:
+    - reports/retrieval_comparison.json:
+        cache: false
+    - reports/retrieval_bge.json:
+        cache: false
+    - reports/retrieval_tfidf.json:
+        cache: false

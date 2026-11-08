@@ -1,0 +1,17 @@
+{
+  "run_id": "381f13fa212346a7a96349ddf4f96009",
+  "name": "bge-index",
+  "status": "FINISHED",
+  "git_commit": "2fbe826baccd8322604ced3bd552c2b3dabf0eca",
+  "working_tree_dirty": "true",
+  "params": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "bank_sha256": "9f73fbd4960eec6c217d17f81b8da29ecab9f9301e400e09c0b4e19a6b90b2bf"
+  },
+  "metrics": {
+    "indexed_questions": 16299.0,
+    "dimensions": 384.0,
+    "duration_seconds": 543.8895069250002
+  }
+}

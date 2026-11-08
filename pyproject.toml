@@ -9,7 +9,7 @@ description = "Reproducible English interview preparation"
 requires-python = ">=3.11,<3.13"
 dependencies = [
   "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "pydantic-settings>=2.7,<3",
-  "httpx>=0.28,<1", "python-multipart>=0.0.20,<1", "pypdf>=6,<7",
+  "httpx[socks]>=0.28,<1", "python-multipart>=0.0.20,<1", "pypdf>=6,<7",
   "python-docx>=1.2,<2", "reportlab>=4.4,<5", "mlflow>=3.5,<4",
   "numpy>=2,<3", "scikit-learn>=1.6,<2", "pyyaml>=6,<7",
 ]
@@ -17,7 +17,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8,<10", "ruff>=0.12,<1", "dvc[s3]>=3.60,<4"]
 retrieval = ["sentence-transformers>=5,<6", "faiss-cpu>=1.11,<2", "torch>=2.8,<3"]
-voice = ["faster-whisper>=1.2,<2", "kokoro>=0.9.4,<1", "soundfile>=0.13,<1", "torch>=2.8,<3"]
+# PyAV 19 removed metadata_errors; faster-whisper 1.2.1 still passes it.
+voice = ["faster-whisper==1.2.1", "av>=16,<19", "kokoro==0.9.4", "soundfile>=0.13,<1", "torch>=2.8,<3", "en-core-web-sm"]
 training = ["transformers>=5,<6", "peft>=0.17,<1", "datasets>=4,<5", "accelerate>=1.10,<2", "torch>=2.8,<3"]
 
 [project.scripts]
@@ -44,3 +45,4 @@ explicit = true
 
 [tool.uv.sources]
 torch = [{ index = "pytorch-cpu" }]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }

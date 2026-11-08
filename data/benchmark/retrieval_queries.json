@@ -1,0 +1,10 @@
+[
+  {"id":"retrieval-01","query":"Backend interview about Kubernetes autoscaling for seasonal gaming traffic, database bottlenecks and a fifty millisecond latency target","relevant_ids":["78441413fa5a678a5ad39a5d2aab30799c2879dc09dd8d85e625bcf7ec9a020c"]},
+  {"id":"retrieval-02","query":"Frontend troubleshooting an unexpected rise in cancelled orders using browser end-to-end tests and analytics","relevant_ids":["c9b6d5a73ba9a91d7efb647c488023a475ba9c74a84afba2bb6022df5df62f6c"]},
+  {"id":"retrieval-03","query":"Data engineering team resource prioritisation after partner data growth, keeping a fraud prediction service accurate and handling health data privacy","relevant_ids":["466aa26a529cc31182cc41e31a0a3845712ca119a65d06ed7c609da32c58f744"]},
+  {"id":"retrieval-04","query":"Selecting training data for predicting hospital readmission within a month while protecting patient information","relevant_ids":["8629de68fc54c7004c891c83cb6cefb611982368bf58b8795b80e80031dfe560"]},
+  {"id":"retrieval-05","query":"Developing live machine learning cyberattack detection with transparent and accountable model decisions","relevant_ids":["92cc080d58ee9998debaed2d09219bc993d66f29dac13673e0969b4af388ea03"]},
+  {"id":"retrieval-06","query":"Designing Argo Workflows continuous delivery for models on Kubernetes with an availability service target and little deployment downtime","relevant_ids":["3c7c2c8567ba52429815f3b8cbfe1adbd6d432d7a942c8b8aa80e257dbab186f"]},
+  {"id":"retrieval-07","query":"Moving Elasticsearch to Kubernetes, scaling during demand spikes and maintaining availability and health-data privacy","relevant_ids":["e91f1f3a7cabe1f492b9b1d464109f88ebffd2a56b485bd80730b10a98dadee3"]},
+  {"id":"retrieval-08","query":"Event driven cloud architecture for controlling thousands of drones with low delay, resilience and reasonable operating costs","relevant_ids":["6fb1dbc38f3a79e15836231d9b8417ec709dcf6ff1f1ceff225380fca4247261"]}
+]
