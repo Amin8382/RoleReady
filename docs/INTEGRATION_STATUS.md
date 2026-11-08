@@ -12,6 +12,8 @@ On 8 November 2026, access was restored after the prepared build had been blocke
 
 Snapshot reviewed: PR #1 head `e8348298d791d51b8d7d6dc092aae800e0430339`, PR #2 head `6bbeabde91d3babf4ef002e99d36ca0b4722ed6d`, `main` at `36aebfee44a09fb1a0e9ad09a17f3fd21b9b8631`. These are observations, not a claim that the other PRs have been validated here.
 
+The platform import is [PR #3](https://github.com/Amin8382/RoleReady/pull/3). [Its fresh destination CI run](https://github.com/Amin8382/RoleReady/actions/runs/42532170913) passed 15 Python tests, four web regression tests, two Chromium workflows, Ruff, TypeScript and a production build. This validates the import branch, not a future combination of the three PRs.
+
 ## Before merging
 
 1. Agree which app/API layout and contracts are the shared team baseline. The branches contain overlapping implementations, not independent changes that should be merged blindly.

@@ -72,3 +72,12 @@
 - Transferred the four build milestones and the repository correction through the GitHub connector. Every uploaded tree hash matches its local source tree. Updated `repository-import.json` with the actual GitHub commit IDs; original experiment IDs remain historical evidence.
 - Kept this import on its own branch. Existing branches, PRs and `main` have not been overwritten, merged or closed. Their different layouts and API contracts require deliberate reconciliation; see `INTEGRATION_STATUS.md`.
 - Updated setup and clone instructions for the import branch. Fresh destination CI is the remaining validation gate; the original successful checks do not stand in for a run in this repository.
+
+## 2026-11-08 M7 Published in the correct repository; destination CI passed
+
+- Published the six prepared milestone/correction commits to `feat/import-verified-platform` and opened [PR #3](https://github.com/Amin8382/RoleReady/pull/3). A fresh fetch confirmed the remote tree matches the local build, with no uncommitted changes.
+- [GitHub Actions run 42532170913](https://github.com/Amin8382/RoleReady/actions/runs/42532170913) completed successfully on head `9b7342ce3a91ebd09549b9110af253ae95b10a42` in **Amin8382/RoleReady**. Job logs confirm 15 Python tests, four web regression tests and two Chromium workflows passed, alongside Ruff, TypeScript and the production build.
+- `uv run --no-sync dvc status` reports that data and pipelines are up to date. No model weights or public datasets needed to be regenerated for this transfer.
+- Updated `reports/verification.json` with destination CI evidence and retained the original data/voice experiment context. This follow-up changes documentation and verification metadata only.
+- The platform import is ready for team review. `main` and draft PRs #1/#2 remain unchanged; choosing and reconciling a shared application layout is the next integration step.
+- Live Qwen/Prometheus quality validation, Supabase isolation, DagsHub connection and custom fine-tuning remain outstanding. Passing fixture-driven browser tests does not complete those tasks.

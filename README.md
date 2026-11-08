@@ -95,4 +95,4 @@ Browser tests launch a separate synthetic fixture server on port 8001 and the pr
 
 Every meaningful change is committed. Each milestone records what changed, what was tested, what failed and what remains. Experiments log parameters, dataset/model versions, metrics and outcomes to MLflow. Git contains code and reports; DVC tracks larger data; credentials and candidate content stay out of both public Git and experiment logs.
 
-This repository already has the correct name and owner. No rename is needed. The previous repository's rename limitation does not apply here. Historical verification reports retain their original run URLs; fresh CI must validate the imported branch in this repository before integration.
+This repository already has the correct name and owner. No rename is needed. [Destination CI run 42532170913](https://github.com/Amin8382/RoleReady/actions/runs/42532170913) passed the imported application checks. Historical experiment evidence remains labeled separately. [PR #3](https://github.com/Amin8382/RoleReady/pull/3) is the import review; reconcile it with the other team PRs before integration.
