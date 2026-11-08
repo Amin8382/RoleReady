@@ -1,0 +1,18 @@
+{
+  "run_id": "aa6d5dcd70484fd8a4b3a981894215eb",
+  "name": "data-prepare",
+  "status": "FINISHED",
+  "git_commit": "2fbe826baccd8322604ced3bd552c2b3dabf0eca",
+  "working_tree_dirty": "true",
+  "params": {
+    "manifest_sha256": "d7aa3f76456ca4f94b8e8b5774b041e861f0194e29daf06739b68b497e1b8a34",
+    "split_rule": "sha256_question_80_10_10_v1"
+  },
+  "metrics": {
+    "unique_questions": 21005.0,
+    "bank_questions": 16299.0,
+    "evaluation_questions": 30.0,
+    "exact_bank_evaluation_overlap": 0.0,
+    "duration_seconds": 3.285613137999917
+  }
+}

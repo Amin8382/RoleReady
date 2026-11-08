@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-08",
+  "canonical_repository": "Amin8382/RoleReady",
+  "verification_source_repository": "Amin8382/RoleReady",
+  "verification_context": "Fresh destination CI passed on the imported application source. The follow-up commit records documentation and evidence only.",
+  "tested_code_commit": "9b7342ce3a91ebd09549b9110af253ae95b10a42",
+  "github_actions_run": "https://github.com/Amin8382/RoleReady/actions/runs/42532170913",
+  "python_tests_passed": 15,
+  "web_regression_tests_passed": 4,
+  "chromium_workflows_passed": 2,
+  "typescript": "passed",
+  "production_web_build": "passed",
+  "actual_bge_index": "passed",
+  "actual_retrieval_api_session": "passed",
+  "actual_kokoro_whisper_sentence_roundtrip": "passed",
+  "live_qwen_generation": "not configured; contract tests only",
+  "live_prometheus_scoring": "not configured; contract tests only",
+  "live_supabase_isolation": "credentials required; contract tests and RLS migration provided",
+  "dagshub_remote": "not configured; connection check returns false",
+  "custom_lora_training": "not performed",
+  "evaluation_limit": "Retrieval labels are provisional and voice test is one synthetic sentence. Browser model outputs are explicitly test fixtures.",
+  "historical_ci": {
+    "repository": "Aminebenfadhel14/interview_wingman",
+    "tested_code_commit": "071be40b23e567b005921c58aadb459b7dcd025d",
+    "github_actions_run": "https://github.com/Aminebenfadhel14/interview_wingman/actions/runs/42492017126"
+  },
+  "real_model_evidence_context": "BGE retrieval and Kokoro/Whisper results are retained from experiments before repository correction; models were not rerun during publication. Application and pipeline source trees were verified unchanged.",
+  "dvc_status_at_publication": "Data and pipelines are up to date.",
+  "integration_status": "Published in PR #3; not merged while concurrent PR #1 and #2 await reconciliation."
+}

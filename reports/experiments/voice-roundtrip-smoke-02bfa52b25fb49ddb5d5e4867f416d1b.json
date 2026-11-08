@@ -1,0 +1,17 @@
+{
+  "run_id": "02bfa52b25fb49ddb5d5e4867f416d1b",
+  "name": "voice-roundtrip-smoke",
+  "status": "FINISHED",
+  "git_commit": "78c8ddd46898fa83a1d7576e586b2fac75024103",
+  "working_tree_dirty": "false",
+  "params": {
+    "tts": "hexgrad/Kokoro-82M",
+    "asr": "Systran/faster-whisper-small.en",
+    "test_material": "assistant-authored public sentence"
+  },
+  "metrics": {
+    "wav_bytes": 241244.0,
+    "completed": 1.0,
+    "duration_seconds": 77.492240656
+  }
+}

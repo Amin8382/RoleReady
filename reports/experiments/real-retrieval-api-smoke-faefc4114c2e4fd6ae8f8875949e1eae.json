@@ -1,0 +1,17 @@
+{
+  "run_id": "faefc4114c2e4fd6ae8f8875949e1eae",
+  "name": "real-retrieval-api-smoke",
+  "status": "FINISHED",
+  "git_commit": "071be40b23e567b005921c58aadb459b7dcd025d",
+  "working_tree_dirty": "false",
+  "params": {
+    "mode": "retrieval",
+    "test_material": "synthetic CV and JD",
+    "model": "BAAI/bge-small-en-v1.5"
+  },
+  "metrics": {
+    "seven_questions": 1.0,
+    "missing_evaluator_fail_closed": 1.0,
+    "duration_seconds": 34.510008481
+  }
+}

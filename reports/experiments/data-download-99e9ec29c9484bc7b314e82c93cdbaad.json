@@ -1,0 +1,15 @@
+{
+  "run_id": "99e9ec29c9484bc7b314e82c93cdbaad",
+  "name": "data-download",
+  "status": "FINISHED",
+  "git_commit": "2fbe826baccd8322604ced3bd552c2b3dabf0eca",
+  "working_tree_dirty": "true",
+  "params": {
+    "manifest_sha256": "d7aa3f76456ca4f94b8e8b5774b041e861f0194e29daf06739b68b497e1b8a34"
+  },
+  "metrics": {
+    "sources_verified": 3.0,
+    "bytes_downloaded_or_verified": 29206435.0,
+    "duration_seconds": 37.71386885700031
+  }
+}

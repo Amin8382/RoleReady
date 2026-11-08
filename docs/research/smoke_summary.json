@@ -1,0 +1,18 @@
+[
+  {
+    "model_id": "Zeeshan506/echohire-qgen-distilgpt2",
+    "revision": "d5b8e2210b007aec86685158c5c5efd83aa7ee15",
+    "calls": 8,
+    "distinct_prompts": 6,
+    "median_cpu_latency_seconds": 4.4879999999999995,
+    "note": "Different prompt/decoding/output lengths: this is not a speed ranking. No automated quality score computed."
+  },
+  {
+    "model_id": "sudaisdev/Question_Generation_model",
+    "revision": "fa5053ae1af7202eede28584940521ffc1434d50",
+    "calls": 8,
+    "distinct_prompts": 8,
+    "median_cpu_latency_seconds": 1.4375,
+    "note": "Different prompt/decoding/output lengths: this is not a speed ranking. No automated quality score computed."
+  }
+]

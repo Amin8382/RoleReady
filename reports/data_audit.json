@@ -1,0 +1,83 @@
+{
+  "sources": [
+    {
+      "dataset": "Davichick/InterviewForge_GenDS",
+      "rows": 20444,
+      "unique_questions": 20444,
+      "invalid_rows": 0,
+      "duplicate_rows": 0,
+      "missing_answers": 20444
+    },
+    {
+      "dataset": "raghu298/ml-interview-sft-dataset",
+      "rows": 566,
+      "unique_questions": 531,
+      "invalid_rows": 0,
+      "duplicate_rows": 35,
+      "missing_answers": 0
+    },
+    {
+      "dataset": "Max00035/ml-systems-interview-bench",
+      "rows": 30,
+      "unique_questions": 30,
+      "invalid_rows": 0,
+      "duplicate_rows": 0,
+      "missing_answers": 0
+    }
+  ],
+  "total_unique_questions": 21005,
+  "bank_questions": 16299,
+  "evaluation_questions": 30,
+  "exact_bank_evaluation_overlap": 0,
+  "split_counts": {
+    "train": 16728,
+    "test": 2101,
+    "validation": 2146
+  },
+  "roles": {
+    "Mobile App Developer (iOS/Android)": 467,
+    "SDET (Software Development Engineer in Test)": 461,
+    "Game Developer": 397,
+    "Test Automation Engineer": 440,
+    "Systems Analyst": 480,
+    "Data Analyst": 443,
+    "Computer Vision Engineer": 394,
+    "Frontend Developer": 462,
+    "NLP Engineer": 411,
+    "Robotics Engineer": 463,
+    "QA Automation Engineer": 454,
+    "Cloud Infrastructure Engineer": 460,
+    "Solutions Architect": 423,
+    "Full Stack Developer": 473,
+    "Data Scientist": 396,
+    "Site Reliability Engineer (SRE)": 487,
+    "Penetration Tester / Ethical Hacker": 396,
+    "Backend Developer": 467,
+    "Application Security (AppSec) Engineer": 459,
+    "IoT Solutions Engineer": 459,
+    "QA Engineer": 462,
+    "Engineering Manager": 402,
+    "Embedded Systems Developer": 447,
+    "Sales / Solutions Engineer": 405,
+    "UX/UI Designer": 401,
+    "Platform Engineer": 387,
+    "MLOps Engineer": 390,
+    "Database Administrator (DBA)": 418,
+    "Security Operations (SOC) Analyst": 384,
+    "DevOps Engineer": 471,
+    "Data Engineer": 398,
+    "Scrum Master / Agile Coach": 422,
+    "Blockchain / Smart Contract Developer": 411,
+    "AI/ML Engineer": 439,
+    "Network Engineer": 375,
+    "Fraud Analyst": 429,
+    "Business Intelligence (BI) Analyst": 393,
+    "Technical Product Manager": 373
+  },
+  "bank_sha256": "9f73fbd4960eec6c217d17f81b8da29ecab9f9301e400e09c0b4e19a6b90b2bf",
+  "limitations": [
+    "Structural checks only; no human technical-quality review yet.",
+    "Exact duplicates removed; semantic near-duplicate and question-family review remains.",
+    "Supplemental ML reference data is excluded from retrieval pending provenance review."
+  ]
+}

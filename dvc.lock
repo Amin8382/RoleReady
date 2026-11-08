@@ -1,0 +1,171 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python -m roleready.cli download
+    deps:
+    - path: configs/datasets.json
+      hash: md5
+      md5: 22b60b6db33b38ff787cb210ed823163
+      size: 2014
+    - path: services/api/src/roleready/cli.py
+      hash: md5
+      md5: 654854c15af0214c54a4d469a05d5b50
+      size: 973
+    - path: services/api/src/roleready/data.py
+      hash: md5
+      md5: 62399fada356105ec1bad3b3b6a3db71
+      size: 8623
+    - path: services/api/src/roleready/paths.py
+      hash: md5
+      md5: f17a32baaac2b4aebc84080dd9731dc5
+      size: 394
+    - path: services/api/src/roleready/tracking.py
+      hash: md5
+      md5: 34497a346d408ede271f873ab06d1e73
+      size: 3192
+    - path: uv.lock
+      hash: md5
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: 26982e506ae51d069a085c2214641e11.dir
+      size: 29206435
+      nfiles: 3
+    - path: reports/download.json
+      hash: md5
+      md5: 6f0226f5ba404065a3cbd8dcda3059a2
+      size: 749
+  prepare:
+    cmd: python -m roleready.cli prepare
+    deps:
+    - path: configs/datasets.json
+      hash: md5
+      md5: 22b60b6db33b38ff787cb210ed823163
+      size: 2014
+    - path: data/raw
+      hash: md5
+      md5: 26982e506ae51d069a085c2214641e11.dir
+      size: 29206435
+      nfiles: 3
+    - path: services/api/src/roleready/cli.py
+      hash: md5
+      md5: 654854c15af0214c54a4d469a05d5b50
+      size: 973
+    - path: services/api/src/roleready/data.py
+      hash: md5
+      md5: 62399fada356105ec1bad3b3b6a3db71
+      size: 8623
+    - path: services/api/src/roleready/paths.py
+      hash: md5
+      md5: f17a32baaac2b4aebc84080dd9731dc5
+      size: 394
+    - path: services/api/src/roleready/tracking.py
+      hash: md5
+      md5: 34497a346d408ede271f873ab06d1e73
+      size: 3192
+    - path: uv.lock
+      hash: md5
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: d0cfbd215c65c366059cb61d64da82bc.dir
+      size: 81929229
+      nfiles: 6
+    - path: reports/data_audit.json
+      hash: md5
+      md5: 3942103d1f8d60cb648c102efbad3ba4
+      size: 2548
+  index:
+    cmd: python -m roleready.cli index
+    deps:
+    - path: configs/models.json
+      hash: md5
+      md5: 7717918f9704479eb19f18d35e873fc5
+      size: 483
+    - path: data/processed/bank.jsonl
+      hash: md5
+      md5: 8e6f2cbd75a37b00f991c5ceef0a62d0
+      size: 22783351
+    - path: services/api/src/roleready/cli.py
+      hash: md5
+      md5: 654854c15af0214c54a4d469a05d5b50
+      size: 973
+    - path: services/api/src/roleready/paths.py
+      hash: md5
+      md5: f17a32baaac2b4aebc84080dd9731dc5
+      size: 394
+    - path: services/api/src/roleready/retrieval.py
+      hash: md5
+      md5: ff04eaa5e305f8d06298af93e77c06bf
+      size: 7547
+    - path: services/api/src/roleready/tracking.py
+      hash: md5
+      md5: 34497a346d408ede271f873ab06d1e73
+      size: 3192
+    - path: uv.lock
+      hash: md5
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
+    outs:
+    - path: data/index
+      hash: md5
+      md5: 6162f2edc9aaa57853ed42e25c09766f.dir
+      size: 26209181
+      nfiles: 2
+    - path: reports/index.json
+      hash: md5
+      md5: f0af61c04c0ccaf7017882bdab690835
+      size: 322
+  evaluate:
+    cmd: python -m roleready.cli evaluate-retrieval
+    deps:
+    - path: data/benchmark/retrieval_queries.json
+      hash: md5
+      md5: 227493ccbf705d4cf3eb901c63ac779e
+      size: 1947
+    - path: data/index
+      hash: md5
+      md5: 6162f2edc9aaa57853ed42e25c09766f.dir
+      size: 26209181
+      nfiles: 2
+    - path: data/processed/bank.jsonl
+      hash: md5
+      md5: 8e6f2cbd75a37b00f991c5ceef0a62d0
+      size: 22783351
+    - path: services/api/src/roleready/cli.py
+      hash: md5
+      md5: 654854c15af0214c54a4d469a05d5b50
+      size: 973
+    - path: services/api/src/roleready/paths.py
+      hash: md5
+      md5: f17a32baaac2b4aebc84080dd9731dc5
+      size: 394
+    - path: services/api/src/roleready/retrieval.py
+      hash: md5
+      md5: ff04eaa5e305f8d06298af93e77c06bf
+      size: 7547
+    - path: services/api/src/roleready/tracking.py
+      hash: md5
+      md5: 34497a346d408ede271f873ab06d1e73
+      size: 3192
+    - path: uv.lock
+      hash: md5
+      md5: dadc15ad265227c242b534ea30495ff1
+      size: 584407
+    outs:
+    - path: reports/retrieval_bge.json
+      hash: md5
+      md5: ccf4faf84d0a3098e0468d4c57276c82
+      size: 5031
+    - path: reports/retrieval_comparison.json
+      hash: md5
+      md5: 4d020239cc865fb0e358c88690a0f4c3
+      size: 487
+    - path: reports/retrieval_tfidf.json
+      hash: md5
+      md5: 2734dd3f71d08954ec2f72c6add53539
+      size: 5099

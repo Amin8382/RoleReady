@@ -1,0 +1,6 @@
+{
+  "test_type": "synthetic English roundtrip smoke, not ASR benchmark",
+  "input": "Describe how you would test a data pipeline before releasing it to production.",
+  "transcript": "Describe how you would test a data pipeline before releasing it to production.",
+  "wav_bytes": 241244
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "dataset": "Davichick/InterviewForge_GenDS",
+    "revision": "25f0a5432554234fcd4cd86c90ab9ed5216a9efa",
+    "filename": "interview_forge_v3_complete.csv",
+    "cache_filename": "Davichick__InterviewForge_GenDS__interview_forge_v3_complete.csv",
+    "format": "question_records",
+    "publisher_license_metadata": "mit",
+    "sha256": "fed39b9bca11b88eaf4697a15e2e64a0f8bf162ee3d49244904f10671396d3fc",
+    "source_url": "https://huggingface.co/datasets/Davichick/InterviewForge_GenDS/resolve/25f0a5432554234fcd4cd86c90ab9ed5216a9efa/interview_forge_v3_complete.csv",
+    "purpose": "question_bank",
+    "human_reviewed": false,
+    "enabled_for_retrieval": true
+  },
+  {
+    "dataset": "raghu298/ml-interview-sft-dataset",
+    "revision": "b83f86d352cbfa5b75111157deae8595d7c44e35",
+    "filename": "ml_interview_sft.jsonl",
+    "cache_filename": "raghu298__ml-interview-sft-dataset__ml_interview_sft.jsonl",
+    "format": "question_records",
+    "publisher_license_metadata": "apache-2.0",
+    "sha256": "f2924fcb96329d07495d2e9c770f049f48f10d0ac50d42ee7016b92c1a3189d7",
+    "source_url": "https://huggingface.co/datasets/raghu298/ml-interview-sft-dataset/resolve/b83f86d352cbfa5b75111157deae8595d7c44e35/ml_interview_sft.jsonl",
+    "purpose": "reference_candidate",
+    "human_reviewed": false,
+    "enabled_for_retrieval": false
+  },
+  {
+    "dataset": "Max00035/ml-systems-interview-bench",
+    "revision": "891a8edfcfea178790ceab6cee8fa51eda708af8",
+    "filename": "data/questions.jsonl",
+    "cache_filename": "Max00035__ml-systems-interview-bench__questions.jsonl",
+    "format": "question_records",
+    "publisher_license_metadata": "apache-2.0",
+    "sha256": "0f63a0697bce6f6efe59c567ed093999efaab2bc0b0933048219c165c2a77d63",
+    "source_url": "https://huggingface.co/datasets/Max00035/ml-systems-interview-bench/resolve/891a8edfcfea178790ceab6cee8fa51eda708af8/data/questions.jsonl",
+    "purpose": "evaluation_only",
+    "human_reviewed": false,
+    "enabled_for_retrieval": false
+  }
+]

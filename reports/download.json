@@ -1,0 +1,23 @@
+{
+  "source_count": 3,
+  "sources": [
+    {
+      "dataset": "Davichick/InterviewForge_GenDS",
+      "revision": "25f0a5432554234fcd4cd86c90ab9ed5216a9efa",
+      "sha256": "fed39b9bca11b88eaf4697a15e2e64a0f8bf162ee3d49244904f10671396d3fc",
+      "bytes": 27776542
+    },
+    {
+      "dataset": "raghu298/ml-interview-sft-dataset",
+      "revision": "b83f86d352cbfa5b75111157deae8595d7c44e35",
+      "sha256": "f2924fcb96329d07495d2e9c770f049f48f10d0ac50d42ee7016b92c1a3189d7",
+      "bytes": 1376521
+    },
+    {
+      "dataset": "Max00035/ml-systems-interview-bench",
+      "revision": "891a8edfcfea178790ceab6cee8fa51eda708af8",
+      "sha256": "0f63a0697bce6f6efe59c567ed093999efaab2bc0b0933048219c165c2a77d63",
+      "bytes": 53372
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "run_id": "549055f4f90b47999580e8c271229356",
+  "name": "retrieval-bge",
+  "status": "FINISHED",
+  "git_commit": "2fbe826baccd8322604ced3bd552c2b3dabf0eca",
+  "working_tree_dirty": "true",
+  "params": {
+    "bank_sha256": "9f73fbd4960eec6c217d17f81b8da29ecab9f9301e400e09c0b4e19a6b90b2bf",
+    "qrels_sha256": "9c9dbdb4a1e9a7f6986d099fc8aa7080a91f7f48673f9d1a820154110a68ba2d",
+    "backend": "bge",
+    "k": 5
+  },
+  "metrics": {
+    "hit_rate_at_5": 1.0,
+    "recall_at_5": 1.0,
+    "mrr_at_5": 1.0,
+    "ndcg_at_5": 1.0,
+    "latency_seconds": 1.5427451631248914,
+    "duration_seconds": 13.318044544999793
+  }
+}
