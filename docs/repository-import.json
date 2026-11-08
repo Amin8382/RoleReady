@@ -6,23 +6,34 @@
   "milestones": [
     {
       "source_commit": "2fbe826baccd8322604ced3bd552c2b3dabf0eca",
-      "canonical_commit": "8da59904e017acef5d1544a501df4c5253eeab31",
-      "message": "chore: establish clean RoleReady foundation and research record"
+      "canonical_commit": "541cd2ade65d73340179b373e66096d2663a8dbd",
+      "message": "chore: establish clean RoleReady foundation and research record",
+      "local_import_commit": "8da59904e017acef5d1544a501df4c5253eeab31",
+      "url": "https://github.com/Amin8382/RoleReady/commit/541cd2ade65d73340179b373e66096d2663a8dbd"
     },
     {
       "source_commit": "78c8ddd46898fa83a1d7576e586b2fac75024103",
-      "canonical_commit": "9aec4c38fee814b933846cdfd110f814634c2241",
-      "message": "feat: add interview workflow, data pipeline and MLflow experiments"
+      "canonical_commit": "8714ae427b1e3b0a9e34afe3c28cb28c400cc42f",
+      "message": "feat: add interview workflow, data pipeline and MLflow experiments",
+      "local_import_commit": "9aec4c38fee814b933846cdfd110f814634c2241",
+      "url": "https://github.com/Amin8382/RoleReady/commit/8714ae427b1e3b0a9e34afe3c28cb28c400cc42f"
     },
     {
       "source_commit": "071be40b23e567b005921c58aadb459b7dcd025d",
-      "canonical_commit": "70620b537d9d89f9c4ed3e51cf4fd9e6f6d10a7f",
-      "message": "fix: verify voice pipeline and browser upload origin checks"
+      "canonical_commit": "ba6c9aff6a3862771b9f90753aa1162cc60b1505",
+      "message": "fix: verify voice pipeline and browser upload origin checks",
+      "local_import_commit": "70620b537d9d89f9c4ed3e51cf4fd9e6f6d10a7f",
+      "url": "https://github.com/Amin8382/RoleReady/commit/ba6c9aff6a3862771b9f90753aa1162cc60b1505"
     },
     {
       "source_commit": "bc3f69b6724bd6541135981f01706c7f2df2ae53",
-      "canonical_commit": "8f0627e836a548d1b378de65d1e1469d3dc13273",
-      "message": "docs: record passing checks and team handoff"
+      "canonical_commit": "35ff308a4be69c4f4ba01dd5a483d1b1ce2bb1be",
+      "message": "docs: record passing checks and team handoff",
+      "local_import_commit": "8f0627e836a548d1b378de65d1e1469d3dc13273",
+      "url": "https://github.com/Amin8382/RoleReady/commit/35ff308a4be69c4f4ba01dd5a483d1b1ce2bb1be"
     }
-  ]
+  ],
+  "repository_correction_commit": "52a8ce9345700529ec66477b7c9fe07ca43ce18b",
+  "import_branch": "feat/import-verified-platform",
+  "tree_verification": "Every imported milestone tree SHA exactly matched the local source tree."
 }

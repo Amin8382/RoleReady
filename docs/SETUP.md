@@ -91,4 +91,6 @@ git remote set-url origin https://github.com/Amin8382/RoleReady.git
 git remote -v
 ```
 
-At the repository correction, the connected GitHub app was installed only under the other account and rejected branch creation here with HTTP 403, `Resource not accessible by integration`. This is separate from the user's administrator rights. Connect the GitHub app under **Amin8382** and authorize **RoleReady** before publishing the prepared import branch.
+The GitHub app installation for **Amin8382** is now connected, and creation of `feat/import-verified-platform` succeeded. The earlier HTTP 403 was caused by the app being installed only under another account; user administrator rights alone did not grant the app repository access.
+
+Use the branch-specific clone command in the README while the import is under review. Two newer draft PRs also exist; see [integration status](INTEGRATION_STATUS.md) for their branches and the reconciliation needed before merging. Live model, Supabase and DagsHub connections remain separate setup tasks.

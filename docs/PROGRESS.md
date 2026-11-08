@@ -64,3 +64,11 @@
 - Added a repository identity check to `AGENTS.md` and corrected current setup/README guidance. `docs/repository-import.json` maps the original milestone commits to their local imported counterparts.
 - **Publishing blocker:** GitHub returned HTTP 403, `Resource not accessible by integration`, on branch creation. Installation discovery shows the connected app is installed only under `Aminebenfadhel14`; it has no installation for `Amin8382`. The user's admin rights and the app's installation permissions are distinct.
 - The transfer is prepared locally but has **not been published** to the destination. After connecting the GitHub app to `Amin8382/RoleReady`, publish this branch, run CI in the correct repository and integrate through a pull request.
+
+## 2026-11-08 M6 GitHub access restored; import and concurrent work review
+
+- Several retries still returned HTTP 403 until the user installed ChatGPT Codex Connector on **Amin8382**. Authorization of the user's identity and installation on the repository owner were separate steps. Verified installation `179900517` and successfully created `feat/import-verified-platform` in repository `1435056976`.
+- The first resumed access check was interrupted. A fresh check found two newer draft PRs: [MVP/backend contracts #1](https://github.com/Amin8382/RoleReady/pull/1) and [Amin AI/data work #2](https://github.com/Amin8382/RoleReady/pull/2). Both target `main`, which remains at the initial README commit.
+- Transferred the four build milestones and the repository correction through the GitHub connector. Every uploaded tree hash matches its local source tree. Updated `repository-import.json` with the actual GitHub commit IDs; original experiment IDs remain historical evidence.
+- Kept this import on its own branch. Existing branches, PRs and `main` have not been overwritten, merged or closed. Their different layouts and API contracts require deliberate reconciliation; see `INTEGRATION_STATUS.md`.
+- Updated setup and clone instructions for the import branch. Fresh destination CI is the remaining validation gate; the original successful checks do not stand in for a run in this repository.

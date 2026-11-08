@@ -8,7 +8,9 @@ Team: Mohamed Amin Guesmi (AI/data), Oussema Ferchichi (API/scoring), Khaled Bri
 
 ## Clean rebuild
 
-The team approved a clean rebuild on 8 November 2026. The assistant initially used the wrong repository; the user corrected the destination to `Amin8382/RoleReady`. The clean-build milestones and experiment records have been prepared for import while preserving this repository's initial commit. No generated scores are substituted when a model fails.
+The team approved a clean rebuild on 8 November 2026. The assistant initially used the wrong repository; the user corrected the destination to `Amin8382/RoleReady`. This branch imports the clean-build milestones and experiment records while preserving this repository's initial commit. No generated scores are substituted when a model fails.
+
+This implementation is on `feat/import-verified-platform`. Two other draft PRs contain concurrent team work; review [the integration status](docs/INTEGRATION_STATUS.md) before merging or changing the project layout.
 
 | Location | Purpose |
 | --- | --- |
@@ -27,7 +29,7 @@ Implementation and verified commands are recorded as milestones in [the progress
 Requires Node.js 22, Python 3.12 and [uv](https://docs.astral.sh/uv/getting-started/installation/). Commands work from the repository root; use three terminals for the API, web app and optional MLflow UI.
 
 ```bash
-git clone https://github.com/Amin8382/RoleReady.git
+git clone --branch feat/import-verified-platform https://github.com/Amin8382/RoleReady.git
 cd RoleReady
 uv sync --frozen --extra dev --extra retrieval
 npm ci
