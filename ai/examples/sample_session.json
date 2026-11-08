@@ -1,0 +1,6 @@
+{
+  "target_role": "Machine Learning Engineer",
+  "experience_level": "junior",
+  "cv_text": "Built an end-to-end Python and scikit-learn training pipeline for a university project. Used pandas and SQL to clean data, trained classification models and wrote evaluation scripts.",
+  "job_description": "We seek a Machine Learning Engineer with Python, SQL, Docker, model evaluation, monitoring, and collaboration experience. Responsibilities include deploying and troubleshooting machine learning pipelines in production."
+}
