@@ -1,0 +1,1 @@
+case_id,reviewer_id,model_variant,question_id,relevance_1_to_5,personalization_1_to_5,correctness_1_to_5,variety_1_to_5,invented_cv_claim_yes_no,problem_notes,review_timestamp_utc

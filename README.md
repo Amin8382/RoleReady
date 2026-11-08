@@ -1,40 +1,72 @@
-# RoleReady
+# RoleReady — English interview preparation
 
-Resume-to-job interview preparation MVP, implemented in Next.js, React and TypeScript.
+**Team:** Mohamed Amin Guesmi · Oussema Ferchichi · Khaled Briki
 
-## Run locally
+RoleReady is an academic multimodel interview-preparation project. It helps a candidate prepare for English-language software, data and AI interviews using a resume and a target job description, a bank of relevant questions, voice practice and a structured feedback report.
 
-Requires Node.js 20+.
+> **Development status:** The Next.js app is a **demo frontend**, the FastAPI backend is a **stateless baseline**, and the AI/data package contains actual data tooling, optional BGE/FAISS retrieval, and an opt-in Qwen endpoint adapter. Models are NOT wired into the end-to-end app. Voice, authentication, persistence, verified scoring and PDF report are not implemented yet. Do not treat demo scores as AI evaluation.
 
-```bash
-npm install
-npm run dev
-```
+## Repository layout
 
-Open http://localhost:3000. Also run `npm run typecheck` and `npm run build` before deployment.
+| Folder | Description | Lead |
+| --- | --- | --- |
+| app/ and lib/ | Next.js UI, resume parsing, typed interview demo | Khaled Briki (frontend/voice owner) |
+| backend/ | FastAPI session contract, typed data, score endpoint (501 until model configured) | Oussema Ferchichi |
+| ai/ | Reproducible data preparation, retrieval, Qwen adapter, quality checks, LoRA input preparation | Mohamed Amin Guesmi |
+| docs/ | Project handoffs, rubric, architectural agreements | Team |
+| .github/ | Continuous integration and pull-request template | Team |
 
-## Features implemented
+## Quick start
 
-- Responsive four-stage experience: profile, gap analysis, seven-question interview and feedback
-- Resume text entry or PDF, DOCX, TXT upload (5 MB maximum)
-- Transparent curated skill-keyword overlap (not proof of ability)
-- Role- and gap-aware interview question prompts
-- Simple **demo-only** heuristic feedback, clearly labeled as non-AI
-- Downloadable Markdown cheat sheet (PDF export not implemented)
+Requires Node.js 20+ and Python 3.10+.
 
-## Limitations and privacy
+Frontend (from repository root):
 
-This is a runnable-code MVP, **not yet verified by a local build or automated tests**. No live model integrations, recording, Whisper transcription, Supabase, Stripe, RAG or PDF export have been implemented.
+    npm install
+    npm run dev
 
-Uploaded files are parsed server-side for text extraction without intentional persistence. Resume and job text are held in browser component state. Do not upload sensitive information to publicly deployed instances without production-grade security, authentication and retention controls. Scanned PDFs cannot be read without OCR.
+Backend (in a second terminal):
 
-## Next steps
+    cd backend
+    python -m pip install -r requirements-dev.txt
+    uvicorn app.main:app --reload --port 8000
 
-1. Install dependencies, typecheck, test and fix any runtime issues.
-2. Integrate a real multi-model pipeline: role analysis, grounded question selection, speech transcription and answer assessment.
-3. Add Supabase auth, secure storage, robust evaluation and PDF export.
-4. Add CI, tests, accessibility checks, deployment controls and (if needed) billing.
+AI/data (in another terminal):
 
-## Project branch
+    cd ai
+    python -m pip install -e ".[test]"
+    python -m pytest -q
 
-Development implementation: `feat/role-ready-mvp`. The default `main` branch remains preserved until review.
+See [AI documentation](ai/README.md) and [backend documentation](backend/README.md) for dataset curation and the API. Visit http://localhost:3000 for the frontend and http://localhost:8000/docs for backend documentation.
+
+**The frontend does not yet call the FastAPI service.** The AI package does not download or serve Qwen automatically. You must explicitly configure a compatible inference endpoint to generate questions with the live model.
+
+## Candidate architecture
+
+- Qwen3.5 4B — personalized analysis, interview questions and report wording (candidate; requires validation)
+- Prometheus 7B v2 — rubric-based answer evaluation, owned by backend workstream (candidate; not integrated)
+- BGE-small-en-v1.5 — embeddings; FAISS — vector index (optional real implementation in ai/)
+- Whisper small English — speech-to-text (planned)
+- Kokoro 82M — English narration (planned)
+- Supabase — private accounts/files/sessions (planned)
+- FastAPI and Next.js — service/frontend components (present as independent baselines)
+
+Models and dataset counts come from the team overview and must be verified against original publishers, licensing and target hardware before production. FAISS is not a model.
+
+## Collaboration
+
+- [Contributing guide](CONTRIBUTING.md)
+- [Shared team implementation contracts](docs/TEAM_IMPLEMENTATION.md)
+- [Evaluation rubric](docs/SCORING_RUBRIC.md)
+- [AI/data package guide](ai/README.md)
+
+Use feature branches and reviewed PRs. Never commit personal CVs, voice recordings, API keys, private reports or unreviewed/unlicensed external datasets. AI outputs must be grounded with source IDs and labeled by mode. CI runs frontend, backend and AI checks on changes.
+
+## Development gates
+
+1. Contract/data preparation, sources and tests
+2. Live CV/job analysis, retrieved seven questions and **real** typed scoring
+3. Spoken questions, editable transcripts, private sessions and PDF
+4. Two-reviewer held-out evaluations, model comparison, optional LoRA and demonstration
+
+**Not yet achieved:** live-model benchmark, 30-case human review, trained LoRA, or verified production end-to-end session.

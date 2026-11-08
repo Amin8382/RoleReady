@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "status": "RESEARCH_CANDIDATES_NOT_LICENSE_VERIFIED",
+  "sources": [
+    {
+      "source_id": "interviewforge-gends",
+      "dataset_title": "InterviewForge GenDS",
+      "publisher_url": null,
+      "revision_or_snapshot": null,
+      "license": "UNVERIFIED",
+      "human_review_status": "NOT_REVIEWED",
+      "planned_use": "Curate software, data and AI interview question bank",
+      "counts_reported_in_team_overview": {
+        "question_rows": 20444,
+        "role_labels": 38
+      },
+      "counts_independently_verified": false
+    },
+    {
+      "source_id": "ml-interview-sft",
+      "dataset_title": "ML interview SFT dataset",
+      "publisher_url": null,
+      "revision_or_snapshot": null,
+      "license": "UNVERIFIED",
+      "human_review_status": "NOT_REVIEWED",
+      "planned_use": "Human-reviewed question and answer reference examples",
+      "counts_reported_in_team_overview": {
+        "rows": 566,
+        "unique_normalized_questions": 531
+      },
+      "counts_independently_verified": false
+    },
+    {
+      "source_id": "ml-systems-bench",
+      "dataset_title": "ML systems interview bench",
+      "publisher_url": null,
+      "revision_or_snapshot": null,
+      "license": "UNVERIFIED",
+      "human_review_status": "NOT_REVIEWED",
+      "planned_use": "Small held-out evaluation starting point",
+      "counts_reported_in_team_overview": {
+        "questions": 30
+      },
+      "counts_independently_verified": false
+    }
+  ],
+  "warning": "All counts are copied from the uploaded team overview and require independent source/license validation. Never convert this template into a trusted provenance manifest automatically."
+}

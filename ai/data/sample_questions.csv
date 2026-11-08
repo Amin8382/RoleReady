@@ -1,0 +1,11 @@
+question,role,reference_answer
+"Describe a machine learning project you built and how you evaluated its results.",Machine Learning Engineer,
+"How would you diagnose overfitting in a production machine learning system?",Machine Learning Engineer,
+"Explain how you would monitor data drift in an deployed prediction service.",Machine Learning Engineer,
+"Describe how you optimized a slow SQL query for a data pipeline.",Data Engineer,
+"How would you design a resilient batch ETL pipeline for analytics?",Data Engineer,
+"Tell me about a time you resolved a disagreement with a teammate.",general,
+"Explain how you would select between batch and real time inference.",Machine Learning Engineer,
+"How would you design an experiment to compare two recommendation models?",Machine Learning Engineer,
+"Describe a difficult debugging problem and how you solved it.",general,
+"Explain the tradeoffs between precision recall and latency.",Machine Learning Engineer,

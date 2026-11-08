@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "roleready-ai"
+version = "0.1.0"
+description = "RoleReady AI/data pipeline: audited question bank, retrieval, model adapter, and evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+retrieval = ["numpy>=1.26,<3", "faiss-cpu>=1.8,<2", "sentence-transformers>=3,<6"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+roleready-data = "roleready_ai.datasets:main"
+roleready-eval = "roleready_ai.evaluation:main"
+roleready-sft = "roleready_ai.sft:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["roleready_ai*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
