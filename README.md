@@ -2,11 +2,13 @@
 
 English interview preparation from a CV and a target job description: evidence-based preparation priorities, seven questions, voice practice, feedback and a PDF preparation sheet.
 
+**Working repository: [Amin8382/RoleReady](https://github.com/Amin8382/RoleReady).** All development, issues, pull requests and experiment documentation belong here.
+
 Team: Mohamed Amin Guesmi (AI/data), Oussema Ferchichi (API/scoring), Khaled Briki (web/voice).
 
 ## Clean rebuild
 
-The team approved replacing the previous application on 8 November 2026. This repository is the record of the rebuild. The old application is recoverable from Git history. No generated scores are substituted when a model fails.
+The team approved a clean rebuild on 8 November 2026. The assistant initially used the wrong repository; the user corrected the destination to `Amin8382/RoleReady`. The clean-build milestones and experiment records have been prepared for import while preserving this repository's initial commit. No generated scores are substituted when a model fails.
 
 | Location | Purpose |
 | --- | --- |
@@ -25,6 +27,8 @@ Implementation and verified commands are recorded as milestones in [the progress
 Requires Node.js 22, Python 3.12 and [uv](https://docs.astral.sh/uv/getting-started/installation/). Commands work from the repository root; use three terminals for the API, web app and optional MLflow UI.
 
 ```bash
+git clone https://github.com/Amin8382/RoleReady.git
+cd RoleReady
 uv sync --frozen --extra dev --extra retrieval
 npm ci
 uv run --no-sync dvc repro
@@ -89,4 +93,4 @@ Browser tests launch a separate synthetic fixture server on port 8001 and the pr
 
 Every meaningful change is committed. Each milestone records what changed, what was tested, what failed and what remains. Experiments log parameters, dataset/model versions, metrics and outcomes to MLflow. Git contains code and reports; DVC tracks larger data; credentials and candidate content stay out of both public Git and experiment logs.
 
-The GitHub account can push code but cannot rename this repository. The owner must rename `interview_wingman` to `roleready` in repository settings. No new owner or duplicate repository is created automatically.
+This repository already has the correct name and owner. No rename is needed. The previous repository's rename limitation does not apply here. Historical verification reports retain their original run URLs; fresh CI must validate the imported branch in this repository before integration.

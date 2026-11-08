@@ -84,4 +84,11 @@ Keep credentials in `.dvc/config.local` or a secret manager. Verify a fresh clon
 
 Create a focused branch, make the change, update `docs/PROGRESS.md`, run relevant checks, and commit the code plus small reports. Record failures and the corrective action. Open a PR and keep milestone commits when merging. GitHub Actions checks Python contracts, TypeScript, a production build and two browser workflows.
 
-The repository is currently under `Aminebenfadhel14/interview_wingman`. The connected account has write permission but not repository administration. The owner must rename it to `roleready`; application branding and package names have already changed. After the rename, update the clone's `origin` URL and any DagsHub mirror configuration.
+The working repository is **[Amin8382/RoleReady](https://github.com/Amin8382/RoleReady)**. It already has the correct name, and the user has administrator access. Use this repository for all branches, pull requests and any DagsHub mirror.
+
+```bash
+git remote set-url origin https://github.com/Amin8382/RoleReady.git
+git remote -v
+```
+
+At the repository correction, the connected GitHub app was installed only under the other account and rejected branch creation here with HTTP 403, `Resource not accessible by integration`. This is separate from the user's administrator rights. Connect the GitHub app under **Amin8382** and authorize **RoleReady** before publishing the prepared import branch.

@@ -1,5 +1,7 @@
 # RoleReady working rules
 
+- The only working GitHub repository is **Amin8382/RoleReady**, repository ID **1435056976**, at https://github.com/Amin8382/RoleReady. Before any remote write, confirm both the Git remote and the GitHub tool's repository argument match this destination.
+- `Aminebenfadhel14/interview_wingman` was selected in error. It is not a destination for future work. References to it in older experiment records are historical evidence only.
 - Product scope is English interview preparation. Seven questions per session.
 - Read `docs/PROGRESS.md`, `docs/DECISIONS.md` and the relevant source before changing code.
 - Record every meaningful change, failed experiment and milestone in the progress log. Explain decisions and corrective action. Never fabricate results.

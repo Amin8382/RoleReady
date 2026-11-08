@@ -1,5 +1,7 @@
 # Progress and experiment log
 
+**Current working repository: https://github.com/Amin8382/RoleReady.** The assistant's earlier repository selection was wrong. M0–M4 below describe the work completed before that correction; their original commit and CI links remain historical evidence. The previous rename blocker does not apply to this repository.
+
 ## 2026-11-08 M0 Clean rebuild authorised
 
 - Confirmed English scope, the seven-question workflow and the three-member work split.
@@ -53,3 +55,12 @@
 - Reviewed desktop/mobile layout captures and added mobile access to saved sessions. No candidate data was used in testing.
 - All old application files have been replaced on the rebuild branch. The PR is ready for integration with milestone commits preserved. GitHub records the subsequent merge outcome.
 - Still external: repository owner must rename the repository; team must connect real Qwen/Prometheus serving, Supabase and DagsHub. Fine-tuning waits for reviewed CV/job pairs and a compatible GPU environment.
+
+## 2026-11-08 M5 Correct repository selected; import prepared
+
+- The user explicitly identified **Amin8382/RoleReady** as the working repository. The assistant acknowledges that selecting `Aminebenfadhel14/interview_wingman` was an error.
+- Verified repository ID `1435056976`, owner `Amin8382`, default branch `main` and the user's administrator/write permissions. The destination initially contains only its README and initial commit `36aebfee44a09fb1a0e9ad09a17f3fd21b9b8631`.
+- Corrected the local `origin` URL. Prepared an import branch based on the destination's initial commit, replaying all four clean-build milestones without importing the old application's history. The imported 85-file source tree exactly matches the previously tested build before repository-specific documentation changes.
+- Added a repository identity check to `AGENTS.md` and corrected current setup/README guidance. `docs/repository-import.json` maps the original milestone commits to their local imported counterparts.
+- **Publishing blocker:** GitHub returned HTTP 403, `Resource not accessible by integration`, on branch creation. Installation discovery shows the connected app is installed only under `Aminebenfadhel14`; it has no installation for `Amin8382`. The user's admin rights and the app's installation permissions are distinct.
+- The transfer is prepared locally but has **not been published** to the destination. After connecting the GitHub app to `Amin8382/RoleReady`, publish this branch, run CI in the correct repository and integrate through a pull request.

@@ -1,0 +1,28 @@
+{
+  "canonical_repository": "Amin8382/RoleReady",
+  "original_repository": "Aminebenfadhel14/interview_wingman",
+  "reason": "User corrected the repository selected by the assistant.",
+  "initial_canonical_commit": "36aebfee44a09fb1a0e9ad09a17f3fd21b9b8631",
+  "milestones": [
+    {
+      "source_commit": "2fbe826baccd8322604ced3bd552c2b3dabf0eca",
+      "canonical_commit": "8da59904e017acef5d1544a501df4c5253eeab31",
+      "message": "chore: establish clean RoleReady foundation and research record"
+    },
+    {
+      "source_commit": "78c8ddd46898fa83a1d7576e586b2fac75024103",
+      "canonical_commit": "9aec4c38fee814b933846cdfd110f814634c2241",
+      "message": "feat: add interview workflow, data pipeline and MLflow experiments"
+    },
+    {
+      "source_commit": "071be40b23e567b005921c58aadb459b7dcd025d",
+      "canonical_commit": "70620b537d9d89f9c4ed3e51cf4fd9e6f6d10a7f",
+      "message": "fix: verify voice pipeline and browser upload origin checks"
+    },
+    {
+      "source_commit": "bc3f69b6724bd6541135981f01706c7f2df2ae53",
+      "canonical_commit": "8f0627e836a548d1b378de65d1e1469d3dc13273",
+      "message": "docs: record passing checks and team handoff"
+    }
+  ]
+}

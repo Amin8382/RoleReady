@@ -1,5 +1,8 @@
 {
   "date": "2026-11-08",
+  "canonical_repository": "Amin8382/RoleReady",
+  "verification_source_repository": "Aminebenfadhel14/interview_wingman",
+  "verification_context": "Historical results from before the repository correction. The imported source tree is identical; fresh destination CI is pending repository-app access.",
   "tested_code_commit": "071be40b23e567b005921c58aadb459b7dcd025d",
   "github_actions_run": "https://github.com/Aminebenfadhel14/interview_wingman/actions/runs/42492017126",
   "python_tests_passed": 15,

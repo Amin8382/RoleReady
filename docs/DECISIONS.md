@@ -19,3 +19,7 @@ Download source files at immutable revisions and verify SHA-256. Record provenan
 ## ADR 005 Development and hosted operation
 
 Provide a local single-user development mode and a fail-closed Supabase mode for hosted use. Local mode must not be advertised as authentication. Real model endpoints or optional local model adapters must return errors when unavailable. No silent fallback scoring.
+
+## ADR 006 Canonical repository identity
+
+The user explicitly selected `https://github.com/Amin8382/RoleReady`, repository ID `1435056976`. This replaces the assistant's incorrect repository selection. Match that exact identity before every remote write; access to a similarly named repository is not evidence that it is the right project. Preserve the destination's initial history and import the clean-build milestones. Historical experiment commit IDs remain unchanged and are mapped in `repository-import.json`.
