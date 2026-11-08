@@ -2,7 +2,44 @@ node_modules/
 .next/
 out/
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 *.tsbuildinfo
 .DS_Store
+
+# Python and test artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.coverage
+coverage.xml
+
+# Models, checkpoints and indexed content
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.gguf
+*.faiss
+checkpoints/
+models/
+
+# Private candidate data, derived data and evaluation outputs
+ai/outputs/
+ai/data/processed/
+ai/data/raw/
+ai/data/heldout/
+ai/data/private/
+backend/outputs/
+uploads/
+recordings/
+reports/
+*.wav
+*.mp3
