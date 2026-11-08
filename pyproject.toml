@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "roleready"
+version = "0.1.0"
+description = "Reproducible English interview preparation"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "pydantic-settings>=2.7,<3",
+  "httpx>=0.28,<1", "python-multipart>=0.0.20,<1", "pypdf>=6,<7",
+  "python-docx>=1.2,<2", "reportlab>=4.4,<5", "mlflow>=3.5,<4",
+  "numpy>=2,<3", "scikit-learn>=1.6,<2", "pyyaml>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1", "dvc[s3]>=3.60,<4"]
+retrieval = ["sentence-transformers>=5,<6", "faiss-cpu>=1.11,<2", "torch>=2.8,<3"]
+voice = ["faster-whisper>=1.2,<2", "kokoro>=0.9.4,<1", "soundfile>=0.13,<1", "torch>=2.8,<3"]
+training = ["transformers>=5,<6", "peft>=0.17,<1", "datasets>=4,<5", "accelerate>=1.10,<2", "torch>=2.8,<3"]
+
+[project.scripts]
+roleready = "roleready.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["services/api/src/roleready"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["services/api/src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]

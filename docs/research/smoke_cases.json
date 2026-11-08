@@ -1,0 +1,66 @@
+[
+  {
+    "id": "backend_technical",
+    "title": "Junior Backend Developer",
+    "description": "Build REST APIs and database-backed services.",
+    "experience": "0-1 years",
+    "skills": "Python, FastAPI, PostgreSQL",
+    "type": "Technical"
+  },
+  {
+    "id": "backend_behavioral",
+    "title": "Junior Backend Developer",
+    "description": "Build REST APIs and database-backed services.",
+    "experience": "0-1 years",
+    "skills": "Python, FastAPI, PostgreSQL",
+    "type": "Behavioral"
+  },
+  {
+    "id": "backend_scenario",
+    "title": "Junior Backend Developer",
+    "description": "Build REST APIs and database-backed services.",
+    "experience": "0-1 years",
+    "skills": "Python, FastAPI, PostgreSQL",
+    "type": "Scenario"
+  },
+  {
+    "id": "data_analyst",
+    "title": "Data Analyst Intern",
+    "description": "Clean sales data, write SQL queries, and explain results to business users.",
+    "experience": "Student with one academic project",
+    "skills": "SQL, Python, pandas, data visualization",
+    "type": "Technical"
+  },
+  {
+    "id": "mlops",
+    "title": "Senior Machine Learning Engineer",
+    "description": "Monitor model drift, deploy models, and troubleshoot inference latency in production.",
+    "experience": "5 years",
+    "skills": "PyTorch, Docker, MLflow, model monitoring",
+    "type": "Scenario"
+  },
+  {
+    "id": "frontend",
+    "title": "Frontend Developer",
+    "description": "Build accessible web interfaces and collaborate with designers.",
+    "experience": "2 years",
+    "skills": "React, TypeScript, accessibility, CSS",
+    "type": "Behavioral"
+  },
+  {
+    "id": "data_engineer",
+    "title": "Data Engineer",
+    "description": "Build reliable incremental ETL pipelines and handle late-arriving events.",
+    "experience": "3 years",
+    "skills": "Spark, Airflow, SQL, data quality",
+    "type": "Problem-Solving"
+  },
+  {
+    "id": "qa",
+    "title": "QA Automation Engineer",
+    "description": "Design regression tests and investigate flaky browser tests.",
+    "experience": "1 year",
+    "skills": "Python, pytest, Playwright, CI",
+    "type": "Technical"
+  }
+]
