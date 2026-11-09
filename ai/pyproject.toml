@@ -4,20 +4,23 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "roleready-ai"
-version = "0.1.0"
-description = "RoleReady AI/data pipeline: audited question bank, retrieval, model adapter, and evaluation"
+version = "0.2.0"
+description = "RoleReady dataset, retrieval, Qwen, Prometheus, Whisper and Kokoro adapters"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.13"
 dependencies = []
 
 [project.optional-dependencies]
 retrieval = ["numpy>=1.26,<3", "faiss-cpu>=1.8,<2", "sentence-transformers>=3,<6"]
+voice = ["faster-whisper>=1.1,<2", "kokoro==0.9.4", "soundfile>=0.12,<1", "numpy>=1.26,<3"]
 test = ["pytest>=8,<10"]
 
 [project.scripts]
 roleready-data = "roleready_ai.datasets:main"
 roleready-eval = "roleready_ai.evaluation:main"
 roleready-sft = "roleready_ai.sft:main"
+roleready-readiness = "roleready_ai.readiness:main"
+roleready-audio = "roleready_ai.audio_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
