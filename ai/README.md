@@ -67,3 +67,7 @@ The SFT exporter currently produces general interview Q&A training pairs, **not*
 ## Team handoff
 
 Mohamed Amin owns AI/data; Oussema owns FastAPI and Prometheus evaluator; Khaled owns Next.js and voice. Shared schemas and ownership live in ../docs/TEAM_IMPLEMENTATION.md. The FastAPI baseline is not automatically connected to Qwen. Run tests and validate model outputs on real target hardware before integration.
+
+## Five-model runtime integration
+
+The five model adapters, optional voice dependencies, offline readiness inventory and per-model smoke commands are documented in [the Windows five-model setup guide](docs/FIVE_MODEL_SETUP.md). Run `python -m roleready_ai.readiness` to inspect dependencies without downloading model weights. Runtime checks are opt-in via `python -m roleready_ai.model_smoke <model>`. The repository does not include large model weights, does not host Qwen or Prometheus inference servers, and does not claim completed end-to-end integration or calibrated scoring.
