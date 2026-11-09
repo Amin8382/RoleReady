@@ -9,6 +9,8 @@ out/
 
 # Python and test artifacts
 .venv/
+.venv311/
+.runtime/
 venv/
 __pycache__/
 *.py[cod]

@@ -82,7 +82,10 @@ def offline_report() -> dict[str, Any]:
         "recommended_python": "3.11",
         "kokoro_0_9_4_python_supported": (3, 10) <= sys.version_info[:2] < (3, 13),
         "models": details,
-        "warning": "No model weight download, real inference, or hardware benchmark has occurred.",
+        "warning": (
+            "This offline inventory performs no model downloads, inference or hardware benchmark. "
+            "It does not read historical smoke-test reports."
+        ),
     }
 
 

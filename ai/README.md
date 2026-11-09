@@ -17,7 +17,8 @@ This package implements an independently testable AI/data module. It is **not** 
 
 ## Install and test
 
-Python 3.10+ is required. From repository root, run:
+Python 3.10-3.12 is required; Python 3.11 is recommended for the combined
+retrieval/voice runtime. From repository root, run:
 
     cd ai
     python -m venv .venv
@@ -71,3 +72,9 @@ Mohamed Amin owns AI/data; Oussema owns FastAPI and Prometheus evaluator; Khaled
 ## Five-model runtime integration
 
 The five model adapters, optional voice dependencies, offline readiness inventory and per-model smoke commands are documented in [the Windows five-model setup guide](docs/FIVE_MODEL_SETUP.md). Run `python -m roleready_ai.readiness` to inspect dependencies without downloading model weights. Runtime checks are opt-in via `python -m roleready_ai.model_smoke <model>`. The repository does not include large model weights, does not host Qwen or Prometheus inference servers, and does not claim completed end-to-end integration or calibrated scoring.
+
+Real BGE/FAISS, Whisper Small English and Kokoro CPU/CUDA smoke checks passed on
+the local RTX 4080 Laptop environment. See [verified commands, revisions, timings
+and limitations](docs/LOCAL_ENVIRONMENT_2026-11-09.md). The Windows-specific
+dependency snapshot is `requirements-windows-cu128-py311.lock.txt`; model/audio
+outputs stay private and gitignored. Qwen and Prometheus inference remain pending.

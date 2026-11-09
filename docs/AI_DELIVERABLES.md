@@ -6,7 +6,7 @@
 - [x] CSV/JSONL ingestion, deterministic duplicate-aware dataset splitting and manifest
 - [x] Explicit license/provenance warnings and synthetic sample records
 - [x] Dependency-free lexical retrieval baseline
-- [x] Optional BGE-small-en-v1.5 / FAISS implementation (not benchmarked on target machine)
+- [x] Optional BGE-small-en-v1.5 / FAISS implementation; synthetic CPU/CUDA smoke passed on target machine (quality benchmark pending)
 - [x] Qwen OpenAI-compatible endpoint adapter and seven-question structured output validation
 - [x] Basic automated structural evaluation metrics, with hallucinated-source detection
 - [x] Reviewed-only SFT data export to prepare for later fine-tuning
@@ -47,3 +47,14 @@ To **Khaled**: seven question objects and evidence-aware explanation labels; pla
 ## 5. Academic evidence required
 
 Save experiment config hashes and anonymized predictions, manual evaluation sheets, source manifest/version, training hyperparameters, performance tables and final model decisions. No fine-tuning or full integration benchmark is complete in this branch.
+
+## 6. Local runtime evidence
+
+Mission 001 verified an isolated Python 3.11.18 environment, torch 2.11.0+cu128
+GPU acceleration, all 17 existing AI tests, and real BGE/FAISS, Whisper Small
+English and Kokoro CPU/GPU inference. Exact revisions, timings, GPU memory,
+installation issues and the Windows dependency snapshot are documented in
+[the local environment report](../ai/docs/LOCAL_ENVIRONMENT_2026-11-09.md).
+Qwen/Prometheus weights, live endpoints, held-out quality evaluation and product
+integration remain pending. The nested local clone and original environment
+were preserved.

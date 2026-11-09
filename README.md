@@ -46,12 +46,18 @@ See [AI documentation](ai/README.md) and [backend documentation](backend/README.
 - Qwen3.5 4B — personalized analysis, interview questions and report wording (candidate; requires validation)
 - Prometheus 7B v2 — rubric-based answer evaluation, owned by backend workstream (candidate; not integrated)
 - BGE-small-en-v1.5 — embeddings; FAISS — vector index (optional real implementation in ai/)
-- Whisper small English — speech-to-text (planned)
-- Kokoro 82M — English narration (planned)
+- Whisper small English — optional speech-to-text adapter; not wired into the app
+- Kokoro 82M — optional English narration adapter; not wired into the app
 - Supabase — private accounts/files/sessions (planned)
 - FastAPI and Next.js — service/frontend components (present as independent baselines)
 
 Models and dataset counts come from the team overview and must be verified against original publishers, licensing and target hardware before production. FAISS is not a model.
+
+BGE/FAISS, Whisper and Kokoro passed real CPU/CUDA smoke checks on the local
+Windows RTX 4080 Laptop machine. The [environment evidence report](ai/docs/LOCAL_ENVIRONMENT_2026-11-09.md)
+records installation, exact versions, timings and remaining blockers. Qwen and
+Prometheus weights were not downloaded; live generation/scoring and end-to-end
+integration remain unfinished.
 
 ## Collaboration
 
