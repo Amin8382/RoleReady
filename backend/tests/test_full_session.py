@@ -80,3 +80,4 @@ def test_full_session_flow_end_to_end(client):
     # Verify session is gone
     check_res = client.get(f"/sessions/{session_id}")
     assert check_res.status_code == status.HTTP_404_NOT_FOUND
+

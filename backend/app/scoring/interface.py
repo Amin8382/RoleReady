@@ -22,3 +22,4 @@ class BaseScorer(ABC):
         Returns a typed AnswerEvaluationResponse.
         """
         pass
+

@@ -60,3 +60,4 @@ def test_create_session_missing_job_text_rejected(client):
     }
     response = client.post("/sessions", data=data)
     assert response.status_code == status.HTTP_400_BAD_REQUEST
+

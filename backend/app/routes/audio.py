@@ -34,3 +34,4 @@ async def speak_text(payload: TTSRequest):
 
     res = await synthesize_speech_kokoro(payload.text, voice_name=payload.voice_name)
     return TTSResponse(**res)
+

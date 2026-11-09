@@ -79,3 +79,4 @@ async def test_mock_scorer_weak_vs_strong_output():
     )
     assert strong_res.scores.overall_score >= 3.0
     assert len(strong_res.evidence) >= 1
+

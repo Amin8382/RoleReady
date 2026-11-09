@@ -108,3 +108,4 @@ async def run_evaluation(csv_path: str = "backend/data/eval_benchmark.csv"):
 
 if __name__ == "__main__":
     asyncio.run(run_evaluation())
+

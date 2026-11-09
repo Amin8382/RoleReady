@@ -61,3 +61,4 @@ def get_current_user_id(authorization: Optional[str] = Header(default=None)) -> 
                 detail="Invalid token format",
             )
         return "demo-candidate-001"
+

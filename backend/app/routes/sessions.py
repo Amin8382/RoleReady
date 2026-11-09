@@ -329,3 +329,4 @@ def delete_candidate_data(user_id: str = Depends(get_current_user_id)):
         deleted_sessions_count=deleted_count,
         message=f"All {deleted_count} candidate sessions and transcripts have been completely deleted.",
     )
+

@@ -96,3 +96,4 @@ All **11 tests pass in ~0.3 seconds**, validating:
 
 ## 7. Closing Statement
 > *"Our backend is fully typed, tested, documented, and resilient with local SQLite and mock fallbacks so that any teammate or evaluator can run it with zero friction. I am ready for any technical questions."*
+

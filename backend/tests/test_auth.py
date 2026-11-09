@@ -38,3 +38,4 @@ def test_auth_enforce_jwt_flag(client, monkeypatch):
     # Missing header should yield 401
     res = client.get("/sessions/some_id")
     assert res.status_code == status.HTTP_401_UNAUTHORIZED
+

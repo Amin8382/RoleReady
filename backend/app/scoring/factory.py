@@ -33,3 +33,4 @@ def get_scorer() -> BaseScorer:
         _scorer_instance = MockScorer()
 
     return _scorer_instance
+
