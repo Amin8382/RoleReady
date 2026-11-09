@@ -11,15 +11,24 @@ class FakeModel:
     def complete_json(self, *, system: str, user: str):
         assert "CV" in system
         assert "Machine Learning Engineer" in user
+        texts = [
+            "How did you validate the Python analytics project documented in your CV?",
+            "How would you optimize a slow SQL join for this role?",
+            "What tradeoffs would guide a production model deployment design?",
+            "Describe how you would resolve a disagreement with a teammate.",
+            "How would you identify data leakage before training a classifier?",
+            "Which monitoring signals would reveal distribution drift?",
+            "How would you explain an uncertain model prediction to a stakeholder?",
+        ]
         return {"questions": [
             {
-                "text": f"Tell me about your approach to engineering problem number {i}.",
+                "text": text,
                 "target_skill": "problem solving",
                 "difficulty": "medium",
-                "reason_for_asking": "Test relevant thinking",
+                "reason_for_asking": "CV: [Python and SQL]; Job: [Python and production ML pipelines]. Practice the job requirement using documented CV context; missing ability is not inferred.",
                 "reference_criteria": ["Concrete action", "Evidence"],
                 "source_ids": [],
-            } for i in range(1, 8)
+            } for text in texts
         ]}
 
 

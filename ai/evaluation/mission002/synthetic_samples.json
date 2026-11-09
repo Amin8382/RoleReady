@@ -1,0 +1,1171 @@
+{
+  "provenance": "Actual local Qwen output from synthetic fixtures; no post-generation question editing.",
+  "quality_status": "Functional demonstration with automated checks and agent inspection; no independent human validation.",
+  "source_model": "qwen3.5:4b-q4_K_M",
+  "source_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "served_model": "roleready-qwen35-4b:8k",
+  "served_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+  "fixture_sha256": {
+    "questions.train.jsonl": "5b8e9c56a99fd9db32f1707b2aa5bb8c406994ce8bdf1097f14e195ffe866063",
+    "scenarios.json": "451adbc394ffe2bd73005ed63b2b465eca60a6913a335c0abb498dcaf16fa58e"
+  },
+  "runs": [
+    {
+      "scenario_id": "junior-data-analyst",
+      "retrieval": "lexical",
+      "status": "structural_pass",
+      "generation": {
+        "model_id": "roleready-qwen35-4b:8k",
+        "mode": "qwen_retrieval",
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "In your university retail analytics project, you cleaned 5000 sales rows using Python and pandas. How would you apply similar data cleaning techniques to validate the integrity of sales data for a Junior Data Analyst role?",
+            "target_skill": "Data Cleaning and Validation",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [In a university retail analytics project]; Job: [A Junior Data Analyst will validate sales data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe specific steps taken to handle missing values and duplicates.",
+              "Explain how you verified data quality before analysis.",
+              "Discuss tools used beyond Python for validation."
+            ],
+            "source_ids": [
+              "syn-da-quality"
+            ]
+          },
+          {
+            "question_id": "q2",
+            "text": "How would you design a dashboard that effectively communicates complex sales metrics to nontechnical stakeholders?",
+            "target_skill": "Stakeholder Communication",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I documented the metric definitions and presented findings to a team of three classmates]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline how you simplified technical data for non-experts.",
+              "Describe methods used to gather stakeholder feedback during presentation.",
+              "Identify key visualizations that drive business decisions."
+            ],
+            "source_ids": [
+              "syn-da-dashboard"
+            ]
+          },
+          {
+            "question_id": "q3",
+            "text": "When you investigated missing values in your project, what criteria did you use to distinguish between data errors and legitimate gaps?",
+            "target_skill": "Data Quality Investigation",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [investigated missing values]; Job: [A Junior Data Analyst will validate sales data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Define rules for flagging suspicious versus acceptable missing data.",
+              "Explain how you cross-referenced sources to confirm data validity.",
+              "Discuss the impact of different missing value assumptions on results."
+            ],
+            "source_ids": [
+              "syn-da-analysis"
+            ]
+          },
+          {
+            "question_id": "q4",
+            "text": "Given your experience querying a SQLite database, how would you construct efficient SQL joins and aggregations to compute a trustworthy sales metric?",
+            "target_skill": "SQL Proficiency",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [queried a SQLite database and built a Power BI dashboard]; Job: [use SQL joins and aggregations]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Demonstrate understanding of join types (inner, left, etc.) for specific scenarios.",
+              "Explain how you optimize aggregation queries for performance.",
+              "Describe methods to verify query output against source data."
+            ],
+            "source_ids": [
+              "syn-da-sql"
+            ]
+          },
+          {
+            "question_id": "q5",
+            "text": "How would you learn an unfamiliar data transformation tool like dbt and verify your first changes without prior professional experience?",
+            "target_skill": "Technical Adaptability",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [My CV does not document professional cloud or dbt experience]; Job: [The team also uses dbt]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline a step-by-step learning plan for a new transformation tool.",
+              "Describe how you would test transformations in a safe environment.",
+              "Explain how you would document your findings for team review."
+            ],
+            "source_ids": [
+              "syn-da-learning"
+            ]
+          },
+          {
+            "question_id": "q6",
+            "text": "When faced with an ambiguous reporting request, how would you clarify the requirements and prioritize a small first delivery?",
+            "target_skill": "Project Prioritization",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I documented the metric definitions and presented findings to a team of three classmates]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe techniques for asking clarifying questions to narrow scope.",
+              "Explain how you break down large tasks into manageable first steps.",
+              "Discuss criteria used to determine what constitutes a 'first delivery'.",
+              "Identify stakeholders who need to be involved in the clarification process."
+            ],
+            "source_ids": [
+              "syn-general-priorities"
+            ]
+          },
+          {
+            "question_id": "q7",
+            "text": "In your university project, you presented findings to a team. How would you resolve a technical disagreement about metric definitions with a teammate?",
+            "target_skill": "Collaboration",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [I documented the metric definitions and presented findings to a team of three classmates]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain how you facilitate constructive debate without escalating conflict.",
+              "Describe how you reach consensus or decide when to seek external input.",
+              "Outline steps taken to ensure all team members understand the final decision."
+            ],
+            "source_ids": [
+              "syn-general-team"
+            ]
+          }
+        ],
+        "retrieved_source_ids": [
+          "syn-da-analysis",
+          "syn-da-dashboard",
+          "syn-da-learning",
+          "syn-da-quality",
+          "syn-da-sql",
+          "syn-general-priorities",
+          "syn-general-team",
+          "syn-general-testing"
+        ],
+        "attempts": 1,
+        "rejected_attempts": []
+      },
+      "retrieved_sources": [
+        {
+          "source_id": "syn-da-sql",
+          "question": "How would you use joins and aggregation to compute a trustworthy sales metric?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.125
+        },
+        {
+          "source_id": "syn-da-dashboard",
+          "question": "How would you design and validate a dashboard for a nontechnical audience?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.10256
+        },
+        {
+          "source_id": "syn-da-analysis",
+          "question": "How would you distinguish an apparent sales trend from a data artifact?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.075
+        },
+        {
+          "source_id": "syn-da-quality",
+          "question": "How would you investigate missing values and inconsistent sales records?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.07317
+        },
+        {
+          "source_id": "syn-da-learning",
+          "question": "How would you learn an unfamiliar data transformation tool and verify your first changes?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.07143
+        },
+        {
+          "source_id": "syn-general-team",
+          "question": "Describe how you would resolve a technical disagreement in a small project team.",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.02381
+        },
+        {
+          "source_id": "syn-general-priorities",
+          "question": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.02326
+        },
+        {
+          "source_id": "syn-general-testing",
+          "question": "How would you choose tests that give useful confidence before a release?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.0
+        }
+      ],
+      "semantic_screen": {
+        "threshold": 0.86,
+        "flagged_pairs": [],
+        "most_similar_pair": {
+          "left": "q1",
+          "right": "q4",
+          "cosine": 0.7327
+        },
+        "limitation": "Similarity is a review screen, not proof of semantic distinctness. CV claims and question relevance require explicit review."
+      }
+    },
+    {
+      "scenario_id": "machine-learning-engineer",
+      "retrieval": "lexical",
+      "status": "structural_pass",
+      "generation": {
+        "model_id": "roleready-qwen35-4b:8k",
+        "mode": "qwen_retrieval",
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "How would you choose a precision-recall operating point for an imbalanced classifier?",
+            "target_skill": "Evaluation Strategy",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [compared precision and recall and performed false-positive error analysis]; Job: [evaluate imbalanced classifiers]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain how class imbalance affects metric selection",
+              "Describe a method to balance precision and recall tradeoffs"
+            ],
+            "source_ids": [
+              "syn-ml-metrics"
+            ]
+          },
+          {
+            "question_id": "q2",
+            "text": "How would you prevent target leakage and choose a realistic validation split?",
+            "target_skill": "Data Integrity",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [used train/validation splits]; Job: [prevent data leakage]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Identify common sources of target leakage in datasets",
+              "Outline a strategy for creating temporally separated validation sets"
+            ],
+            "source_ids": [
+              "syn-ml-leakage"
+            ]
+          },
+          {
+            "question_id": "q3",
+            "text": "How would you test and version a machine learning inference API?",
+            "target_skill": "API Design",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I exposed the model through a local FastAPI endpoint and packaged it with Docker]; Job: [design inference APIs and monitor model drift]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Propose testing protocols for API latency and accuracy",
+              "Discuss versioning strategies for model artifacts"
+            ],
+            "source_ids": [
+              "syn-ml-api"
+            ]
+          },
+          {
+            "question_id": "q4",
+            "text": "How would you make a training pipeline reproducible and reviewable?",
+            "target_skill": "Reproducibility",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [I built a fraud classification course project in Python and scikit-learn]; Job: [A Machine Learning Engineer will build reproducible feature pipelines]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "List specific tools or configurations that ensure reproducibility",
+              "Explain how to document dependencies and random seeds"
+            ],
+            "source_ids": [
+              "syn-ml-reproduce"
+            ]
+          },
+          {
+            "question_id": "q5",
+            "text": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+            "target_skill": "Project Management",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [Two classmates reviewed my experiments]; Job: [communicating tradeoffs and planning AWS deployment]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe a process for defining success criteria with stakeholders",
+              "Explain how to scope a minimal viable project milestone"
+            ],
+            "source_ids": [
+              "syn-general-priorities"
+            ]
+          },
+          {
+            "question_id": "q6",
+            "text": "How would you resolve a technical disagreement in a small project team?",
+            "target_skill": "Collaboration",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [Two classmates reviewed my experiments]; Job: [communicating tradeoffs and planning AWS deployment]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline a framework for evaluating technical arguments objectively",
+              "Discuss how to reach consensus without compromising project goals"
+            ],
+            "source_ids": [
+              "syn-general-team"
+            ]
+          },
+          {
+            "question_id": "q7",
+            "text": "How would you choose tests that give useful confidence before a release?",
+            "target_skill": "Quality Assurance",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [This CV does not document deployment to AWS or operating a production model monitoring service]; Job: [The role includes CI tests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Distinguish between unit, integration, and regression tests for ML",
+              "Explain how to validate data preprocessing steps in a pipeline"
+            ],
+            "source_ids": [
+              "syn-general-testing"
+            ]
+          }
+        ],
+        "retrieved_source_ids": [
+          "syn-general-priorities",
+          "syn-general-team",
+          "syn-general-testing",
+          "syn-ml-api",
+          "syn-ml-drift",
+          "syn-ml-leakage",
+          "syn-ml-metrics",
+          "syn-ml-reproduce"
+        ],
+        "attempts": 1,
+        "rejected_attempts": []
+      },
+      "retrieved_sources": [
+        {
+          "source_id": "syn-ml-drift",
+          "question": "Which signals would you monitor to investigate model drift after deployment?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.275
+        },
+        {
+          "source_id": "syn-ml-leakage",
+          "question": "How would you prevent target leakage and choose a realistic validation split?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.21905
+        },
+        {
+          "source_id": "syn-ml-api",
+          "question": "How would you test and version a machine learning inference API?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.2
+        },
+        {
+          "source_id": "syn-ml-reproduce",
+          "question": "How would you make a training pipeline reproducible and reviewable?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.19756
+        },
+        {
+          "source_id": "syn-ml-metrics",
+          "question": "How would you choose a precision-recall operating point for an imbalanced classifier?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.19302
+        },
+        {
+          "source_id": "syn-general-testing",
+          "question": "How would you choose tests that give useful confidence before a release?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.02273
+        },
+        {
+          "source_id": "syn-general-priorities",
+          "question": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.0
+        },
+        {
+          "source_id": "syn-general-team",
+          "question": "Describe how you would resolve a technical disagreement in a small project team.",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.0
+        }
+      ],
+      "semantic_screen": {
+        "threshold": 0.86,
+        "flagged_pairs": [],
+        "most_similar_pair": {
+          "left": "q3",
+          "right": "q4",
+          "cosine": 0.71502
+        },
+        "limitation": "Similarity is a review screen, not proof of semantic distinctness. CV claims and question relevance require explicit review."
+      }
+    },
+    {
+      "scenario_id": "backend-developer",
+      "retrieval": "lexical",
+      "status": "structural_pass",
+      "generation": {
+        "model_id": "roleready-qwen35-4b:8k",
+        "mode": "qwen_retrieval",
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "In your university appointment-booking project, you mentioned adding request logs to diagnose issues. How would you design an observability strategy to detect and investigate observable failures in a production environment?",
+            "target_skill": "Observability",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I used Git pull requests with two teammates and added request logs to diagnose a failing endpoint]; Job: [observable failures and a plan for background tasks and caching]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe specific log formats or metrics you would collect",
+              "Explain how you would correlate logs with database errors"
+            ],
+            "source_ids": [
+              "syn-be-observe"
+            ]
+          },
+          {
+            "question_id": "q2",
+            "text": "How would you approach investigating a slow PostgreSQL query when performance is critical for your appointment-booking service?",
+            "target_skill": "Database Performance",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I built a FastAPI REST service with PostgreSQL]; Job: [investigate PostgreSQL query performance]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline steps to analyze execution plans and identify bottlenecks",
+              "Discuss indexing strategies or query optimization techniques"
+            ],
+            "source_ids": [
+              "syn-be-sql"
+            ]
+          },
+          {
+            "question_id": "q3",
+            "text": "Given your experience with JWT login, how would you architect authentication boundaries and write maintainable tests to validate them?",
+            "target_skill": "Security",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [implemented JWT login and wrote pytest tests for booking conflicts]; Job: [validate authentication boundaries and write maintainable tests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain how you would test token expiration and scope permissions",
+              "Describe methods to ensure test coverage for unauthorized access scenarios"
+            ],
+            "source_ids": [
+              "syn-be-security"
+            ]
+          },
+          {
+            "question_id": "q4",
+            "text": "How would you determine when to use background jobs or caching, and how would you handle failures in those asynchronous processes?",
+            "target_skill": "System Design",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [This CV does not document Kubernetes operations or high-volume production traffic]; Job: [observable failures and a plan for background tasks and caching]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Identify scenarios where synchronous processing would block user experience",
+              "Propose retry mechanisms and dead-letter queues for failure handling"
+            ],
+            "source_ids": [
+              "syn-be-background"
+            ]
+          },
+          {
+            "question_id": "q5",
+            "text": "How would you prevent two concurrent requests from booking the same appointment to ensure data integrity?",
+            "target_skill": "Concurrency",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [In a university appointment-booking project]; Job: [handle concurrent booking requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Discuss database locking mechanisms or optimistic concurrency control",
+              "Explain how you would handle race conditions in your tests"
+            ],
+            "source_ids": [
+              "syn-be-concurrency"
+            ]
+          },
+          {
+            "question_id": "q6",
+            "text": "Describe how you would clarify an ambiguous request and prioritize a small first delivery for your project.",
+            "target_skill": "Project Management",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [Synthetic candidate: a junior developer]; Job: [Discuss scaling as a hypothetical problem without inventing past production experience]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline a process for defining clear acceptance criteria",
+              "Explain how you would break down work into manageable tasks"
+            ],
+            "source_ids": [
+              "syn-general-priorities"
+            ]
+          },
+          {
+            "question_id": "q7",
+            "text": "In your experience working with two teammates, how would you resolve a technical disagreement regarding code structure?",
+            "target_skill": "Collaboration",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I used Git pull requests with two teammates and added request logs to diagnose a failing endpoint]; Job: [The team needs clear code reviews]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain how you would facilitate discussion during code review",
+              "Describe criteria for making data-driven decisions in technical debates"
+            ],
+            "source_ids": [
+              "syn-general-team"
+            ]
+          }
+        ],
+        "retrieved_source_ids": [
+          "syn-be-background",
+          "syn-be-concurrency",
+          "syn-be-observe",
+          "syn-be-security",
+          "syn-be-sql",
+          "syn-general-priorities",
+          "syn-general-team",
+          "syn-general-testing"
+        ],
+        "attempts": 1,
+        "rejected_attempts": []
+      },
+      "retrieved_sources": [
+        {
+          "source_id": "syn-be-background",
+          "question": "When would you use background jobs or caching and how would you handle failures?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.23953
+        },
+        {
+          "source_id": "syn-be-concurrency",
+          "question": "How would you prevent two concurrent requests from booking the same appointment?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.21111
+        },
+        {
+          "source_id": "syn-be-sql",
+          "question": "How would you diagnose and improve a slow PostgreSQL query?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.19091
+        },
+        {
+          "source_id": "syn-be-security",
+          "question": "How would you test authentication and resource authorization for a REST API?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.18889
+        },
+        {
+          "source_id": "syn-be-observe",
+          "question": "How would you use request logs and metrics to investigate a failing endpoint?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.16383
+        },
+        {
+          "source_id": "syn-general-team",
+          "question": "Describe how you would resolve a technical disagreement in a small project team.",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.02128
+        },
+        {
+          "source_id": "syn-general-testing",
+          "question": "How would you choose tests that give useful confidence before a release?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.02083
+        },
+        {
+          "source_id": "syn-general-priorities",
+          "question": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.0
+        }
+      ],
+      "semantic_screen": {
+        "threshold": 0.86,
+        "flagged_pairs": [],
+        "most_similar_pair": {
+          "left": "q2",
+          "right": "q5",
+          "cosine": 0.74798
+        },
+        "limitation": "Similarity is a review screen, not proof of semantic distinctness. CV claims and question relevance require explicit review."
+      }
+    },
+    {
+      "scenario_id": "junior-data-analyst",
+      "retrieval": "bge-faiss",
+      "status": "structural_pass",
+      "generation": {
+        "model_id": "roleready-qwen35-4b:8k",
+        "mode": "qwen_retrieval",
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "In your university retail analytics project, you cleaned 5000 sales rows using Python and pandas. How would you apply similar data cleaning principles to validate sales data for a Junior Data Analyst role?",
+            "target_skill": "Data Cleaning and Validation",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [In a university retail analytics project]; Job: [A Junior Data Analyst will validate sales data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe specific steps taken to handle missing values and inconsistent records",
+              "Explain how you ensured data integrity before analysis"
+            ],
+            "source_ids": [
+              "syn-da-quality"
+            ]
+          },
+          {
+            "question_id": "q2",
+            "text": "How would you design a dashboard that effectively communicates business metrics to nontechnical stakeholders?",
+            "target_skill": "Stakeholder Communication",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I documented the metric definitions and presented findings to a team of three classmates]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline how you would simplify complex data for non-technical audiences",
+              "Discuss methods for gathering feedback during the presentation phase"
+            ],
+            "source_ids": [
+              "syn-da-dashboard"
+            ]
+          },
+          {
+            "question_id": "q3",
+            "text": "How would you distinguish an apparent sales trend from a potential data artifact?",
+            "target_skill": "Critical Analysis",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [I cleaned 5000 sales rows with Python and pandas]; Job: [A Junior Data Analyst will validate sales data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Identify common sources of data artifacts in sales datasets",
+              "Propose a verification strategy to confirm observed trends"
+            ],
+            "source_ids": [
+              "syn-da-analysis"
+            ]
+          },
+          {
+            "question_id": "q4",
+            "text": "How would you learn an unfamiliar data transformation tool like dbt and verify your first changes?",
+            "target_skill": "Adaptability",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [My CV does not document professional cloud or dbt experience]; Job: [The team also uses dbt]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe a structured approach to learning a new technical tool",
+              "Explain how you would test transformations before deployment"
+            ],
+            "source_ids": [
+              "syn-da-learning"
+            ]
+          },
+          {
+            "question_id": "q5",
+            "text": "How would you use SQL joins and aggregations to compute a trustworthy sales metric?",
+            "target_skill": "SQL Proficiency",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [queried a SQLite database and built a Power BI dashboard]; Job: [use SQL joins and aggregations]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Demonstrate understanding of join types for combining datasets",
+              "Show how aggregation functions ensure accurate metric calculation"
+            ],
+            "source_ids": [
+              "syn-da-sql"
+            ]
+          },
+          {
+            "question_id": "q6",
+            "text": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+            "target_skill": "Project Management",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I also used Excel pivot tables]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline a process for defining scope when requirements are unclear",
+              "Explain how you would select a high-impact initial deliverable"
+            ],
+            "source_ids": [
+              "syn-general-priorities"
+            ]
+          },
+          {
+            "question_id": "q7",
+            "text": "Describe how you would resolve a technical disagreement in a small project team.",
+            "target_skill": "Collaboration",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [I documented the metric definitions and presented findings to a team of three classmates]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Discuss techniques for facilitating consensus in technical discussions",
+              "Explain how you would align team goals with data-driven evidence"
+            ],
+            "source_ids": [
+              "syn-general-team"
+            ]
+          }
+        ],
+        "retrieved_source_ids": [
+          "syn-da-analysis",
+          "syn-da-dashboard",
+          "syn-da-learning",
+          "syn-da-quality",
+          "syn-da-sql",
+          "syn-general-priorities",
+          "syn-general-team",
+          "syn-general-testing"
+        ],
+        "attempts": 1,
+        "rejected_attempts": []
+      },
+      "retrieved_sources": [
+        {
+          "source_id": "syn-da-sql",
+          "question": "How would you use joins and aggregation to compute a trustworthy sales metric?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.66292
+        },
+        {
+          "source_id": "syn-da-dashboard",
+          "question": "How would you design and validate a dashboard for a nontechnical audience?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.65363
+        },
+        {
+          "source_id": "syn-da-quality",
+          "question": "How would you investigate missing values and inconsistent sales records?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.64144
+        },
+        {
+          "source_id": "syn-da-learning",
+          "question": "How would you learn an unfamiliar data transformation tool and verify your first changes?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.63911
+        },
+        {
+          "source_id": "syn-da-analysis",
+          "question": "How would you distinguish an apparent sales trend from a data artifact?",
+          "role": "Data Analyst",
+          "reference_answer": null,
+          "retrieval_score": 0.6086
+        },
+        {
+          "source_id": "syn-general-team",
+          "question": "Describe how you would resolve a technical disagreement in a small project team.",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.53906
+        },
+        {
+          "source_id": "syn-general-testing",
+          "question": "How would you choose tests that give useful confidence before a release?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.52851
+        },
+        {
+          "source_id": "syn-general-priorities",
+          "question": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.47551
+        }
+      ],
+      "semantic_screen": {
+        "threshold": 0.86,
+        "flagged_pairs": [],
+        "most_similar_pair": {
+          "left": "q1",
+          "right": "q5",
+          "cosine": 0.7316
+        },
+        "limitation": "Similarity is a review screen, not proof of semantic distinctness. CV claims and question relevance require explicit review."
+      }
+    },
+    {
+      "scenario_id": "machine-learning-engineer",
+      "retrieval": "bge-faiss",
+      "status": "structural_pass",
+      "generation": {
+        "model_id": "roleready-qwen35-4b:8k",
+        "mode": "qwen_retrieval",
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "How would you design a training pipeline that ensures reproducibility and allows for peer review?",
+            "target_skill": "Reproducibility",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I built a fraud classification course project in Python and scikit-learn]; Job: [A Machine Learning Engineer will build reproducible feature pipelines]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe specific version control or containerization steps taken during the course project",
+              "Explain how train/validation splits were fixed to ensure consistent results"
+            ],
+            "source_ids": [
+              "syn-ml-reproduce"
+            ]
+          },
+          {
+            "question_id": "q2",
+            "text": "How would you prevent target leakage and select a realistic validation split for your data?",
+            "target_skill": "Data Integrity",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [used train/validation splits]; Job: [prevent data leakage]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Detail the specific methodology used to split the fraud dataset",
+              "Explain how you verified that no future information leaked into the training set"
+            ],
+            "source_ids": [
+              "syn-ml-leakage"
+            ]
+          },
+          {
+            "question_id": "q3",
+            "text": "How would you choose an operating point on a precision-recall curve for an imbalanced classifier?",
+            "target_skill": "Model Evaluation",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [compared precision and recall and performed false-positive error analysis]; Job: [evaluate imbalanced classifiers]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe how you balanced precision and recall given the fraud detection context",
+              "Explain what tradeoffs were considered when analyzing false positives"
+            ],
+            "source_ids": [
+              "syn-ml-metrics"
+            ]
+          },
+          {
+            "question_id": "q4",
+            "text": "How would you design and test a machine learning inference API for production use?",
+            "target_skill": "API Design",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [I exposed the model through a local FastAPI endpoint and packaged it with Docker]; Job: [design inference APIs and monitor model drift]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline how you would extend the local FastAPI setup for production scaling",
+              "Discuss additional monitoring signals beyond those tested in the course project"
+            ],
+            "source_ids": [
+              "syn-ml-api"
+            ]
+          },
+          {
+            "question_id": "q5",
+            "text": "How would you choose tests that provide useful confidence before a model release?",
+            "target_skill": "Testing Strategy",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [Two classmates reviewed my experiments]; Job: [The role includes CI tests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain how peer review can be formalized into automated CI checks",
+              "Describe test coverage goals for data preprocessing and model training steps"
+            ],
+            "source_ids": [
+              "syn-general-testing"
+            ]
+          },
+          {
+            "question_id": "q6",
+            "text": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+            "target_skill": "Project Management",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [Synthetic candidate: a computer science graduate]; Job: [communicating tradeoffs and planning AWS deployment]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Demonstrate how you would gather requirements to define scope",
+              "Explain how you would communicate constraints regarding cloud infrastructure"
+            ],
+            "source_ids": [
+              "syn-general-priorities"
+            ]
+          },
+          {
+            "question_id": "q7",
+            "text": "How would you resolve a technical disagreement within a small project team?",
+            "target_skill": "Collaboration",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [Two classmates reviewed my experiments]; Job: [communicating tradeoffs and planning AWS deployment]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe how you would facilitate a discussion to align on technical approaches",
+              "Explain how you would document decisions made during team reviews"
+            ],
+            "source_ids": [
+              "syn-general-team"
+            ]
+          }
+        ],
+        "retrieved_source_ids": [
+          "syn-general-priorities",
+          "syn-general-team",
+          "syn-general-testing",
+          "syn-ml-api",
+          "syn-ml-drift",
+          "syn-ml-leakage",
+          "syn-ml-metrics",
+          "syn-ml-reproduce"
+        ],
+        "attempts": 1,
+        "rejected_attempts": []
+      },
+      "retrieved_sources": [
+        {
+          "source_id": "syn-ml-reproduce",
+          "question": "How would you make a training pipeline reproducible and reviewable?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.76254
+        },
+        {
+          "source_id": "syn-ml-api",
+          "question": "How would you test and version a machine learning inference API?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.72039
+        },
+        {
+          "source_id": "syn-ml-metrics",
+          "question": "How would you choose a precision-recall operating point for an imbalanced classifier?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.68901
+        },
+        {
+          "source_id": "syn-ml-drift",
+          "question": "Which signals would you monitor to investigate model drift after deployment?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.67862
+        },
+        {
+          "source_id": "syn-ml-leakage",
+          "question": "How would you prevent target leakage and choose a realistic validation split?",
+          "role": "Machine Learning Engineer",
+          "reference_answer": null,
+          "retrieval_score": 0.66233
+        },
+        {
+          "source_id": "syn-general-team",
+          "question": "Describe how you would resolve a technical disagreement in a small project team.",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.56886
+        },
+        {
+          "source_id": "syn-general-testing",
+          "question": "How would you choose tests that give useful confidence before a release?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.56456
+        },
+        {
+          "source_id": "syn-general-priorities",
+          "question": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.46286
+        }
+      ],
+      "semantic_screen": {
+        "threshold": 0.86,
+        "flagged_pairs": [],
+        "most_similar_pair": {
+          "left": "q1",
+          "right": "q4",
+          "cosine": 0.74218
+        },
+        "limitation": "Similarity is a review screen, not proof of semantic distinctness. CV claims and question relevance require explicit review."
+      }
+    },
+    {
+      "scenario_id": "backend-developer",
+      "retrieval": "bge-faiss",
+      "status": "structural_pass",
+      "generation": {
+        "model_id": "roleready-qwen35-4b:8k",
+        "mode": "qwen_retrieval",
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "In your university appointment-booking project, how would you design the database schema to ensure data integrity when multiple users book the same resource simultaneously?",
+            "target_skill": "Concurrency Control",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [In a university appointment-booking project]; Job: [handle concurrent booking requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain use of database locking or optimistic concurrency checks",
+              "Describe how to prevent duplicate bookings in the schema design"
+            ],
+            "source_ids": [
+              "syn-be-concurrency"
+            ]
+          },
+          {
+            "question_id": "q2",
+            "text": "When would you introduce background jobs or caching mechanisms, and what strategies would you use to handle failures if a scheduled task crashes?",
+            "target_skill": "Background Processing",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I built a FastAPI REST service with PostgreSQL]; Job: [observable failures and a plan for background tasks and caching]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Identify specific scenarios where async processing adds value",
+              "Outline error handling patterns for unreliable background workers"
+            ],
+            "source_ids": [
+              "syn-be-background"
+            ]
+          },
+          {
+            "question_id": "q3",
+            "text": "How would you structure your testing strategy to validate authentication boundaries and ensure resource authorization works correctly across different user roles?",
+            "target_skill": "Security Testing",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [implemented JWT login and wrote pytest tests for booking conflicts]; Job: [validate authentication boundaries and write maintainable tests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Detail test cases covering unauthorized access attempts",
+              "Explain how to verify role-based permission enforcement"
+            ],
+            "source_ids": [
+              "syn-be-security"
+            ]
+          },
+          {
+            "question_id": "q4",
+            "text": "Given your experience adding request logs, how would you approach investigating a slow query in PostgreSQL without relying on production monitoring tools?",
+            "target_skill": "Query Performance",
+            "difficulty": "medium",
+            "reason_for_asking": "CV: [I used Git pull requests with two teammates and added request logs to diagnose a failing endpoint]; Job: [investigate PostgreSQL query performance]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Describe steps to analyze execution plans or slow queries",
+              "Propose indexing strategies based on log data patterns"
+            ],
+            "source_ids": [
+              "syn-be-sql"
+            ]
+          },
+          {
+            "question_id": "q5",
+            "text": "How would you use request logs and metrics to systematically investigate a failing endpoint when automated tests do not catch the issue?",
+            "target_skill": "Observability",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [I used Git pull requests with two teammates and added request logs to diagnose a failing endpoint]; Job: [observable failures and a plan for background tasks and caching]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Explain how to correlate log entries with error states",
+              "Discuss setting up alerts based on metric thresholds"
+            ],
+            "source_ids": [
+              "syn-be-observe"
+            ]
+          },
+          {
+            "question_id": "q6",
+            "text": "How would you clarify an ambiguous project requirement and prioritize the first deliverable to ensure a clear path to completion?",
+            "target_skill": "Project Prioritization",
+            "difficulty": "easy",
+            "reason_for_asking": "CV: [Synthetic candidate: a junior developer]; Job: [Discuss scaling as a hypothetical problem without inventing past production experience]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Demonstrate a method for breaking down vague goals",
+              "Show how to communicate trade-offs to stakeholders"
+            ],
+            "source_ids": [
+              "syn-general-priorities"
+            ]
+          },
+          {
+            "question_id": "q7",
+            "text": "Describe a scenario where you would disagree with a teammate on a technical approach and how you would resolve the conflict constructively.",
+            "target_skill": "Collaboration",
+            "difficulty": "hard",
+            "reason_for_asking": "CV: [I used Git pull requests with two teammates and added request logs to diagnose a failing endpoint]; Job: [The team needs clear code reviews]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+            "reference_criteria": [
+              "Outline steps for proposing an alternative solution",
+              "Explain how to reach consensus through data or prototyping"
+            ],
+            "source_ids": [
+              "syn-general-team"
+            ]
+          }
+        ],
+        "retrieved_source_ids": [
+          "syn-be-background",
+          "syn-be-concurrency",
+          "syn-be-observe",
+          "syn-be-security",
+          "syn-be-sql",
+          "syn-general-priorities",
+          "syn-general-team",
+          "syn-general-testing"
+        ],
+        "attempts": 1,
+        "rejected_attempts": []
+      },
+      "retrieved_sources": [
+        {
+          "source_id": "syn-be-sql",
+          "question": "How would you diagnose and improve a slow PostgreSQL query?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.75061
+        },
+        {
+          "source_id": "syn-be-background",
+          "question": "When would you use background jobs or caching and how would you handle failures?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.73294
+        },
+        {
+          "source_id": "syn-be-security",
+          "question": "How would you test authentication and resource authorization for a REST API?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.73225
+        },
+        {
+          "source_id": "syn-be-observe",
+          "question": "How would you use request logs and metrics to investigate a failing endpoint?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.72334
+        },
+        {
+          "source_id": "syn-be-concurrency",
+          "question": "How would you prevent two concurrent requests from booking the same appointment?",
+          "role": "Backend Developer",
+          "reference_answer": null,
+          "retrieval_score": 0.63576
+        },
+        {
+          "source_id": "syn-general-team",
+          "question": "Describe how you would resolve a technical disagreement in a small project team.",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.62505
+        },
+        {
+          "source_id": "syn-general-priorities",
+          "question": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.59391
+        },
+        {
+          "source_id": "syn-general-testing",
+          "question": "How would you choose tests that give useful confidence before a release?",
+          "role": "general",
+          "reference_answer": null,
+          "retrieval_score": 0.57869
+        }
+      ],
+      "semantic_screen": {
+        "threshold": 0.86,
+        "flagged_pairs": [],
+        "most_similar_pair": {
+          "left": "q4",
+          "right": "q5",
+          "cosine": 0.76352
+        },
+        "limitation": "Similarity is a review screen, not proof of semantic distinctness. CV claims and question relevance require explicit review."
+      }
+    }
+  ],
+  "agent_review_findings": [
+    {
+      "scenario": "machine-learning-engineer",
+      "retrieval": "bge-faiss",
+      "question_id": "q4",
+      "field": "reference_criteria",
+      "status": "not_approved_for_scoring",
+      "finding": "The wording beyond those tested in the course project assumes prior monitoring-signal testing that the CV does not document. Keep the raw sample for review; do not treat this criterion as a reviewed reference."
+    },
+    {
+      "scenario": "all",
+      "status": "human_review_required",
+      "finding": "Some literal CV/job excerpts are only weakly related to the question, several questions remain generic, and criteria are not validated scoring references. Exact quotes and citation membership alone do not establish semantic grounding."
+    }
+  ]
+}

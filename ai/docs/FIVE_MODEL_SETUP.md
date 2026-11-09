@@ -7,6 +7,11 @@ records real CPU/GPU BGE, Whisper and Kokoro smoke results, the exact Windows
 dependency snapshot and remaining Qwen/Prometheus gates. Those three small-model
 checks do not establish end-to-end integration or model-quality validation.
 
+[Mission 002](MISSION_002_QWEN_RAG.md) adds verified local Qwen3.5 4B Q4_K_M
+inference and six synthetic seven-question lexical/BGE RAG runs. Follow that
+report for the exact Ollama profile, endpoint, JSON/evidence constraints and
+remaining quality findings. Prometheus remains unconfigured.
+
 ## Model IDs and official sources
 
 | Model | Hugging Face repository | Purpose |

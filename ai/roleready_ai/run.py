@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import time
 from .datasets import load_jsonl
-from .generation import generate_questions
+from .generation import generate_questions, QUESTION_RESPONSE_SCHEMA
 from .model import OpenAICompatibleQwen
 from .retrieval import BGEFaissRetriever, LexicalRetriever
 
@@ -23,7 +23,7 @@ def run(*, input_file: Path, question_bank: Path, output_file: Path, retrieval_m
         retriever = BGEFaissRetriever(records)
     else:
         raise ValueError("Choose lexical or bge-faiss.")
-    model = OpenAICompatibleQwen()
+    model = OpenAICompatibleQwen(response_schema=QUESTION_RESPONSE_SCHEMA)
     start = time.perf_counter()
     result = generate_questions(
         model=model, retriever=retriever, cv_text=str(data["cv_text"]),
@@ -39,6 +39,11 @@ def run(*, input_file: Path, question_bank: Path, output_file: Path, retrieval_m
         "latency_ms": round((time.perf_counter() - start) * 1000),
         "retrieved_source_ids": result.retrieved_source_ids,
         "questions": [asdict(question) for question in result.questions],
+        "attempts": result.attempts,
+        "rejected_attempts": result.rejected_attempts,
+        "endpoint_response": model.last_response,
+        "quality_status": result.quality_status,
+        "quality_warning": "Literal evidence and valid citations do not certify question claims or reference criteria; review before use.",
     }
     output_file.parent.mkdir(parents=True, exist_ok=True)
     output_file.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

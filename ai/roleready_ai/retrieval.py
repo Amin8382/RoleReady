@@ -20,6 +20,17 @@ STOPWORDS = {
     "which", "why", "with", "you", "your", "would",
 }
 BGE_MODEL = "BAAI/bge-small-en-v1.5"
+BGE_REVISION = "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+
+
+def load_embedding_model(model_name: str) -> object:
+    try:
+        from sentence_transformers import SentenceTransformer
+    except ImportError as exc:
+        raise RuntimeError("Missing sentence-transformers") from exc
+    # Mission 001 cached this immutable revision, not an unversioned main ref.
+    kwargs = {"revision": BGE_REVISION} if model_name == BGE_MODEL else {}
+    return SentenceTransformer(model_name, **kwargs)
 
 
 def tokens(text: str) -> set[str]:
@@ -106,11 +117,7 @@ class BGEFaissRetriever:
         except ImportError as exc:
             raise RuntimeError("Install retrieval dependencies: pip install -e '.[retrieval]'") from exc
         if embedding_model is None:
-            try:
-                from sentence_transformers import SentenceTransformer
-            except ImportError as exc:
-                raise RuntimeError("Missing sentence-transformers") from exc
-            embedding_model = SentenceTransformer(model_name)
+            embedding_model = load_embedding_model(model_name)
         self.records = list(records)
         self.model_name = model_name
         self.encoder = embedding_model

@@ -77,4 +77,13 @@ Real BGE/FAISS, Whisper Small English and Kokoro CPU/CUDA smoke checks passed on
 the local RTX 4080 Laptop environment. See [verified commands, revisions, timings
 and limitations](docs/LOCAL_ENVIRONMENT_2026-11-09.md). The Windows-specific
 dependency snapshot is `requirements-windows-cu128-py311.lock.txt`; model/audio
-outputs stay private and gitignored. Qwen and Prometheus inference remain pending.
+outputs stay private and gitignored.
+
+[Mission 002: local Qwen and synthetic RAG](docs/MISSION_002_QWEN_RAG.md) verifies
+Qwen3.5 4B Q4_K_M through Ollama's OpenAI-compatible endpoint. All six synthetic
+scenario/retriever combinations returned exactly seven validated question objects.
+The adapter enforces JSON, identity and completion status; generation constrains
+literal evidence and citations before decoding and rejects invalid outputs with
+bounded retries. Results are explicitly `unreviewed_model_output`; agent findings
+include an unsupported criterion that is not approved for scoring. Prometheus
+inference, independent question-quality evaluation and product integration remain pending.

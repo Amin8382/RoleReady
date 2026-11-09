@@ -18,7 +18,7 @@
 - [ ] Verify each external dataset publisher, exact URL, version, redistribution/training license and raw counts
 - [ ] Curate relevant English-language software/data/AI role subsets and validate each reference answer
 - [ ] Review representative question samples and create 30 *held-out* CV/job test cases
-- [ ] Provision local or remote Qwen3.5 4B inference; benchmark RAM/VRAM, latency, JSON compliance and errors
+- [x] Provision local Qwen3.5 4B Q4_K_M; verify synthetic JSON/RAG generation and record VRAM/latency/errors (full RAM and held-out quality benchmarks pending)
 - [ ] Evaluate three prompt variants against held-out human ratings: Qwen alone, Qwen + lexical search, Qwen + FAISS
 - [ ] Add FAISS index revision/persistence strategy, privacy guardrails and embedding version to result metadata
 - [ ] Create **CV/job-conditioned** instruction examples, independently review them, and train LoRA only with adequate hardware
@@ -58,3 +58,11 @@ installation issues and the Windows dependency snapshot are documented in
 Qwen/Prometheus weights, live endpoints, held-out quality evaluation and product
 integration remain pending. The nested local clone and original environment
 were preserved.
+
+Mission 002 adds actual local Qwen Q4_K_M inference through Ollama, 73 passing AI
+tests and six successful synthetic seven-question generation cases across lexical
+and BGE/FAISS retrieval. Exact artifacts, runtime measurements, earlier rejected
+runs and unedited samples are linked from [the Mission 002 report](../ai/docs/MISSION_002_QWEN_RAG.md).
+The samples carry explicit quality findings; no generated criteria are approved
+as reviewed scoring references. Prometheus, independent human evaluation and
+end-to-end product integration remain pending.
