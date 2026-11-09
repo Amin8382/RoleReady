@@ -26,7 +26,8 @@ class MockScorer(BaseScorer):
     ) -> AnswerEvaluationResponse:
         text = corrected_transcript.strip().lower()
         word_count = len(re.findall(r"\w+", text))
-        keywords_in_ref = [w.lower() for w in re.findall(r"\b[A-Za-z]{4,}\b", reference_criteria)]
+        # Match keywords including acronyms of 2+ letters (e.g. PQ, IVF, ML)
+        keywords_in_ref = [w.lower() for w in re.findall(r"\b[A-Za-z0-9_-]{2,}\b", reference_criteria)]
         matched_keywords = [w for w in set(keywords_in_ref) if w in text]
 
         # Deterministic scoring based on content depth and reference coverage
@@ -34,24 +35,26 @@ class MockScorer(BaseScorer):
             c, cov, r, s = 1, 1, 2, 1
             feedback = "The answer is too brief to demonstrate technical competence. State the core concept and explain the mechanism."
             evidence = ["Candidate provided minimal response"]
-        elif word_count < 30:
-            c, cov, r, s = 2, 2, 3, 2
-            feedback = f"Identified basic aspects of {target_skill}, but lacks architectural detail and expected criteria coverage."
-            evidence = [f"Mentioned {matched_keywords[:2]}" if matched_keywords else "General high-level overview"]
-        elif len(matched_keywords) >= 4 or word_count > 70:
-            c, cov, r, s = 5, 4, 5, 4
+        elif len(matched_keywords) >= 3 or word_count >= 20:
+            c, cov, r, s = 4, 4, 4, 4
+            if len(matched_keywords) >= 4 or word_count > 60:
+                c, cov, r, s = 5, 4, 5, 4
             feedback = f"Excellent technical explanation of {target_skill}. Clear conceptual clarity with sound reasoning. Consider citing precise benchmark metrics to reach perfection."
             evidence = [
                 f"Referenced key concepts matching evaluation criteria: {', '.join(matched_keywords[:4])}",
                 "Structured reasoning with logical problem-solving flow",
             ]
-        else:
-            c, cov, r, s = 3, 3, 4, 3
+        elif word_count >= 10:
+            c, cov, r, s = 3, 3, 3, 3
             feedback = f"Good foundational explanation for {target_skill}. To achieve a higher score, elaborate on trade-offs and concrete edge cases."
             evidence = [
                 f"Matched key topics: {', '.join(matched_keywords[:2])}" if matched_keywords else "Basic terminology used",
                 "Covers core question requirements",
             ]
+        else:
+            c, cov, r, s = 2, 2, 2, 2
+            feedback = f"Identified basic aspects of {target_skill}, but lacks architectural detail and expected criteria coverage."
+            evidence = ["General high-level overview"]
 
         overall = round((c + cov + r + s) / 4.0, 2)
 

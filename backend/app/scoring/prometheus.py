@@ -97,11 +97,11 @@ class PrometheusScorer(BaseScorer):
 
         # Extract Evidence bullets
         evidence_list = []
-        evidence_match = re.search(r"Evidence:\s*\n((?:[-*•]\s*[^\n]+\n*)+)", raw_text, re.IGNORECASE)
-        if evidence_match:
-            lines = evidence_match.group(1).strip().split("\n")
+        evidence_section = re.search(r"Evidence:\s*(.*?)(?=Feedback:|\Z)", raw_text, re.IGNORECASE | re.DOTALL)
+        if evidence_section:
+            lines = evidence_section.group(1).strip().split("\n")
             for line in lines:
-                cleaned = re.sub(r"^[-*•]\s*", "", line).strip()
+                cleaned = re.sub(r"^[-*•\s]+", "", line).strip()
                 if cleaned:
                     evidence_list.append(cleaned)
         if not evidence_list:
