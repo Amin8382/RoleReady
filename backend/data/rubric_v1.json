@@ -1,0 +1,62 @@
+{
+  "rubric_name": "RoleReady Technical & Behavioral Practice Rubric",
+  "version": "v1.0",
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "unit": "integer points per dimension"
+  },
+  "ethical_guideline": "Scores describe practice performance on this specific attempt, not the candidate's probability of being hired.",
+  "dimensions": {
+    "correctness": {
+      "name": "Technical & Conceptual Correctness",
+      "weight": 0.30,
+      "scale_descriptions": {
+        "1": "Contains severe factual or conceptual errors that distort fundamental technical concepts.",
+        "2": "Partially accurate but relies on flawed technical premises or incorrect definitions.",
+        "3": "Technically acceptable with standard terminology, though lacks depth or contains minor ambiguities.",
+        "4": "Accurate and sound technical explanation with precise vocabulary and clear cause-effect reasoning.",
+        "5": "Exemplary precision, demonstrating deep mechanical understanding and flawless command of concepts."
+      }
+    },
+    "coverage": {
+      "name": "Reference Criteria Coverage",
+      "weight": 0.25,
+      "scale_descriptions": {
+        "1": "Misses virtually all critical technical topics outlined in the reference criteria.",
+        "2": "Touches upon only 1 minor aspect, omitting core architectural or problem-solving points.",
+        "3": "Covers approximately half the expected anchor points; satisfactory basic coverage.",
+        "4": "Addresses all major points from the reference criteria with appropriate emphasis.",
+        "5": "Thoroughly addresses all expected criteria and adds insightful context or proactive considerations."
+      }
+    },
+    "relevance": {
+      "name": "Direct Relevance & Focus",
+      "weight": 0.20,
+      "scale_descriptions": {
+        "1": "Completely off-topic or misunderstands the core question being asked.",
+        "2": "Meanders heavily into unrelated background details with little focus on the actual prompt.",
+        "3": "Directly answers the prompt but occasionally digresses or includes unnecessary filler.",
+        "4": "Direct, structured, and focused answer that directly tackles what was requested.",
+        "5": "Laser-focused, concise delivery without superfluous padding or diversion."
+      }
+    },
+    "evidence_and_structure": {
+      "name": "Evidence, Reasoning & Answer Structure",
+      "weight": 0.25,
+      "scale_descriptions": {
+        "1": "Disjointed claims with no supporting evidence, metrics, or logical flow.",
+        "2": "Weak structure without clear transitions; assertions lack concrete examples.",
+        "3": "Follows a recognizable structure (e.g., problem -> solution), with generic examples.",
+        "4": "Well-structured (e.g. STAR method or Trade-off comparison) supported by concrete scenarios and metrics.",
+        "5": "Masterful executive-level structure with quantitative rationale, edge-case evaluation, and trade-off synthesis."
+      }
+    }
+  },
+  "question_type_adaptations": {
+    "system_design": "Prioritize trade-off analysis, bottlenecks, scaling limits, and failure modes in Evidence & Structure.",
+    "coding_and_algorithms": "Prioritize time/space complexity analysis and edge case correctness.",
+    "ml_and_data_engineering": "Prioritize data leakage prevention, offline vs online metrics, latency vs recall, and index sizing.",
+    "behavioral": "Apply STAR framework (Situation, Task, Action, Result) with individual ownership emphasis."
+  }
+}
