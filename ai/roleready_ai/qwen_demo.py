@@ -116,7 +116,9 @@ def semantic_screen(encoder, questions) -> dict:
                           "CV claims and question relevance require explicit review."}
 
 
-def run(*, model: str, base_url: str, output: Path, fixtures: Path) -> dict:
+def run(*, model: str, base_url: str, output: Path, fixtures: Path, timeout: float = 300) -> dict:
+    if not 0 < timeout <= 600:
+        raise ValueError("timeout must be greater than zero and at most 600 seconds")
     parsed = urlsplit(base_url)
     if parsed.scheme != "http" or parsed.hostname not in {"localhost", "127.0.0.1", "::1"}:
         raise ValueError("This synthetic demo requires a local HTTP Ollama endpoint")
@@ -148,6 +150,9 @@ def run(*, model: str, base_url: str, output: Path, fixtures: Path) -> dict:
         "source_size_bytes": source["size"], "details": details,
         "capabilities": show.get("capabilities"), "thinking": show.get("thinking"),
         "parameters": show.get("parameters"),
+        "request_config": {"timeout_seconds": timeout, "max_tokens": 4096, "temperature": 0.2,
+                           "reasoning_effort": "none", "stream": False,
+                           "response_format": "json_schema", "max_source_ids_per_question": 1},
         "fixture_sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                            for p in (fixtures / "questions.train.jsonl", fixtures / "scenarios.json")},
         "baseline_gpu": gpu_sample(), "runs": [],
@@ -193,7 +198,7 @@ def run(*, model: str, base_url: str, output: Path, fixtures: Path) -> dict:
             print(f"Generating {scenario['scenario_id']} / {mode}", flush=True)
             retriever = RecordedRetriever(engine)
             client = RecordedQwen(base_url=base_url, model=model, response_schema=QUESTION_RESPONSE_SCHEMA,
-                                  reasoning_effort="none", timeout=240, max_tokens=4096)
+                                  reasoning_effort="none", timeout=timeout, max_tokens=4096)
             entry = {"scenario_id": scenario["scenario_id"], "retrieval": mode,
                      "status": "running", "structural_validation": False}
             report["runs"].append(entry)
@@ -227,9 +232,10 @@ def main():
     parser.add_argument("--model", default=SOURCE_MODEL)
     parser.add_argument("--base-url", default="http://127.0.0.1:11434/v1")
     parser.add_argument("--out", type=Path, default=Path("outputs/qwen-mission002"))
+    parser.add_argument("--timeout", type=float, default=300, help="Structured request timeout, at most 600 seconds")
     args = parser.parse_args()
     fixtures = Path(__file__).resolve().parents[1] / "examples/mission002"
-    result = run(model=args.model, base_url=args.base_url, output=args.out, fixtures=fixtures)
+    result = run(model=args.model, base_url=args.base_url, output=args.out, fixtures=fixtures, timeout=args.timeout)
     passed = sum(entry["structural_validation"] for entry in result["runs"])
     print(f"Structurally valid runs: {passed}/{len(result['runs'])}")
     if passed != 6:

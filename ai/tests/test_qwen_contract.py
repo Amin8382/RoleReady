@@ -6,7 +6,7 @@ from urllib.error import HTTPError
 
 import pytest
 
-from roleready_ai.generation import QUESTION_RESPONSE_SCHEMA, generate_questions, validate_questions, validate_evidence, evidence_excerpts, question_response_schema
+from roleready_ai.generation import SYSTEM_PROMPT, QUESTION_RESPONSE_SCHEMA, generate_questions, validate_questions, validate_evidence, evidence_excerpts, question_response_schema
 import re
 from roleready_ai.model import InvalidModelResponse, ModelUnavailable, OpenAICompatibleQwen, strict_json
 from roleready_ai.datasets import QuestionRecord
@@ -14,11 +14,11 @@ from roleready_ai.retrieval import LexicalRetriever
 
 TEXTS = [
     "How would you validate data quality in a sales CSV?",
-    "Explain the tradeoffs between SQL joins and a pandas merge.",
-    "Describe how you would communicate an uncertain dashboard result.",
-    "Which test cases would catch errors in an aggregation function?",
+    "How would you choose between SQL joins and a pandas merge?",
+    "How would you communicate an uncertain dashboard result?",
+    "What would you test to catch errors in an aggregation function?",
     "How would you resolve a disagreement about project priorities?",
-    "What would you investigate when a database query becomes slow?",
+    "What would you investigate if a database query became slow?",
     "How would you learn an unfamiliar reporting tool for this role?",
 ]
 
@@ -27,7 +27,7 @@ def payload():
     return {"questions": [{
         "text": text, "target_skill": "analytics", "difficulty": "medium",
         "reason_for_asking": "CV: [sales dashboard]; Job: [SQL joins]. Practice the job requirement using documented CV context; missing ability is not inferred.",
-        "reference_criteria": ["Concrete approach", "Tradeoffs"], "source_ids": ["train-sql"],
+        "reference_criteria": ["The answer should describe a concrete approach.", "The answer should explain tradeoffs."], "source_ids": ["train-sql"],
     } for text in TEXTS]}
 
 
@@ -262,3 +262,136 @@ def test_lack_of_experience_is_not_inferred_from_missing_cv_evidence():
 def test_invalid_timeout_is_a_configuration_error(timeout):
     with pytest.raises(ValueError, match="timeout"):
         OpenAICompatibleQwen(base_url="http://localhost/v1", timeout=timeout)
+
+
+@pytest.mark.parametrize("criterion", [
+    "The answer should discuss signals beyond those tested in the course project.",
+    "The answer should explain how you verified leakage in training.",
+    "The answer should describe previously deployed monitors.",
+])
+def test_criteria_cannot_presume_candidate_history(criterion):
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [criterion]
+    with pytest.raises(ValueError, match="candidate-independent"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_prospective_criteria_and_unfamiliar_tool_hypothetical_are_allowed():
+    data = payload()
+    data["questions"][0]["text"] = "How would you learn dbt if the tool is unfamiliar?"
+    data["questions"][0]["reference_criteria"] = [
+        "The answer should outline a small transformation exercise and a validation check."]
+    assert len(validate_questions(data, allowed_source_ids={"train-sql"})) == 7
+
+
+def test_without_prior_experience_is_not_inferred_from_undocumented_experience():
+    data = payload()
+    data["questions"][0]["text"] = "How would you learn dbt without prior professional experience?"
+    with pytest.raises(ValueError, match="missing experience"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_criteria_count_is_bounded_in_schema_and_validation():
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [
+        f"The answer should explain constraint {index}." for index in range(4)]
+    with pytest.raises(ValueError, match="at most three"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+    assert QUESTION_RESPONSE_SCHEMA["properties"]["questions"]["items"]["properties"]["reference_criteria"]["maxItems"] == 3
+
+
+@pytest.mark.parametrize("level", ["entry", "junior"])
+def test_foundational_practice_difficulty_policy_is_enforced(level):
+    schema = question_response_schema(cv_excerpts=["sales dashboard"], job_excerpts=["SQL joins"],
+                                     source_ids={"train-sql"}, experience_level=level)
+    assert schema["properties"]["questions"]["items"]["properties"]["difficulty"]["enum"] == ["easy", "medium"]
+    data = payload()
+    data["questions"][0]["difficulty"] = "hard"
+    with pytest.raises(ValueError, match="Entry/junior"):
+        validate_questions(data, allowed_source_ids={"train-sql"}, experience_level=level)
+    assert len(validate_questions(data, allowed_source_ids={"train-sql"}, experience_level="senior")) == 7
+    assert "hard" in QUESTION_RESPONSE_SCHEMA["properties"]["questions"]["items"]["properties"]["difficulty"]["enum"]
+
+
+def test_past_method_question_is_rejected_before_assuming_sql_joins_were_used():
+    data = payload()
+    data["questions"][0]["text"] = "When you queried SQLite, what specific SQL joins did you use?"
+    with pytest.raises(ValueError, match="interviewer"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_prospective_criterion_cannot_assume_missing_prior_experience():
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [
+        "The answer should list AWS services for hosting a Python API without prior experience."]
+    with pytest.raises(ValueError, match="missing experience"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_secondary_citation_padding_is_rejected_without_truncating_output():
+    data = payload()
+    data["questions"][0]["source_ids"] = ["train-sql", "train-drift"]
+    with pytest.raises(ValueError, match="one primary"):
+        validate_questions(data, allowed_source_ids={"train-sql", "train-drift"})
+    assert data["questions"][0]["source_ids"] == ["train-sql", "train-drift"]
+
+
+@pytest.mark.parametrize("field,value", [
+    ("text", "How would you " + "extend this proposed analysis " * 20),
+    ("target_skill", "x" * 81),
+    ("reference_criteria", ["The answer should " + "explain a verification step " * 20]),
+])
+def test_bounded_question_fields_prevent_unbounded_structured_generation(field, value):
+    data = payload()
+    data["questions"][0][field] = value
+    with pytest.raises(ValueError, match="Overlong"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_shared_prompt_does_not_seed_role_specific_tools_or_experience():
+    # A concrete SQLite example leaked into an unrelated ML scenario in a real run.
+    # Candidate/tool context belongs to the supplied input, not the shared instructions.
+    assert all(tool not in SYSTEM_PROMPT for tool in ("SQLite", "Power BI", "FastAPI"))
+
+
+def test_prospective_peer_feedback_criterion_is_not_a_past_experience_claim():
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [
+        "The answer should outline a validation method where peers explain the dashboard logic back to you."]
+    assert len(validate_questions(data, allowed_source_ids={"train-sql"})) == 7
+
+
+def test_criterion_must_not_require_undocumented_current_implementation_details():
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [
+        "The answer should explain how the current FastAPI implementation interacts with PostgreSQL transactions."]
+    with pytest.raises(ValueError, match="candidate-independent"):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_documented_project_context_is_allowed_in_prospective_criteria():
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [
+        "The answer should detail a workflow for identifying gaps in the 5000 sales rows previously cleaned.",
+        "The answer should explain how to combine tables from the previously queried SQLite database."]
+    assert len(validate_questions(data, allowed_source_ids={"train-sql"})) == 7
+
+
+@pytest.mark.parametrize("criterion,error", [
+    ("The answer should ensure the validation set does not contain information available at prediction time.", "unavailable/future"),
+    ("The answer should avoid any method that uses the target variable during feature engineering.", "training-fold"),
+    ("The answer should identify specific data distribution metrics that indicate concept drift over time.", "concept drift"),
+])
+def test_observed_ml_criteria_misconceptions_are_rejected(criterion, error):
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [criterion]
+    with pytest.raises(ValueError, match=error):
+        validate_questions(data, allowed_source_ids={"train-sql"})
+
+
+def test_prediction_time_features_and_fold_fitted_target_encoding_are_allowed():
+    data = payload()
+    data["questions"][0]["reference_criteria"] = [
+        "The answer should use features available at prediction time and fit target encoding inside each training fold.",
+        "The answer should distinguish input distribution shifts from changes in feature-outcome relationships."]
+    assert len(validate_questions(data, allowed_source_ids={"train-sql"})) == 7

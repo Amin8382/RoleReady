@@ -55,14 +55,16 @@ GPU acceleration, all 17 existing AI tests, and real BGE/FAISS, Whisper Small
 English and Kokoro CPU/GPU inference. Exact revisions, timings, GPU memory,
 installation issues and the Windows dependency snapshot are documented in
 [the local environment report](../ai/docs/LOCAL_ENVIRONMENT_2026-11-09.md).
-Qwen/Prometheus weights, live endpoints, held-out quality evaluation and product
-integration remain pending. The nested local clone and original environment
+At the Mission 001 snapshot, Qwen/Prometheus weights, live endpoints, held-out
+quality evaluation and product integration remained pending. The nested local clone and original environment
 were preserved.
 
-Mission 002 adds actual local Qwen Q4_K_M inference through Ollama, 73 passing AI
+Mission 002 adds actual local Qwen Q4_K_M inference through Ollama, 98 passing AI
 tests and six successful synthetic seven-question generation cases across lexical
 and BGE/FAISS retrieval. Exact artifacts, runtime measurements, earlier rejected
 runs and unedited samples are linked from [the Mission 002 report](../ai/docs/MISSION_002_QWEN_RAG.md).
 The samples carry explicit quality findings; no generated criteria are approved
 as reviewed scoring references. Prometheus, independent human evaluation and
 end-to-end product integration remain pending.
+
+Final Mission 002 validation records 6/6 structural cases and all 42 question reviews, with an explicitly open qualitative gate for technical criteria, citation alignment and fairness findings. Do not treat structural success as full mission-quality approval.

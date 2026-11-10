@@ -2,7 +2,7 @@
 
 **Owner:** Mohamed Amin Guesmi
 
-This package implements an independently testable AI/data module. It is **not** a completed fine-tuned model, and no live-model evaluation has been completed.
+This package implements an independently testable AI/data module. It is **not** a completed fine-tuned model; independent held-out model-quality evaluation remains unfinished.
 
 ## Layout
 
@@ -84,6 +84,11 @@ Qwen3.5 4B Q4_K_M through Ollama's OpenAI-compatible endpoint. All six synthetic
 scenario/retriever combinations returned exactly seven validated question objects.
 The adapter enforces JSON, identity and completion status; generation constrains
 literal evidence and citations before decoding and rejects invalid outputs with
-bounded retries. Results are explicitly `unreviewed_model_output`; agent findings
-include an unsupported criterion that is not approved for scoring. Prometheus
+bounded retries. Results are explicitly `unreviewed_model_output`; the final report
+separates structural checks from agent inspection and preserves earlier failures.
+Generated criteria require independent review before scoring. Prometheus
 inference, independent question-quality evaluation and product integration remain pending.
+
+The final six-case structural run passes, but the qualitative gate remains open:
+the review records technical criteria, semantic citation and fairness blockers.
+See the report before treating any generated criteria as evaluation references.

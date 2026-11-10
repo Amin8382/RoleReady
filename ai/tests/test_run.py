@@ -14,17 +14,17 @@ def test_existing_cli_pipeline_writes_only_validated_questions(monkeypatch, tmp_
         def complete_json(self, *, system, user):
             texts = [
                 "How would you verify missing values before analysis?",
-                "Explain your choice of aggregation for a sales metric.",
-                "What makes a dashboard useful to a nontechnical audience?",
+                "How would you choose an aggregation for a sales metric?",
+                "How would you design a dashboard for a nontechnical audience?",
                 "How would you test a data cleaning function before deployment?",
-                "Describe an approach to resolving an ambiguous business request.",
-                "How could a join produce duplicate sales records?",
-                "Which tradeoffs would matter when learning an unfamiliar reporting tool?",
+                "How would you resolve an ambiguous business request?",
+                "How would you detect a join producing duplicate sales records?",
+                "What would you consider when learning an unfamiliar reporting tool?",
             ]
             return {"questions": [{
                 "text": text, "target_skill": "analytics", "difficulty": "medium",
                 "reason_for_asking": "CV: [sales dashboard]; Job: [SQL joins]. Practice the job requirement using documented CV context; missing ability is not inferred.",
-                "reference_criteria": ["Concrete reasoning"], "source_ids": ["train-sql"],
+                "reference_criteria": ["The answer should provide concrete reasoning."], "source_ids": ["train-sql"],
             } for text in texts]}
 
     monkeypatch.setattr("roleready_ai.run.OpenAICompatibleQwen", Model)

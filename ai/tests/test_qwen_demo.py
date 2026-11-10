@@ -1,4 +1,5 @@
 import json
+import hashlib
 from pathlib import Path
 import sys
 from types import SimpleNamespace
@@ -6,6 +7,7 @@ from types import SimpleNamespace
 import pytest
 
 from roleready_ai.datasets import load_jsonl
+from roleready_ai.generation import validate_evidence, validate_questions
 from roleready_ai.qwen_demo import run, cached_bge_snapshot
 from roleready_ai.retrieval import LexicalRetriever, BGE_MODEL, BGE_REVISION, load_embedding_model
 
@@ -64,3 +66,36 @@ def test_standard_retriever_uses_cached_immutable_bge_revision(monkeypatch):
     monkeypatch.setitem(sys.modules, "sentence_transformers", SimpleNamespace(SentenceTransformer=encoder))
     assert load_embedding_model(BGE_MODEL) == "encoder"
     assert calls == [(BGE_MODEL, {"revision": BGE_REVISION})]
+
+
+@pytest.mark.parametrize("timeout", [0, 601])
+def test_demo_rejects_unbounded_timeout_before_contacting_service(tmp_path, timeout):
+    with pytest.raises(ValueError, match="timeout"):
+        run(model="missing", base_url="http://localhost:11434/v1", output=tmp_path,
+            fixtures=FIXTURES, timeout=timeout)
+
+
+def test_published_synthetic_outputs_replay_against_exact_train_fixtures():
+    """Replay artifact integrity/structure, never infer model quality from this test."""
+    path = FIXTURES.parents[1] / "evaluation/mission002/synthetic_samples.json"
+    samples = json.loads(path.read_text(encoding="utf-8"))
+    scenarios = {s["scenario_id"]: s for s in json.loads((FIXTURES / "scenarios.json").read_text())}
+    bank = {r.record_id: r for r in load_jsonl(FIXTURES / "questions.train.jsonl")}
+    for name, digest in samples["fixture_sha256"].items():
+        assert hashlib.sha256((FIXTURES / name).read_bytes()).hexdigest() == digest
+    assert {(r["scenario_id"], r["retrieval"]) for r in samples["runs"]} == {
+        (scenario, mode) for scenario in scenarios for mode in ("lexical", "bge-faiss")}
+    assert len(samples["runs"]) == 6
+    for run in samples["runs"]:
+        scenario = scenarios[run["scenario_id"]]
+        source_ids = {hit["source_id"] for hit in run["retrieved_sources"]}
+        assert source_ids == set(run["generation"]["retrieved_source_ids"])
+        for hit in run["retrieved_sources"]:
+            record = bank[hit["source_id"]]
+            assert record.split == "train" and hit["question"] == record.question
+            assert hit["reference_answer"] is None  # Unreviewed answers never enter the prompt.
+        raw = [{k: v for k, v in q.items() if k != "question_id"} for q in run["generation"]["questions"]]
+        questions = validate_questions({"questions": raw}, allowed_source_ids=source_ids,
+                                       experience_level=scenario["experience_level"])
+        validate_evidence(questions, cv_text=scenario["cv_text"], job_description=scenario["job_description"])
+        assert len(questions) == 7 and run["generation"]["model_id"] == samples["served_model"]
