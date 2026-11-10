@@ -14,6 +14,7 @@ dependencies = []
 retrieval = ["numpy>=1.26,<3", "faiss-cpu>=1.8,<2", "sentence-transformers>=3,<6"]
 voice = ["faster-whisper>=1.1,<2", "kokoro==0.9.4", "soundfile>=0.12,<1", "numpy>=1.26,<3"]
 test = ["pytest>=8,<10"]
+index-test = ["numpy>=1.26,<3", "faiss-cpu>=1.8,<2"]
 
 [project.scripts]
 roleready-data = "roleready_ai.datasets:main"

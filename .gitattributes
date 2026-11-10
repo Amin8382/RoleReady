@@ -1,0 +1,17 @@
+# Stable pipeline code/config bytes across Windows and Linux checkouts.
+AGENTS.md text eol=lf
+dvc.yaml text eol=lf
+dvc.lock text eol=lf
+.dvcignore text eol=lf
+.dvc/config text eol=lf
+ai/roleready_ai/acquisition.py text eol=lf
+ai/roleready_ai/corpus.py text eol=lf
+ai/roleready_ai/corpus_demo.py text eol=lf
+ai/roleready_ai/datasets.py text eol=lf
+ai/roleready_ai/indexing.py text eol=lf
+ai/roleready_ai/retrieval.py text eol=lf
+ai/roleready_ai/retrieval_evaluation.py text eol=lf
+ai/roleready_ai/run.py text eol=lf
+ai/roleready_ai/taxonomy.py text eol=lf
+ai/data_sources/*.json text eol=lf
+ai/data/mission003/*.dvc text eol=lf

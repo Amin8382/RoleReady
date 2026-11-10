@@ -1,0 +1,169 @@
+{
+  "schema_version": "relevance-judgments-1.0",
+  "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+  "queries_sha256": "c0849dc1dbac938a51cbc6d22922b3c0b30976aa8b50f58008b7a6d8a3fc1f97",
+  "fully_reviewed_query_pools": [],
+  "status": "agent_provisional_incomplete_not_ground_truth",
+  "judgments": [
+    {
+      "query_id": "m3-1-sql-metrics",
+      "record_id": "rrq-fc1e662c151ce63fa6c14cd5",
+      "relevance": 1,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "SQL versus pandas result discrepancies are related to validation, but joins/aggregations and the sales KPI are not directly tested."
+    },
+    {
+      "query_id": "m3-1-sql-metrics",
+      "record_id": "rrq-4bec24037f1fd4b2eadbc39d",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Kafka event deduplication and team communication do not address SQL joins or KPI aggregation."
+    },
+    {
+      "query_id": "m3-2-imbalanced",
+      "record_id": "rrq-92090723349a810eed1e2fe5",
+      "relevance": 2,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Asks anomaly-model evaluation, false positives and business metrics; rare-class recall is not explicit."
+    },
+    {
+      "query_id": "m3-2-imbalanced",
+      "record_id": "rrq-ad7ab72a2527f7adede847e0",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Broad fraud deployment/data-quality/HIPAA workflow does not focus on rare-class evaluation or error costs."
+    },
+    {
+      "query_id": "m3-3-streaming",
+      "record_id": "rrq-7a06eb319a1b96af2ae4b12f",
+      "relevance": 3,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Direct Kafka duplicate-event failure and recovery scenario with data-loss constraints."
+    },
+    {
+      "query_id": "m3-3-streaming",
+      "record_id": "rrq-fc0b33bb15838217629bdca0",
+      "relevance": 1,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Streaming technology and delivery context match, but the actual task is resolving a cross-team conflict."
+    },
+    {
+      "query_id": "m3-4-features",
+      "record_id": "rrq-e54ddddbd1ed9025e34c7842",
+      "relevance": 1,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "End-to-end pipeline/evaluation is related, but prediction-time availability and leakage checks are not explicit."
+    },
+    {
+      "query_id": "m3-4-features",
+      "record_id": "rrq-e5a488a629ba1d88a3fd1436",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Explainability under regulation is a different competency from leakage and feature availability."
+    },
+    {
+      "query_id": "m3-5-rag",
+      "record_id": "rrq-d84454140552ac819c6f3035",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Conversational-model release prioritization does not test retrieved-context selection or RAG evaluation."
+    },
+    {
+      "query_id": "m3-5-rag",
+      "record_id": "rrq-9083097c49da06647ae0d0ea",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Patient-readmission model optimization has no document retrieval/context-selection requirement."
+    },
+    {
+      "query_id": "m3-6-booking",
+      "record_id": "rrq-e3aa150206b0c84f35cadcdc",
+      "relevance": 1,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Database contention is adjacent, but latency diagnosis does not directly test exclusive-slot transaction safety."
+    },
+    {
+      "query_id": "m3-6-booking",
+      "record_id": "rrq-c8b2f349604b814a374ccfd8",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Overloaded game-server performance diagnosis does not address exclusive appointment booking."
+    },
+    {
+      "query_id": "m3-7-tests",
+      "record_id": "rrq-c5a27a92f8ebddf21f8e1ef7",
+      "relevance": 2,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Integration-test fragility and release reliability are relevant, with a managerial rewrite/refactor focus."
+    },
+    {
+      "query_id": "m3-7-tests",
+      "record_id": "rrq-c07be2b86d9b941f94f9394a",
+      "relevance": 1,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Mentions unit/integration tests, but Selenium unit-testing and HIPAA framing are technically questionable."
+    },
+    {
+      "query_id": "m3-8-registry",
+      "record_id": "rrq-050b72beaf8531d8d4fc84f9",
+      "relevance": 2,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Model version control and reproducibility are relevant; promotion/rollback is not directly requested."
+    },
+    {
+      "query_id": "m3-8-registry",
+      "record_id": "rrq-fef9a4b3559a02b891e137ab",
+      "relevance": 0,
+      "label_status": "agent_provisional",
+      "label_origin": "agent_inspection_of_actual_ranked_question",
+      "reviewer": null,
+      "reviewed_at": null,
+      "rationale": "Last-minute data-pipeline bias response does not address versioned artifact promotion or rollback."
+    }
+  ]
+}

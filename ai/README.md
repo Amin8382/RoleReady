@@ -28,6 +28,14 @@ retrieval/voice runtime. From repository root, run:
 
 ## Curate questions
 
+For the real, revision-pinned RAG corpus, use [Mission 003's reproducible data
+pipeline](docs/MISSION_003_DATASETS_AND_RAG.md). It ingests 16,466 InterviewForge
+questions into a persistent BGE/FAISS index. Corpus documents, retrieval queries,
+synthetic generation scenarios and future SFT splits have separate purposes.
+Relevance labels and generated criteria remain unreviewed; structural success
+does not establish quality. The command below is the backward-compatible
+synthetic/SFT preparation path.
+
     python -m roleready_ai.datasets --input data/sample_questions.csv --out data/processed/sample --source-id synthetic-example --source-url https://example.org/placeholder --license UNVERIFIED
 
 The URL above is deliberately a **placeholder**, not genuine source provenance. For a third-party dataset, record its actual URL, license and hash and check usage permissions before publishing/training. Freshly curated rows are always unreviewed. The question-normalized split is stable across duplicate roles to protect held-out cases.

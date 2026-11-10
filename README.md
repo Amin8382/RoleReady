@@ -64,6 +64,12 @@ product integration remain unfinished.
 
 ## Collaboration
 
+[Mission 003](ai/docs/MISSION_003_DATASETS_AND_RAG.md) adds pinned public-source
+acquisition, deterministic curation, local DVC tracking and a persistent index of
+16,466 questions. Nine real Qwen comparisons pass the seven-question structural
+contract; citation relevance and technical quality still need independent review.
+Retrieval quality metrics await human judgments. No data remote is configured.
+
 - [Contributing guide](CONTRIBUTING.md)
 - [Shared team implementation contracts](docs/TEAM_IMPLEMENTATION.md)
 - [Evaluation rubric](docs/SCORING_RUBRIC.md)

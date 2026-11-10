@@ -49,7 +49,9 @@ weights, system installations, destructive actions or security changes.
   Never commit secrets, personal CVs, recordings, private reports, model weights,
   caches or unlicensed datasets. Use synthetic input for smoke tests.
 - Record publisher, license, snapshot/hash and transformations for datasets.
-  Only train records enter retrieval; held-out cases never enter retrieval/SFT.
+  The versioned RAG corpus is separate from retrieval queries, generation-evaluation
+  scenarios and future SFT train/validation/test splits. Legacy train-split banks
+  remain supported. Evaluation-only and held-out material never enters the corpus/SFT.
 
 ## Changes and checks
 

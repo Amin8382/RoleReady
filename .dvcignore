@@ -1,0 +1,11 @@
+# Add patterns of files dvc should ignore, which could improve
+# the performance. Learn more at
+# https://dvc.org/doc/user-guide/dvcignore
+
+# Preserve unrelated nested checkout and environment/cache trees.
+ai/RoleReady/
+ai/.venv/
+ai/.venv311/
+ai/.runtime/
+node_modules/
+.next/

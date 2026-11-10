@@ -15,18 +15,23 @@
 
 ## 2. Next tasks — important not to misrepresent as done
 
-- [ ] Verify each external dataset publisher, exact URL, version, redistribution/training license and raw counts
+- [x] Audit three pinned public datasets, license evidence and actual raw counts; quarantine uncertain upstream rights (Mission 003)
 - [ ] Curate relevant English-language software/data/AI role subsets and validate each reference answer
 - [ ] Review representative question samples and create 30 *held-out* CV/job test cases
 - [x] Provision local Qwen3.5 4B Q4_K_M; verify synthetic JSON/RAG generation and record VRAM/latency/errors (full RAM and held-out quality benchmarks pending)
 - [ ] Evaluate three prompt variants against held-out human ratings: Qwen alone, Qwen + lexical search, Qwen + FAISS
-- [ ] Add FAISS index revision/persistence strategy, privacy guardrails and embedding version to result metadata
+- [x] Add FAISS index revision/persistence strategy, privacy guardrails and embedding version to result metadata (Mission 003)
 - [ ] Create **CV/job-conditioned** instruction examples, independently review them, and train LoRA only with adequate hardware
 - [ ] Compare LoRA against the strongest baseline before claiming improvement
 - [ ] Supply service adapter to Oussema using shared typed contracts; Khaled wires UI through backend
 - [ ] Run and investigate GitHub CI and integrated tests, and merge reviewed PRs in order
 
 ## 3. Quality protocol
+
+Mission 003 separates the searchable RAG corpus from retrieval-evaluation queries,
+generation-evaluation CV/job inputs and future SFT partitions. Corpus documents
+need no train/validation/test split. Human relevance judgments must cover the
+pooled retrieval results before reported quality metrics are available.
 
 For at least 30 disjoint CV/job scenarios, each reviewed by two people:
 - Relevance to a given job requirement: 1–5

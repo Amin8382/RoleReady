@@ -1,0 +1,6 @@
+{
+  "index": {
+    "device": "cuda",
+    "semantic_duplicate_threshold": 0.94
+  }
+}
