@@ -1,0 +1,15 @@
+{
+  "real_corpus_forced_prepare_replay_byte_identical": true,
+  "processed_file_sha256": {
+    "corpus.jsonl": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+    "manifest.json": "904e1464ccff271b46e8f626ff7fd001d34aa3f278743b5657c7556c19d377fe",
+    "references.unreviewed.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rejections.jsonl": "85630a204f34b064b6c120a3660b814a23f5a305284b367a9db3e5b7f8441b72"
+  },
+  "persistent_index_unchanged": true,
+  "index_sha256": "ecc809be80eff1fd088997443d080003bf5ee0eff577e0d73c72c2593f8121f0",
+  "dvc_status": {},
+  "dvc_remotes": [],
+  "data_uploaded": false,
+  "limitation": "Exact replay was verified locally with this code/runtime; cross-hardware floating-point embedding identity is not promised."
+}

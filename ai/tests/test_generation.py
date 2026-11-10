@@ -11,15 +11,24 @@ class FakeModel:
     def complete_json(self, *, system: str, user: str):
         assert "CV" in system
         assert "Machine Learning Engineer" in user
+        texts = [
+            "How would you validate a follow-up to the documented Python analytics project?",
+            "How would you optimize a slow SQL join for this role?",
+            "What would you consider when designing a production model deployment?",
+            "How would you resolve a disagreement with a teammate?",
+            "How would you identify data leakage before training a classifier?",
+            "What would you monitor to reveal distribution drift?",
+            "How would you explain an uncertain model prediction to a stakeholder?",
+        ]
         return {"questions": [
             {
-                "text": f"Tell me about your approach to engineering problem number {i}.",
+                "text": text,
                 "target_skill": "problem solving",
                 "difficulty": "medium",
-                "reason_for_asking": "Test relevant thinking",
-                "reference_criteria": ["Concrete action", "Evidence"],
+                "reason_for_asking": "CV: [Python and SQL]; Job: [Python and production ML pipelines]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+                "reference_criteria": ["The answer should describe a concrete action.", "The answer should identify supporting evidence."],
                 "source_ids": [],
-            } for i in range(1, 8)
+            } for text in texts
         ]}
 
 
@@ -40,11 +49,11 @@ def test_generation_with_mock_model_requires_no_gpu_or_api():
 
 def test_hallucinated_source_is_rejected():
     question = {
-        "text": "Explain how you would design a production-grade retrieval service.",
+        "text": "How would you design a production-grade retrieval service?",
         "target_skill": "retrieval",
         "difficulty": "medium",
         "reason_for_asking": "Check design skills",
-        "reference_criteria": ["Design tradeoffs"],
+        "reference_criteria": ["The answer should explain design tradeoffs."],
         "source_ids": ["invented"],
     }
     with pytest.raises(ValueError, match="non-retrieved"):
@@ -53,9 +62,9 @@ def test_hallucinated_source_is_rejected():
 
 def test_duplicate_questions_are_rejected():
     q = {
-        "text": "Explain how you would deploy a robust application.",
+        "text": "How would you deploy a robust application?",
         "target_skill": "deployment", "difficulty": "medium",
-        "reason_for_asking": "Role fit", "reference_criteria": ["Detail"], "source_ids": [],
+        "reason_for_asking": "Role fit", "reference_criteria": ["The answer should provide detail."], "source_ids": [],
     }
     with pytest.raises(ValueError, match="Duplicate"):
         validate_questions({"questions": [q] * 7}, allowed_source_ids=set())

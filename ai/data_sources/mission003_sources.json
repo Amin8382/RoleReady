@@ -1,0 +1,113 @@
+{
+  "schema_version": "source-registry-1.0",
+  "max_download_bytes": 50000000,
+  "sources": [
+    {
+      "source_id": "interviewforge",
+      "repo_id": "Davichick/InterviewForge_GenDS",
+      "revision": "25f0a5432554234fcd4cd86c90ab9ed5216a9efa",
+      "license": "mit",
+      "first_verified_download_utc": "2026-11-10T09:31:50.295639+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 7930,
+          "sha256": "bdbb2e3ad6d0934f7a04f373795a4baa361e5d6af5692d8645ba43dc201cfa25"
+        },
+        {
+          "path": "interview_forge_v3_complete.csv",
+          "bytes": 27776542,
+          "sha256": "fed39b9bca11b88eaf4697a15e2e64a0f8bf162ee3d49244904f10671396d3fc"
+        }
+      ],
+      "publisher": "Davichick",
+      "url": "https://huggingface.co/datasets/Davichick/InterviewForge_GenDS",
+      "upstream_split": "train",
+      "authorship": "synthetic",
+      "usage": "retrieval_corpus",
+      "license_status": "publisher_declared_mit_card_verified",
+      "license_verified": true,
+      "license_evidence": "README.md YAML license: mit; repository has no separate LICENSE file",
+      "limitations": [
+        "Generator is reported as mistral:latest without a fixed model revision.",
+        "MIT is a publisher declaration, not independent verification of all underlying rights.",
+        "Card describes answers, but the pinned CSV has no answer column.",
+        "Role and difficulty calibration and technical correctness are unreviewed."
+      ]
+    },
+    {
+      "source_id": "ml_interview_sft",
+      "repo_id": "raghu298/ml-interview-sft-dataset",
+      "revision": "b83f86d352cbfa5b75111157deae8595d7c44e35",
+      "license": "apache-2.0",
+      "first_verified_download_utc": "2026-11-10T09:31:55.574036+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 5308,
+          "sha256": "cfe8e87fb11c6365fe236de9fb4e3d38856ed0776558084c063c2a05c47b4d31"
+        },
+        {
+          "path": "ml_interview_sft.jsonl",
+          "bytes": 1376521,
+          "sha256": "f2924fcb96329d07495d2e9c770f049f48f10d0ac50d42ee7016b92c1a3189d7"
+        }
+      ],
+      "publisher": "raghu298",
+      "url": "https://huggingface.co/datasets/raghu298/ml-interview-sft-dataset",
+      "upstream_split": "train",
+      "authorship": "mixed_or_unknown",
+      "usage": "quarantine",
+      "license_status": "apache_declaration_upstream_rights_unverified",
+      "license_verified": false,
+      "license_evidence": "README declares Apache 2.0; named upstream HTML/PDF documents have no verified links or licenses",
+      "limitations": [
+        "Excluded from retrieval and fine-tuning until upstream document rights are verified.",
+        "73 curated rows are publisher-claimed handcrafted; independent authorship is not verified.",
+        "Role and difficulty fields are absent."
+      ]
+    },
+    {
+      "source_id": "ml_systems_bench",
+      "repo_id": "Max00035/ml-systems-interview-bench",
+      "revision": "891a8edfcfea178790ceab6cee8fa51eda708af8",
+      "license": "apache-2.0",
+      "first_verified_download_utc": "2026-11-10T09:31:57.891974+00:00",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 10165,
+          "sha256": "65d9b34da9b1a0fa3464c0398c77d0a05108d3f2630863a9a97e3a4bc4cdf119"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "docs/METHODOLOGY.md",
+          "bytes": 5257,
+          "sha256": "2996396e52c00a3c69879590c7c0f61a5244c6046683c253565afb6597b4ff83"
+        },
+        {
+          "path": "data/questions.jsonl",
+          "bytes": 53372,
+          "sha256": "0f63a0697bce6f6efe59c567ed093999efaab2bc0b0933048219c165c2a77d63"
+        }
+      ],
+      "publisher": "Max00035",
+      "url": "https://huggingface.co/datasets/Max00035/ml-systems-interview-bench",
+      "upstream_split": "train",
+      "authorship": "synthetic",
+      "usage": "evaluation_only",
+      "license_status": "apache_license_file_verified",
+      "license_verified": true,
+      "license_evidence": "LICENSE contains Apache License Version 2.0; README and methodology describe original synthetic prompts",
+      "limitations": [
+        "Evaluation-only even though the Hub exposes a train split.",
+        "No human-calibrated labels or independent expert review.",
+        "Authorship tool/process beyond the publisher synthetic declaration is unknown."
+      ]
+    }
+  ]
+}

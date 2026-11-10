@@ -38,6 +38,23 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q
 
+  ai-data-pipeline:
+    name: AI corpus, DVC and FAISS / Python 3.11
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ai
+    env:
+      DVC_NO_ANALYTICS: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install -e ".[test,index-test]" -r requirements-data-tools.txt
+      - run: python -m pip check
+      - run: python -m pytest -q tests/test_acquisition.py tests/test_corpus.py tests/test_dvc_pipeline.py tests/test_index_persistence.py tests/test_retrieval_metrics.py tests/test_run_corpus.py
+
   frontend:
     name: Next.js typecheck and build
     runs-on: ubuntu-latest

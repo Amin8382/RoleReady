@@ -1,0 +1,6 @@
+# Use Python 3.11 for Kokoro 0.9.4 compatibility.
+# Install into a dedicated virtual environment after the lightweight AI tests pass.
+faster-whisper>=1.1,<2
+kokoro==0.9.4
+soundfile>=0.12,<1
+numpy>=1.26,<3

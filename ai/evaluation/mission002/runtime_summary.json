@@ -1,0 +1,577 @@
+{
+  "ollama_version": "0.40.15",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "source_model": "qwen3.5:4b-q4_K_M",
+  "source_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "source_size_bytes": 3324173934,
+  "served_model": "roleready-qwen35-4b:8k",
+  "served_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+  "details": {
+    "parent_model": "qwen3.5:4b-q4_K_M",
+    "format": "gguf",
+    "family": "qwen35",
+    "families": [
+      "qwen35"
+    ],
+    "parameter_size": "4.2B",
+    "quantization_level": "Q4_K_M",
+    "runner": "llamacpp"
+  },
+  "parameters": "temperature                    0.2\ntop_k                          20\ntop_p                          0.95\nnum_ctx                        8192\nnum_predict                    4096\npresence_penalty               1.5",
+  "request_config": {
+    "timeout_seconds": 600.0,
+    "max_tokens": 4096,
+    "temperature": 0.2,
+    "reasoning_effort": "none",
+    "stream": false,
+    "response_format": "json_schema",
+    "max_source_ids_per_question": 1
+  },
+  "thinking": {
+    "values": [
+      false,
+      true
+    ],
+    "default": true
+  },
+  "embedding": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "device": "cpu",
+    "reason": "Keep the only large model's GPU measurement separate from BGE allocations"
+  },
+  "fixture_sha256": {
+    "questions.train.jsonl": "5b8e9c56a99fd9db32f1707b2aa5bb8c406994ce8bdf1097f14e195ffe866063",
+    "scenarios.json": "451adbc394ffe2bd73005ed63b2b465eca60a6913a335c0abb498dcaf16fa58e"
+  },
+  "cold_short_generation": {
+    "model": "roleready-qwen35-4b:8k",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 201185477400,
+    "load_duration": 103352315600,
+    "prompt_eval_count": 25,
+    "prompt_eval_duration": 92261157000,
+    "eval_count": 33,
+    "eval_duration": 5555792000,
+    "text": "A REST API is a set of rules that allows different software systems to communicate with each other by using standard HTTP methods to request and exchange data over the internet.",
+    "latency_ms": 201201,
+    "thinking_characters": 0,
+    "loaded_models": [
+      {
+        "name": "roleready-qwen35-4b:8k",
+        "model": "roleready-qwen35-4b:8k",
+        "size": 3364911840,
+        "digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-10T00:00:14.8433936+01:00",
+        "size_vram": 3364911840,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "cold_baseline_gpu": {
+    "used_mib": 1680,
+    "free_mib": 10316,
+    "utilization_percent": 2
+  },
+  "cold_peak_device_used_mib": 5736,
+  "run_start_short_generation": {
+    "model": "roleready-qwen35-4b:8k",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 951851500,
+    "load_duration": 16669300,
+    "prompt_eval_count": 25,
+    "prompt_eval_duration": 401772000,
+    "eval_count": 31,
+    "eval_duration": 411521000,
+    "text": "A REST API is a set of rules that allows web applications to communicate with each other by using standard HTTP methods to request and exchange data through resources.",
+    "latency_ms": 955,
+    "thinking_characters": 0,
+    "loaded_models": [
+      {
+        "name": "roleready-qwen35-4b:8k",
+        "model": "roleready-qwen35-4b:8k",
+        "size": 3364911840,
+        "digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-10T10:29:37.2516018+01:00",
+        "size_vram": 3364911840,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "warm_short_generation": {
+    "model": "roleready-qwen35-4b:8k",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1115730800,
+    "load_duration": 12843500,
+    "prompt_eval_count": 25,
+    "prompt_eval_duration": 332139000,
+    "eval_count": 31,
+    "eval_duration": 450330000,
+    "text": "A REST API is a set of rules that allows web applications to communicate with each other by using standard HTTP methods to request and manipulate data through resources.",
+    "latency_ms": 1144,
+    "thinking_characters": 0,
+    "loaded_models": [
+      {
+        "name": "roleready-qwen35-4b:8k",
+        "model": "roleready-qwen35-4b:8k",
+        "size": 3364911840,
+        "digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "4.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-11-10T10:35:36.035056+01:00",
+        "size_vram": 3364911840,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "power_observation": {
+    "observed_utc": "2026-11-10T09:00:38.2478392Z",
+    "status": {
+      "PowerOnline": true,
+      "Charging": true,
+      "Discharging": false
+    },
+    "gpu": "P0, 75, 2445 MHz, 111.69 W, 5338 MiB, 70 %",
+    "note": "Verified AC during attempt-15; no power or GPU settings changed."
+  },
+  "dependency_snapshot_verification": {
+    "version_pins_matched": 113,
+    "spacy_model": "en_core_web_sm==3.8.0",
+    "total_matched": 114,
+    "mismatches": []
+  },
+  "runs": [
+    {
+      "scenario_id": "junior-data-analyst",
+      "retrieval": "lexical",
+      "latency_ms": 69930,
+      "attempts": 2,
+      "question_count": 7,
+      "peak_device_used_mib": 5621,
+      "peak_gpu_utilization_percent": 100,
+      "most_similar_pair": {
+        "left": "q2",
+        "right": "q3",
+        "cosine": 0.82217
+      },
+      "response": [
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "length",
+          "usage": {
+            "prompt_tokens": 1702,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens": 4096,
+            "total_tokens": 5798
+          },
+          "server_timings": null,
+          "latency_ms": 51994,
+          "reasoning_characters": 0
+        },
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1724,
+            "prompt_tokens_details": {
+              "cached_tokens": 678
+            },
+            "completion_tokens": 1390,
+            "total_tokens": 3114
+          },
+          "server_timings": null,
+          "latency_ms": 17900,
+          "reasoning_characters": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "machine-learning-engineer",
+      "retrieval": "lexical",
+      "latency_ms": 15766,
+      "attempts": 1,
+      "question_count": 7,
+      "peak_device_used_mib": 5602,
+      "peak_gpu_utilization_percent": 74,
+      "most_similar_pair": {
+        "left": "q2",
+        "right": "q3",
+        "cosine": 0.80873
+      },
+      "response": [
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1697,
+            "prompt_tokens_details": {
+              "cached_tokens": 700
+            },
+            "completion_tokens": 1237,
+            "total_tokens": 2934
+          },
+          "server_timings": null,
+          "latency_ms": 15748,
+          "reasoning_characters": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "backend-developer",
+      "retrieval": "lexical",
+      "latency_ms": 17685,
+      "attempts": 1,
+      "question_count": 7,
+      "peak_device_used_mib": 5600,
+      "peak_gpu_utilization_percent": 74,
+      "most_similar_pair": {
+        "left": "q1",
+        "right": "q2",
+        "cosine": 0.73915
+      },
+      "response": [
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1671,
+            "prompt_tokens_details": {
+              "cached_tokens": 700
+            },
+            "completion_tokens": 1373,
+            "total_tokens": 3044
+          },
+          "server_timings": null,
+          "latency_ms": 17648,
+          "reasoning_characters": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "junior-data-analyst",
+      "retrieval": "bge-faiss",
+      "latency_ms": 68288,
+      "attempts": 2,
+      "question_count": 7,
+      "peak_device_used_mib": 5568,
+      "peak_gpu_utilization_percent": 74,
+      "most_similar_pair": {
+        "left": "q2",
+        "right": "q3",
+        "cosine": 0.85628
+      },
+      "response": [
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "length",
+          "usage": {
+            "prompt_tokens": 1709,
+            "prompt_tokens_details": {
+              "cached_tokens": 700
+            },
+            "completion_tokens": 4096,
+            "total_tokens": 5805
+          },
+          "server_timings": null,
+          "latency_ms": 51170,
+          "reasoning_characters": 0
+        },
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1731,
+            "prompt_tokens_details": {
+              "cached_tokens": 700
+            },
+            "completion_tokens": 1310,
+            "total_tokens": 3041
+          },
+          "server_timings": null,
+          "latency_ms": 16997,
+          "reasoning_characters": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "machine-learning-engineer",
+      "retrieval": "bge-faiss",
+      "latency_ms": 17338,
+      "attempts": 1,
+      "question_count": 7,
+      "peak_device_used_mib": 5566,
+      "peak_gpu_utilization_percent": 73,
+      "most_similar_pair": {
+        "left": "q2",
+        "right": "q5",
+        "cosine": 0.80369
+      },
+      "response": [
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1711,
+            "prompt_tokens_details": {
+              "cached_tokens": 700
+            },
+            "completion_tokens": 1341,
+            "total_tokens": 3052
+          },
+          "server_timings": null,
+          "latency_ms": 17204,
+          "reasoning_characters": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "backend-developer",
+      "retrieval": "bge-faiss",
+      "latency_ms": 17322,
+      "attempts": 1,
+      "question_count": 7,
+      "peak_device_used_mib": 5566,
+      "peak_gpu_utilization_percent": 73,
+      "most_similar_pair": {
+        "left": "q2",
+        "right": "q5",
+        "cosine": 0.83306
+      },
+      "response": [
+        {
+          "model": "roleready-qwen35-4b:8k",
+          "finish_reason": "stop",
+          "usage": {
+            "prompt_tokens": 1675,
+            "prompt_tokens_details": {
+              "cached_tokens": 700
+            },
+            "completion_tokens": 1327,
+            "total_tokens": 3002
+          },
+          "server_timings": null,
+          "latency_ms": 17189,
+          "reasoning_characters": 0
+        }
+      ]
+    }
+  ],
+  "final_recorded_directory": "attempt-15",
+  "total_six_case_latency_ms": 206329,
+  "total_latency_definition": "Sum of six monitored client wall times, including retrieval, validation and any rejected attempts; excludes imports, BGE loading and post-generation similarity screens.",
+  "warm_accepted_response_latency_ms": [
+    17900,
+    15748,
+    17648,
+    16997,
+    17204,
+    17189
+  ],
+  "openai_server_timings_note": "The OpenAI endpoint did not return separate load/prefill/decode timings; accepted response client wall times are reported. Native short-call metrics provide measured load/decode components separately.",
+  "history": [
+    {
+      "directory": "attempt-01",
+      "runs": 0,
+      "structural_passes": 0,
+      "setup_error": {
+        "type": "IncompleteSnapshotError",
+        "message": "The cached snapshot for 'BAAI/bge-small-en-v1.5' (revision '5c38ec7c405ec4b44b94cc5a9bb96e735b38267a', commit 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a) is incomplete: 3 file(s) are missing (.gitattributes, onnx/model.onnx, pytorch_model.bin). Outgoing traffic is disabled ('local_files_only=True'). Re-run the download with network access to complete the snapshot."
+      },
+      "errors": []
+    },
+    {
+      "directory": "attempt-02",
+      "runs": 6,
+      "structural_passes": 0,
+      "setup_error": null,
+      "errors": [
+        "Question generation rejected after 2 attempts: CV evidence must be one literal 8-160 character excerpt from the supplied input"
+      ]
+    },
+    {
+      "directory": "attempt-03",
+      "runs": 6,
+      "structural_passes": 2,
+      "setup_error": null,
+      "errors": [
+        "Question generation rejected after 2 attempts: CV evidence must be one literal 8-160 character excerpt from the supplied input",
+        "Question generation rejected after 2 attempts: Job evidence must be one literal 8-160 character excerpt from the supplied input"
+      ]
+    },
+    {
+      "directory": "attempt-04",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions.",
+      "agent_review_status": "Not selected for delivery: inspection found unsupported or ambiguous wording despite structural validity; see mission report."
+    },
+    {
+      "directory": "attempt-05",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions.",
+      "agent_review_status": "Not selected for delivery: inspection found unsupported or ambiguous wording despite structural validity; see mission report."
+    },
+    {
+      "directory": "attempt-06",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions.",
+      "agent_review_status": "Not selected for delivery: inspection found unsupported or ambiguous wording despite structural validity; see mission report."
+    },
+    {
+      "directory": "attempt-07",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-08",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-09",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-10",
+      "runs": 6,
+      "structural_passes": 5,
+      "setup_error": null,
+      "errors": [
+        "Qwen endpoint request failed: TimeoutError"
+      ],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-11",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-12",
+      "runs": 6,
+      "structural_passes": 5,
+      "setup_error": null,
+      "errors": [
+        "Question generation rejected after 2 attempts: Reference criteria must be candidate-independent, without undocumented personal history"
+      ],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-13",
+      "runs": 6,
+      "structural_passes": 5,
+      "setup_error": null,
+      "errors": [
+        "Question generation rejected after 2 attempts: Reference criteria must be candidate-independent, without undocumented personal history"
+      ],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-14",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": [],
+      "delivery_status": "Superseded; see preserved failures/review history. Gates changed across versions."
+    },
+    {
+      "directory": "attempt-15",
+      "runs": 6,
+      "structural_passes": 6,
+      "setup_error": null,
+      "errors": []
+    }
+  ],
+  "limitations": [
+    "Whole-device GPU samples include desktop/other processes and are sampled rather than exact peaks.",
+    "One synthetic run per scenario/mode is not a statistically reliable performance or quality benchmark.",
+    "Both retrievers select the same eight role-compatible records here; this tests integration, not retrieval superiority.",
+    "Exact evidence quotes and citation IDs do not prove semantic relevance or entailment of arbitrary question text.",
+    "Reference criteria are model-generated and unreviewed; they must not be treated as validated scoring references."
+  ],
+  "structural_results": {
+    "successful_cases": 6,
+    "cases": 6,
+    "accepted_questions": 42,
+    "literal_evidence_anchors": 84,
+    "total_model_requests": 8,
+    "accepted_generations": 6,
+    "rejected_attempts": 2,
+    "first_attempt_successful_cases": 4
+  },
+  "quality_review_artifact": "validation_review.json",
+  "public_cli_checks": [
+    {
+      "file": "backend-cli-final-lexical.json",
+      "question_count": 7,
+      "attempts": 1,
+      "rejected_attempts": [],
+      "latency_ms": 17198
+    },
+    {
+      "file": "backend-cli-final-bge.json",
+      "question_count": 7,
+      "attempts": 1,
+      "rejected_attempts": [],
+      "latency_ms": 16841
+    }
+  ],
+  "public_cli_cache_issue": "The unversioned BGE main ref was not cached; the loader now pins the exact Mission 001 revision. Both CLI modes were then verified offline."
+}

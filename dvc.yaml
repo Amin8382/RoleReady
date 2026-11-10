@@ -1,0 +1,32 @@
+vars:
+  - ai/data_sources/mission003_params.json
+
+stages:
+  prepare_corpus:
+    wdir: ai
+    cmd: python -m roleready_ai.corpus --registry data_sources/mission003_sources.json --raw data/mission003/raw --out data/mission003/processed
+    deps:
+      - data_sources/mission003_sources.json
+      - data/mission003/raw
+      - roleready_ai/acquisition.py
+      - roleready_ai/corpus.py
+      - roleready_ai/taxonomy.py
+      - roleready_ai/datasets.py
+    outs:
+      - data/mission003/processed
+
+  build_index:
+    wdir: ai
+    cmd: python -m roleready_ai.indexing --corpus data/mission003/processed/corpus.jsonl --out data/mission003/index --device ${index.device} --duplicate-threshold ${index.semantic_duplicate_threshold} --report outputs/mission003/index-benchmark.json
+    deps:
+      - data/mission003/processed/corpus.jsonl
+      - roleready_ai/indexing.py
+      - roleready_ai/retrieval.py
+      - roleready_ai/corpus.py
+      - roleready_ai/taxonomy.py
+    params:
+      - data_sources/mission003_params.json:
+          - index.device
+          - index.semantic_duplicate_threshold
+    outs:
+      - data/mission003/index

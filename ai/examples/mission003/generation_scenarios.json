@@ -1,0 +1,29 @@
+[
+  {
+    "scenario_id": "m3-cycling-analyst",
+    "purpose": "generation_evaluation",
+    "authorship": "synthetic_agent_authored",
+    "target_role": "Junior Data Analyst",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: a business analytics graduate. In a university city-bike study, I cleaned trip logs with Python and pandas, joined station lookup tables in SQLite and built a Power BI dashboard of weekday usage. I wrote a one-page note explaining metric definitions and limitations and discussed it with two classmates. My CV does not document paid analytics employment or professional dbt use.",
+    "job_description": "A Junior Data Analyst on a transport team will validate trip and station data, use SQL joins and aggregations, maintain readable dashboards and explain uncertainty to nontechnical stakeholders. The team needs clear prioritization of reporting requests and a careful plan for learning dbt if it is unfamiliar. Discuss future tasks without inventing professional experience."
+  },
+  {
+    "scenario_id": "m3-ticket-classifier",
+    "purpose": "generation_evaluation",
+    "authorship": "synthetic_agent_authored",
+    "target_role": "Machine Learning Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: a software graduate. I built a support-ticket classifier using TF-IDF and scikit-learn, split records by date and reported macro F1 and per-class recall. I wrote preprocessing tests, exposed a local FastAPI endpoint and packaged it with Docker. I recorded experiment parameters in a CSV file and reviewed results with two teammates. This CV does not document operating a cloud production service.",
+    "job_description": "A junior Machine Learning Engineer will build reproducible text-feature pipelines, check prediction-time feature availability, evaluate rare ticket classes and test inference APIs. The team needs monitoring plans, reliable deployment proposals and clear communication of tradeoffs. Production scaling and cloud operations should be hypothetical when not evidenced in the CV."
+  },
+  {
+    "scenario_id": "m3-parcel-api",
+    "purpose": "generation_evaluation",
+    "authorship": "synthetic_agent_authored",
+    "target_role": "Backend Developer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: a junior software graduate. I developed a parcel-status API with FastAPI and PostgreSQL for a university project. I implemented JWT login, wrote pytest checks for resource ownership and pagination and added request IDs to error logs. Two teammates used Git pull requests to review changes. My CV does not document production traffic, Kubernetes or managing a distributed queue.",
+    "job_description": "A Backend Developer will protect API resource ownership, investigate slow SQL queries, handle concurrent status updates and write reliable release tests. The team also needs cache invalidation, background notification retries and useful failure logs. Ask proposed design and collaboration questions without inventing prior production incidents or assuming that undocumented skills are absent."
+  }
+]

@@ -2,7 +2,7 @@
 
 **Owner:** Mohamed Amin Guesmi
 
-This package implements an independently testable AI/data module. It is **not** a completed fine-tuned model, and no live-model evaluation has been completed.
+This package implements an independently testable AI/data module. It is **not** a completed fine-tuned model; independent held-out model-quality evaluation remains unfinished.
 
 ## Layout
 
@@ -17,7 +17,8 @@ This package implements an independently testable AI/data module. It is **not** 
 
 ## Install and test
 
-Python 3.10+ is required. From repository root, run:
+Python 3.10-3.12 is required; Python 3.11 is recommended for the combined
+retrieval/voice runtime. From repository root, run:
 
     cd ai
     python -m venv .venv
@@ -26,6 +27,14 @@ Python 3.10+ is required. From repository root, run:
     python -m pytest -q
 
 ## Curate questions
+
+For the real, revision-pinned RAG corpus, use [Mission 003's reproducible data
+pipeline](docs/MISSION_003_DATASETS_AND_RAG.md). It ingests 16,466 InterviewForge
+questions into a persistent BGE/FAISS index. Corpus documents, retrieval queries,
+synthetic generation scenarios and future SFT splits have separate purposes.
+Relevance labels and generated criteria remain unreviewed; structural success
+does not establish quality. The command below is the backward-compatible
+synthetic/SFT preparation path.
 
     python -m roleready_ai.datasets --input data/sample_questions.csv --out data/processed/sample --source-id synthetic-example --source-url https://example.org/placeholder --license UNVERIFIED
 
@@ -67,3 +76,27 @@ The SFT exporter currently produces general interview Q&A training pairs, **not*
 ## Team handoff
 
 Mohamed Amin owns AI/data; Oussema owns FastAPI and Prometheus evaluator; Khaled owns Next.js and voice. Shared schemas and ownership live in ../docs/TEAM_IMPLEMENTATION.md. The FastAPI baseline is not automatically connected to Qwen. Run tests and validate model outputs on real target hardware before integration.
+
+## Five-model runtime integration
+
+The five model adapters, optional voice dependencies, offline readiness inventory and per-model smoke commands are documented in [the Windows five-model setup guide](docs/FIVE_MODEL_SETUP.md). Run `python -m roleready_ai.readiness` to inspect dependencies without downloading model weights. Runtime checks are opt-in via `python -m roleready_ai.model_smoke <model>`. The repository does not include large model weights, does not host Qwen or Prometheus inference servers, and does not claim completed end-to-end integration or calibrated scoring.
+
+Real BGE/FAISS, Whisper Small English and Kokoro CPU/CUDA smoke checks passed on
+the local RTX 4080 Laptop environment. See [verified commands, revisions, timings
+and limitations](docs/LOCAL_ENVIRONMENT_2026-11-09.md). The Windows-specific
+dependency snapshot is `requirements-windows-cu128-py311.lock.txt`; model/audio
+outputs stay private and gitignored.
+
+[Mission 002: local Qwen and synthetic RAG](docs/MISSION_002_QWEN_RAG.md) verifies
+Qwen3.5 4B Q4_K_M through Ollama's OpenAI-compatible endpoint. All six synthetic
+scenario/retriever combinations returned exactly seven validated question objects.
+The adapter enforces JSON, identity and completion status; generation constrains
+literal evidence and citations before decoding and rejects invalid outputs with
+bounded retries. Results are explicitly `unreviewed_model_output`; the final report
+separates structural checks from agent inspection and preserves earlier failures.
+Generated criteria require independent review before scoring. Prometheus
+inference, independent question-quality evaluation and product integration remain pending.
+
+The final six-case structural run passes, but the qualitative gate remains open:
+the review records technical criteria, semantic citation and fairness blockers.
+See the report before treating any generated criteria as evaluation references.

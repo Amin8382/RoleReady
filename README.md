@@ -43,17 +43,32 @@ See [AI documentation](ai/README.md) and [backend documentation](backend/README.
 
 ## Candidate architecture
 
-- Qwen3.5 4B — personalized analysis, interview questions and report wording (candidate; requires validation)
+- Qwen3.5 4B — local quantized question generation verified; analysis/report integration and quality validation pending
 - Prometheus 7B v2 — rubric-based answer evaluation, owned by backend workstream (candidate; not integrated)
 - BGE-small-en-v1.5 — embeddings; FAISS — vector index (optional real implementation in ai/)
-- Whisper small English — speech-to-text (planned)
-- Kokoro 82M — English narration (planned)
+- Whisper small English — optional speech-to-text adapter; not wired into the app
+- Kokoro 82M — optional English narration adapter; not wired into the app
 - Supabase — private accounts/files/sessions (planned)
 - FastAPI and Next.js — service/frontend components (present as independent baselines)
 
 Models and dataset counts come from the team overview and must be verified against original publishers, licensing and target hardware before production. FAISS is not a model.
 
+BGE/FAISS, Whisper and Kokoro passed real CPU/CUDA smoke checks on the local
+Windows RTX 4080 Laptop machine. The [environment evidence report](ai/docs/LOCAL_ENVIRONMENT_2026-11-09.md)
+records installation, exact versions, timings and remaining blockers.
+[Mission 002](ai/docs/MISSION_002_QWEN_RAG.md) subsequently verified local Qwen3.5
+4B Q4_K_M generation: three synthetic scenarios with lexical and BGE/FAISS
+retrieval each produced seven structurally valid questions. Samples retain
+explicit quality findings. Prometheus inference, validated scoring and end-to-end
+product integration remain unfinished.
+
 ## Collaboration
+
+[Mission 003](ai/docs/MISSION_003_DATASETS_AND_RAG.md) adds pinned public-source
+acquisition, deterministic curation, local DVC tracking and a persistent index of
+16,466 questions. Nine real Qwen comparisons pass the seven-question structural
+contract; citation relevance and technical quality still need independent review.
+Retrieval quality metrics await human judgments. No data remote is configured.
 
 - [Contributing guide](CONTRIBUTING.md)
 - [Shared team implementation contracts](docs/TEAM_IMPLEMENTATION.md)

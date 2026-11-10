@@ -1,0 +1,74 @@
+schema: '2.0'
+stages:
+  prepare_corpus:
+    cmd: python -m roleready_ai.corpus --registry
+      data_sources/mission003_sources.json --raw data/mission003/raw --out
+      data/mission003/processed
+    deps:
+    - path: data/mission003/raw
+      hash: md5
+      md5: 300f90349f72a672271ab7e4153f3512.dir
+      size: 29246452
+      nfiles: 8
+    - path: data_sources/mission003_sources.json
+      hash: md5
+      md5: dde593c45eb81ad426ada05fc701615a
+      size: 4553
+    - path: roleready_ai/acquisition.py
+      hash: md5
+      md5: b92d085552a8c62cef38004c6e43f7ea
+      size: 5236
+    - path: roleready_ai/corpus.py
+      hash: md5
+      md5: be3877a1fa5b5c02b976b8c64353dbe3
+      size: 16750
+    - path: roleready_ai/datasets.py
+      hash: md5
+      md5: e9dbe87856a0bb91aa5b2af8928971a2
+      size: 7995
+    - path: roleready_ai/taxonomy.py
+      hash: md5
+      md5: 999d325460afb866b4f58b4cabf74958
+      size: 3842
+    outs:
+    - path: data/mission003/processed
+      hash: md5
+      md5: f6ebae6e1bcc18ff1193d14b322f3533.dir
+      size: 32000542
+      nfiles: 4
+  build_index:
+    cmd: python -m roleready_ai.indexing --corpus
+      data/mission003/processed/corpus.jsonl --out data/mission003/index
+      --device cuda --duplicate-threshold 0.94 --report
+      outputs/mission003/index-benchmark.json
+    deps:
+    - path: data/mission003/processed/corpus.jsonl
+      hash: md5
+      md5: cd5fe8afb6d08f5d914695d3f5841039
+      size: 30749193
+    - path: roleready_ai/corpus.py
+      hash: md5
+      md5: be3877a1fa5b5c02b976b8c64353dbe3
+      size: 16750
+    - path: roleready_ai/indexing.py
+      hash: md5
+      md5: 50e7746028c4b66b34ed1570427bd6fb
+      size: 10406
+    - path: roleready_ai/retrieval.py
+      hash: md5
+      md5: cde436f891d1b628dfec030adb43b708
+      size: 14437
+    - path: roleready_ai/taxonomy.py
+      hash: md5
+      md5: 999d325460afb866b4f58b4cabf74958
+      size: 3842
+    params:
+      data_sources/mission003_params.json:
+        index.device: cuda
+        index.semantic_duplicate_threshold: 0.94
+    outs:
+    - path: data/mission003/index
+      hash: md5
+      md5: 1ad5980184b93406ac82fc89daf87d36.dir
+      size: 63105122
+      nfiles: 3

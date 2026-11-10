@@ -9,6 +9,8 @@ out/
 
 # Python and test artifacts
 .venv/
+.venv311/
+.runtime/
 venv/
 __pycache__/
 *.py[cod]
@@ -43,3 +45,11 @@ recordings/
 reports/
 *.wav
 *.mp3
+
+# Mission 003 data bodies are tracked locally by DVC, never normal Git.
+ai/data/mission003/raw/
+ai/data/mission003/processed/
+ai/data/mission003/index/
+ai/data/mission003/retrieval_runs/
+ai/data/fine_tuning/*
+!ai/data/fine_tuning/README.md

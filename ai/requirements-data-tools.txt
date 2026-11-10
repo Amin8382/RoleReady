@@ -1,0 +1,2 @@
+# Isolated DVC tooling only; do not install into the verified CUDA/voice venv.
+dvc==3.67.1
