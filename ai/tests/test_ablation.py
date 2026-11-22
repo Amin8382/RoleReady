@@ -176,6 +176,11 @@ def test_runner_checkpoints_resumes_and_passes_identical_seed_and_contract(monke
     monkeypatch.setattr(ablation, "LexicalRetriever", lambda records: EmptyRetriever())
     monkeypatch.setattr(ablation, "BGEFaissRetriever", Persisted)
     monkeypatch.setattr("roleready_ai.model.urlopen", response)
+    # CI intentionally has no DVC data bodies. Hash an authored disposable file,
+    # rather than accidentally depending on the developer's real corpus cache.
+    fixture_corpus = tmp_path / "corpus.jsonl"
+    fixture_corpus.write_text('{"purpose":"authored-test-fixture"}\n', encoding="utf-8")
+    monkeypatch.setattr(ablation, "CORPUS", fixture_corpus)
     path = tmp_path / "freeze.json"
     hashes = {"ai/data/mission003/processed/corpus.jsonl": "c" * 64,
               "ai/evaluation/ablation/scenarios.json": "e" * 64, "dvc.lock": "d" * 64}
