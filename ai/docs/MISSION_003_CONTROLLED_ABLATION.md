@@ -109,6 +109,22 @@ $env:DVC_BIN = "$PWD/.runtime/dvc-env/Scripts/dvc.exe"
 Serving version/digest/settings, frozen code and artifact hashes are checked at
 startup and block boundaries. A process lock prevents competing experiment writers.
 
+For a long Windows batch, run the completion monitor in the isolated server
+environment (or launch that command as a hidden background process):
+
+```powershell
+.runtime/mlflow-env/Scripts/python.exe scripts/complete-ablation.py --experiment outputs/ablation/run-001 --review-out data/private/ablation-review-final-20261122
+```
+
+It watches the existing runner, resumes only if its process exits, preserves any
+interrupted request, and never replaces a completed case. At 288 recorded sets,
+it synchronizes MLflow, exports both final reviewer directories, writes the
+pending-human analysis, and saves `outputs/ablation/run-001/completion.json`.
+Keep the computer and local Ollama/MLflow services running. A failed supervised
+resume requires inspection of `continuation.log`; the monitor does not retry
+configuration failures indefinitely. The model/code/settings freeze is unchanged
+by this orchestration script or test-only CI fixes.
+
 ## Independent human review
 
 ```powershell
@@ -176,3 +192,33 @@ test; all CI inference uses authored fixtures, never downloads weights. Existing
 data/FAISS and frontend/backend checks remain in place. Report the exact delivery
 commit/CI URL, freeze hash, MLflow IDs and completed/failed/pending sets. Human
 quality results stay null until genuine review, regardless of structural success.
+
+## Verified initial delivery — 22 November 2026
+
+- Harness commit: `06931f65e89105f89476856787d10bec04edb4ee`.
+- Pre-inference freeze commit: `0badcbc23a1ee6a4074b760fce2d0d86d648ceb9`.
+- Freeze identifier: `fdb56e78d982493d9fff65b74e14efdca654e83167af7affefcf5937dd467801`.
+- SQLite dashboard is live at http://127.0.0.1:5000. The controlled parent run is
+  `0e43bdc7706e4f09b6ad4434d2dafe30` in experiment 1; retrieval is experiment 2.
+- All nine old generation cases and the retrieval benchmark are imported as
+  exploratory. Initial blinded question-review sheets and both 607-pair retrieval
+  sheets are local under `data/private/`; the full bundle is exported at completion.
+- The inference suite passed 179 tests with the optional MLflow test skipped;
+  the isolated MLflow suite passed its 16 checks, including an actual server
+  restart/artifact-persistence test. The added completion-monitor test passed
+  separately. Dependency checks passed in both environments.
+- Source snapshots still verify against all pinned hashes and `dvc status --json`
+  returns `{}`. No corpus rebuild, model download or reference approval occurred.
+- CI exposed a test that accidentally read the local DVC corpus. Commit
+  `b249e87b67fef7b25581cfbeb2c1477083f80843` corrects only that fixture; both
+  [push](https://github.com/Amin8382/RoleReady/actions/runs/45067035834) and
+  [PR](https://github.com/Amin8382/RoleReady/actions/runs/45067040523) CI passed.
+- The 288-set batch is running, not claimed complete here. Read `summary.json`
+  for current counts and `completion.json` for final synchronization/export evidence.
+  Human-approved quality and paired confidence intervals remain null.
+
+Development probes are separate from evaluation: probe 002 recorded two accepted
+seeded requests, zero retries, identical observed small JSON responses and 724 ms
+combined request latency. This does not establish general GPU determinism. Probe
+001 is preserved; its old aggregate counted the second independent request as a
+retry. That bookkeeping was corrected before freeze; no held-out output was used.

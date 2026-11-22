@@ -66,3 +66,28 @@ def test_real_server_persists_runs_and_artifacts_and_idempotent_import(tmp_path)
         assert client.log(**args) == first
     finally:
         stop(process, log)
+
+
+def test_completion_monitor_exports_without_rerunning_or_approving(monkeypatch, tmp_path):
+    import importlib.util
+    script = Path(__file__).resolve().parents[1] / "scripts/complete-ablation.py"
+    spec = importlib.util.spec_from_file_location("completion_test_fixture", script)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    ai = tmp_path / "ai"
+    experiment = ai / "outputs/ablation/fixture"
+    experiment.mkdir(parents=True)
+    (experiment / "summary.json").write_text(json.dumps({"completed_sets": 288, "structural_passes": 280, "failed_sets": 8}))
+    monkeypatch.setattr(module, "AI", ai)
+    monkeypatch.setattr(sys, "argv", [str(script), "--experiment", str(experiment),
+                                     "--review-out", str(ai / "data/private/fixture")])
+    calls = []
+    def invoke(args, **kwargs):
+        calls.append(args)
+        result = {"quality_metrics": None, "paired_analysis": None}
+        return subprocess.CompletedProcess(args, 0, stdout=json.dumps(result), stderr="")
+    monkeypatch.setattr(module.subprocess, "run", invoke)
+    module.main()
+    receipt = json.loads((experiment / "completion.json").read_text())
+    assert receipt["summary"]["failed_sets"] == 8 and receipt["quality_metrics"] is None
+    assert [args[3] for args in calls] == ["sync", "export", "analyze"]
