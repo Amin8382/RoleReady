@@ -8,6 +8,7 @@ from __future__ import annotations
 import json
 import os
 import time
+from typing import Callable
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
@@ -53,6 +54,10 @@ class OpenAICompatibleQwen:
         response_schema: dict[str, object] | None = None,
         reasoning_effort: str | None = None,
         max_tokens: int = 4096,
+        seed: int | None = None,
+        top_p: float | None = None,
+        presence_penalty: float | None = None,
+        request_recorder: Callable[[dict], None] | None = None,
     ) -> None:
         self.base_url = (base_url or os.environ.get("ROLEREADY_QWEN_BASE_URL", "")).rstrip("/")
         self.model = model or os.environ.get("ROLEREADY_QWEN_MODEL", DEFAULT_MODEL)
@@ -68,6 +73,10 @@ class OpenAICompatibleQwen:
         if not 1 <= max_tokens <= 8192:
             raise ValueError("max_tokens must be 1-8192")
         self.max_tokens = max_tokens
+        self.seed = seed
+        self.top_p = top_p
+        self.presence_penalty = presence_penalty
+        self.request_recorder = request_recorder
         self.last_response: dict[str, object] = {}
         self.last_content: str | None = None
         parsed = urlsplit(self.base_url)
@@ -100,6 +109,9 @@ class OpenAICompatibleQwen:
             }
         if self.reasoning_effort:
             payload["reasoning_effort"] = self.reasoning_effort
+        for key in ("seed", "top_p", "presence_penalty"):
+            if (value := getattr(self, key)) is not None:
+                payload[key] = value
         body = json.dumps(payload).encode("utf-8")
         headers = {"Content-Type": "application/json"}
         if self.api_key:
@@ -110,6 +122,9 @@ class OpenAICompatibleQwen:
         )
         self.last_response = {}
         self.last_content = None
+        raw = b""
+        if self.request_recorder:
+            self.request_recorder({"event": "request_started", "payload": payload})
         started = time.perf_counter()
         try:
             with urlopen(request, timeout=self.timeout) as response:
@@ -141,6 +156,8 @@ class OpenAICompatibleQwen:
                 raise ValueError("Model response must be a JSON object")
             return parsed
         except (HTTPError, URLError, TimeoutError) as exc:
+            if isinstance(exc, HTTPError):
+                raw = exc.read(2_000_001)
             status = f" (HTTP {exc.code})" if isinstance(exc, HTTPError) else ""
             self.last_response = {"error_type": type(exc).__name__, "http_status": getattr(exc, "code", None),
                                   "latency_ms": round((time.perf_counter() - started) * 1000)}
@@ -149,3 +166,12 @@ class OpenAICompatibleQwen:
             raise InvalidModelResponse(
                 f"Qwen response rejected: {type(exc).__name__}; check model identity, finish reason and strict JSON"
             ) from exc
+        finally:
+            self.last_response.setdefault("latency_ms", round((time.perf_counter() - started) * 1000))
+            if self.request_recorder:
+                import base64
+                self.request_recorder({"event": "request_finished", "response": self.last_response,
+                                       "raw_response_base64": base64.b64encode(raw).decode("ascii"),
+                                       "response_capture_limit_bytes": 2_000_001,
+                                       "capture_may_be_truncated": len(raw) >= 2_000_001,
+                                       "raw_content": self.last_content})

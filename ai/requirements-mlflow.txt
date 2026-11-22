@@ -1,0 +1,4 @@
+# Install only in .runtime/mlflow-env, never the verified inference environment.
+mlflow==3.18.0
+pytest>=8,<10
+psutil==7.0.0

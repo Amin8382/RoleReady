@@ -1,5 +1,10 @@
 # RoleReady AI & Data
 
+The [controlled RAG ablation continuation](docs/MISSION_003_CONTROLLED_ABLATION.md)
+adds local MLflow, a frozen 32-scenario/three-seed comparison and blinded human
+review tooling. Historical demonstrations remain exploratory; quality metrics
+require independent human ratings.
+
 **Owner:** Mohamed Amin Guesmi
 
 This package implements an independently testable AI/data module. It is **not** a completed fine-tuned model; independent held-out model-quality evaluation remains unfinished.

@@ -49,7 +49,7 @@ def retrieval_metrics(ranking: list[str], relevance: dict[str, int]) -> dict:
               for rank, doc in enumerate(ranking[:10], 1))
     ideal = sum((2 ** grade - 1) / math.log2(rank + 1)
                 for rank, grade in enumerate(sorted(relevance.values(), reverse=True)[:10], 1))
-    return {"precision_at_5": hits5 / 5, "recall_at_5": hits5 / len(positives),
+    return {"precision_at_5": hits5 / 5, "precision_at_10": hits10 / 10, "recall_at_5": hits5 / len(positives),
             "recall_at_10": hits10 / len(positives), "mrr_at_10": reciprocal,
             "ndcg_at_10": dcg / ideal}
 

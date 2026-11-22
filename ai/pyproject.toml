@@ -22,6 +22,8 @@ roleready-eval = "roleready_ai.evaluation:main"
 roleready-sft = "roleready_ai.sft:main"
 roleready-readiness = "roleready_ai.readiness:main"
 roleready-audio = "roleready_ai.audio_cli:main"
+roleready-ablation = "roleready_ai.ablation:main"
+roleready-question-review = "roleready_ai.question_review:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

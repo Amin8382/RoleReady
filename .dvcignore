@@ -9,3 +9,5 @@ ai/.venv311/
 ai/.runtime/
 node_modules/
 .next/
+**/.pytest_cache/
+**/__pycache__/

@@ -1,0 +1,322 @@
+[
+  {
+    "scenario_id": "abl-01-entry",
+    "target_role": "Data Analyst",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a museum attendance workbook. I used spreadsheet pivot tables to summarize daily admissions by ticket category. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry Data Analyst position requires the candidate to validate spreadsheet totals and explain attendance patterns. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-01-junior",
+    "target_role": "Data Analyst",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a food pantry reporting project. I used SQL joins and a dashboard to summarize weekly food donations without publishing donor names. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior Data Analyst position requires the candidate to check join cardinality and communicate uncertain donation trends. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-01-mid",
+    "target_role": "Data Analyst",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a water-meter reporting pipeline. I maintained a Python and SQL report joining meter readings to district boundaries and tracked missing readings. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid Data Analyst position requires the candidate to design reporting quality checks and distinguish reporting delays from consumption changes. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-01-senior",
+    "target_role": "Data Analyst",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a university grant analytics programme. I led metric definitions for grant applications across departments and documented changes to reporting rules. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior Data Analyst position requires the candidate to govern comparable metrics and resolve conflicting stakeholder interpretations. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-02-entry",
+    "target_role": "Data Scientist",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a seed germination statistics notebook. I used Python to visualize germination rates and calculate uncertainty intervals on a classroom experiment. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry Data Scientist position requires the candidate to explain sampling uncertainty and identify limits of small experiments. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-02-junior",
+    "target_role": "Data Scientist",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a library demand forecasting project. I compared a seasonal baseline with regression using chronological validation on daily loans. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior Data Scientist position requires the candidate to evaluate temporal forecasts and explain errors across quiet and busy periods. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-02-mid",
+    "target_role": "Data Scientist",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a wildlife image classification study. I evaluated imbalanced species labels with group-separated validation by camera location. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid Data Scientist position requires the candidate to choose useful classification metrics and prevent location leakage. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-02-senior",
+    "target_role": "Data Scientist",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a customer survey experimentation programme. I led randomized survey experiments with predeclared metrics and documented nonresponse limitations. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior Data Scientist position requires the candidate to design experiments and communicate heterogeneous effects without overstating causality. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-03-entry",
+    "target_role": "Data Engineer",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a public weather CSV ingestion exercise. I wrote a Python loader that parsed station identifiers and validated daily temperatures. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry Data Engineer position requires the candidate to validate data types and explain how malformed rows should be handled. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-03-junior",
+    "target_role": "Data Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a community energy warehouse project. I built SQL staging tables and incremental loads keyed by meter and reading timestamp. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior Data Engineer position requires the candidate to handle duplicate and late records without corrupting warehouse aggregates. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-03-mid",
+    "target_role": "Data Engineer",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a rail timetable event pipeline. I maintained Kafka consumers and a schema registry for timetable updates across regions. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid Data Engineer position requires the candidate to design replay and schema evolution procedures while preserving event identity. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-03-senior",
+    "target_role": "Data Engineer",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a multi-region research data platform. I designed ownership boundaries and lineage for pipelines serving research teams. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior Data Engineer position requires the candidate to balance reliability and cost while planning recoverable data-platform migrations. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-04-entry",
+    "target_role": "Machine Learning Engineer",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a plant disease model exercise. I trained a small image classifier and kept separate training and validation image folders. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry Machine Learning Engineer position requires the candidate to explain inference inputs and avoid duplicate images across evaluation partitions. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-04-junior",
+    "target_role": "Machine Learning Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a used-book price estimator. I packaged a regression pipeline with training-only preprocessing and a small prediction API. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior Machine Learning Engineer position requires the candidate to test preprocessing consistency and monitor changes in price-prediction errors. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-04-mid",
+    "target_role": "Machine Learning Engineer",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a acoustic fault detection service. I maintained versioned features and evaluated recordings grouped by machine before deployment. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid Machine Learning Engineer position requires the candidate to design reproducible releases and investigate performance changes with delayed labels. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-04-senior",
+    "target_role": "Machine Learning Engineer",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a document routing ML platform. I led model release reviews using offline evaluations and rollback criteria across several business teams. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior Machine Learning Engineer position requires the candidate to design dependable serving and decide how to validate changes under operational constraints. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-05-entry",
+    "target_role": "AI Engineer",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a campus FAQ search prototype. I built a small English FAQ search demo and manually inspected retrieved passages. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry AI Engineer position requires the candidate to explain retrieval relevance and distinguish a source passage from a verified answer. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-05-junior",
+    "target_role": "AI Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a botanical catalogue assistant. I implemented retrieval over public catalogue entries and tested JSON outputs with synthetic questions. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior AI Engineer position requires the candidate to ground responses in retrieved text and test resistance to instructions embedded in documents. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-05-mid",
+    "target_role": "AI Engineer",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a maintenance manual assistant. I maintained a document-ingestion pipeline and a fixed evaluation suite for a local language-model assistant. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid AI Engineer position requires the candidate to diagnose retrieval versus generation failures and manage context limits. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-05-senior",
+    "target_role": "AI Engineer",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a internal knowledge assistant programme. I led evaluation reviews and release criteria for assistants used by multiple technical teams. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior AI Engineer position requires the candidate to compare model configurations and manage privacy, latency and grounding tradeoffs. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-06-entry",
+    "target_role": "Backend Developer",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a volunteer signup API exercise. I implemented basic FastAPI request validation and tests for volunteer signup records. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry Backend Developer position requires the candidate to explain HTTP errors and validate input without exposing personal data. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-06-junior",
+    "target_role": "Backend Developer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a equipment lending API. I implemented session authentication and SQL transactions for borrowing workshop equipment. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior Backend Developer position requires the candidate to enforce resource ownership and prevent conflicting equipment reservations. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-06-mid",
+    "target_role": "Backend Developer",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a digital receipt processing service. I maintained idempotent payment-event handlers and SQL audit records for merchant receipts. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid Backend Developer position requires the candidate to handle retries and partial failures without duplicating business actions. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-06-senior",
+    "target_role": "Backend Developer",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a regional messaging backend. I led API compatibility reviews and planned staged migrations between message stores. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior Backend Developer position requires the candidate to design resilient migrations and explain consistency tradeoffs to partner teams. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-07-entry",
+    "target_role": "Software Engineer",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a crossword editor coursework. I implemented a TypeScript grid editor with unit tests for invalid cell operations. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry Software Engineer position requires the candidate to explain test cases and separate input validation from rendering logic. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-07-junior",
+    "target_role": "Software Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a accessible recipe planning application. I built a React and Python application with integration tests and keyboard navigation. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior Software Engineer position requires the candidate to debug application boundaries and communicate an accessible design decision. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-07-mid",
+    "target_role": "Software Engineer",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a scientific file conversion tool. I maintained a Python package with streaming parsers and backward-compatible command options. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid Software Engineer position requires the candidate to design safe parser changes and investigate performance regressions. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-07-senior",
+    "target_role": "Software Engineer",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a collaborative diagramming product. I led modularization of a shared codebase and coordinated compatibility changes across teams. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior Software Engineer position requires the candidate to manage architectural boundaries and plan incremental improvements with reliable tests. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-08-entry",
+    "target_role": "MLOps Engineer",
+    "experience_level": "entry",
+    "cv_text": "Synthetic candidate: I worked on a model experiment tracking exercise. I recorded Python experiment settings and evaluation metrics in a local project. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This entry MLOps Engineer position requires the candidate to explain reproducibility and separate model artifacts from evaluation data. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-08-junior",
+    "target_role": "MLOps Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: I worked on a air-quality model deployment project. I used Docker and a CI pipeline to package a model and validate artifact checksums. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This junior MLOps Engineer position requires the candidate to design release checks and recover from a failed deployment. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-08-mid",
+    "target_role": "MLOps Engineer",
+    "experience_level": "mid",
+    "cv_text": "Synthetic candidate: I worked on a factory model monitoring platform. I maintained model version manifests and dashboards for latency, errors and input changes. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This mid MLOps Engineer position requires the candidate to distinguish data drift from performance degradation and manage rollback decisions. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  },
+  {
+    "scenario_id": "abl-08-senior",
+    "target_role": "MLOps Engineer",
+    "experience_level": "senior",
+    "cv_text": "Synthetic candidate: I worked on a shared inference operations programme. I led release governance and capacity planning for local GPU inference services. I documented the scope, limitations and my own contribution. This fictional profile contains no real personal information.",
+    "job_description": "This senior MLOps Engineer position requires the candidate to coordinate reproducible model releases and balance serving reliability with constrained GPU capacity. The interview should explore technical reasoning, proportionate validation, communication and collaboration within the stated role and level.",
+    "purpose": "generation_evaluation",
+    "authorship": "assistant_synthetic",
+    "authorized_use": "local_research_evaluation_only"
+  }
+]
