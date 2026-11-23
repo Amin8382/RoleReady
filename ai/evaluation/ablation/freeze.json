@@ -1,0 +1,2130 @@
+{
+  "schema_version": "ablation-freeze-1.0",
+  "created_utc": "2026-11-22T20:28:35.206670+00:00",
+  "execution_code_commit": "06931f65e89105f89476856787d10bec04edb4ee",
+  "code_hashes": {
+    "ai/roleready_ai/__init__.py": "e31421bb75e306c904bfbba3e89033794ec157b2b291e0340108c4cfd56e868e",
+    "ai/roleready_ai/ablation.py": "6da7d7920856dbb72f54153d956b5480a6eb033c3522b0d4d5125f4873205556",
+    "ai/roleready_ai/acquisition.py": "32b2970db690a11129dd6f2c8d1c7a291810290c4c8a6cb19f0e04dc0e0836f1",
+    "ai/roleready_ai/audio_cli.py": "5d3c813e69d0053d44f1269529c8c209aa1dbd0cde71b2c1660b946749462b39",
+    "ai/roleready_ai/chat.py": "6d7017ba044fa6cd7eb2d25f23e9ca0246806a4c7a0fe236827af49c2669009e",
+    "ai/roleready_ai/corpus.py": "5c131bf5b78edd83d33baa5d20c29be42bda701ef2f8176cedff2ea3c0f2053a",
+    "ai/roleready_ai/corpus_demo.py": "19fb56dd8c83959fb71fff31eff95fa9bd79fdcf0c089cb9311b827ae4dba5c5",
+    "ai/roleready_ai/datasets.py": "6dcc63768dd7e44611d71388a708d1a447bb63d800b8de57ea2c9a6ab61cc882",
+    "ai/roleready_ai/evaluation.py": "8c0e575cd2defd8bd6d74fe856d585066892b4ab7237626349d39c48bc47c6c0",
+    "ai/roleready_ai/experiment_protocol.py": "3bbcc656284dae8fcdfdbdb8e0cd5258c93f9020637bc21333ababcaa506f7db",
+    "ai/roleready_ai/generation.py": "7992b7d54dbc1ac62e0c3820f075ed2c686ca288faddb63e743fc3af8a1a62ce",
+    "ai/roleready_ai/indexing.py": "ca173427970370df8df36ceb94acc43a47667c5ab847ca27855ccb008505a749",
+    "ai/roleready_ai/local_benchmark.py": "b38c15cd5c0fe97238a71e697befca4b3a2b5cf9b586d41e279a4b475b2d1b24",
+    "ai/roleready_ai/model.py": "3689689bdaf7e79328c9ca89d0cb20056e624f47bce8d9772e740351488cf14e",
+    "ai/roleready_ai/model_registry.py": "568a271a6085ec91adec69c0e6623b66e85151214ffa11b69bd02c2bbbfacb35",
+    "ai/roleready_ai/model_smoke.py": "683bcb756f2793c707cbfa9bda4cc96ca36f490be6ca0b19d0a28f874ed92f67",
+    "ai/roleready_ai/question_review.py": "09ab2db6ed7dff8497b359134f43ea9e47a3c56e48ded1e9c87ce9d0b0815e43",
+    "ai/roleready_ai/qwen_demo.py": "df6f52574e0499c5081bf9b6f88287d815925b720022306d0d253f7f75e180c0",
+    "ai/roleready_ai/readiness.py": "73fd22dc0c2da1ffdfd115984477479eb0f007ba9fb69f936552697ae437452e",
+    "ai/roleready_ai/retrieval.py": "851845032d03bc0ecd514cea4b7d3bce5a57a892c9dec024aed9b1c05e7bb4ca",
+    "ai/roleready_ai/retrieval_evaluation.py": "83f2b2291a1655744ab4aa6a6878501026ab8490e394047d841d1eb1bd78050b",
+    "ai/roleready_ai/retrieval_review.py": "becb0bee03c28735ea6805c9e99df753bafa53d5033331d4c8a9a79a2c398585",
+    "ai/roleready_ai/run.py": "49197eba09fd2c8370f8514070dccf24126e3b0e3eefa8074a7ba4fa67767328",
+    "ai/roleready_ai/scoring.py": "6787935da4b7ba94ad4a3d1109ecbce5d25f6b276c2322e95797ab64c68d831c",
+    "ai/roleready_ai/sft.py": "9bb1679a6b5c060982831071fc84aa9b83c7941ea32ef2978cb0287cd088e147",
+    "ai/roleready_ai/taxonomy.py": "816caac1e10d1306b6c133b3aae7ff2818e676bd359e979710a7bc45dbfb3d52",
+    "ai/roleready_ai/tracking.py": "89a6b6e7518503bebd0843ae26a469a4c713ea0725f894c7e44f9958aecac4d1",
+    "ai/roleready_ai/voice.py": "7abd559788748f31db7a483ddbf7d574111de7758220c72e4ef4b6148478c118"
+  },
+  "git_dirty_at_freeze": false,
+  "seed_transport_evidence": {
+    "purpose": "development_seed_transport_probe_and_warmup",
+    "seed": 17,
+    "seed_field_accepted": true,
+    "same_output_observed": true,
+    "determinism_claim": false,
+    "metrics": {
+      "model_requests": 2,
+      "retries": 0,
+      "finished_requests": 2,
+      "input_tokens": 82,
+      "output_tokens": 12,
+      "http_latency_ms": 724
+    },
+    "limitations": "Acceptance does not prove the backend honored every sampler option or deterministic GPU output."
+  },
+  "artifact_hashes": {
+    "ai/data/mission003/processed/corpus.jsonl": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+    "ai/data/mission003/index/questions.faiss": "ecc809be80eff1fd088997443d080003bf5ee0eff577e0d73c72c2593f8121f0",
+    "ai/data/mission003/index/questions.meta.json": "4a1d1388ae0a56f119e058320cea12870442422acbf36435d26c1aea9a17c8f1",
+    "dvc.lock": "4e550e8e2e311681f5f41cb94ae430f331d1236143f795f3b43e03bdf04d2056",
+    "ai/data/mission003/raw.dvc": "0dc063541e87d18e03e28b2b5405208aecdf3eca0032215cfc9cd39fe34b526f",
+    "ai/data/mission003/retrieval_runs.dvc": "9bd72a54742a322d9858e559a68b142dc514b3c640cce4b4bd61a7276828cd1c",
+    "ai/evaluation/ablation/scenarios.json": "60f9c99eacdbe071bf6ed1898ba1a802733705cd3dde8d5a960fb8781ab08e00",
+    "ai/evaluation/ablation/rubric.json": "39a95e52cd42c7b1f2bf76ab18407ce65c2830a221141b3d794d47ade2bebe90",
+    "ai/evaluation/ablation/protocol.json": "51f1c8e6aae1abe82b1a0952551e510555ca42a37df8f3c8c9cf33661da196fb"
+  },
+  "dvc_metadata": {
+    "dvc.lock": "schema: '2.0'\nstages:\n  prepare_corpus:\n    cmd: python -m roleready_ai.corpus --registry\n      data_sources/mission003_sources.json --raw data/mission003/raw --out\n      data/mission003/processed\n    deps:\n    - path: data/mission003/raw\n      hash: md5\n      md5: 300f90349f72a672271ab7e4153f3512.dir\n      size: 29246452\n      nfiles: 8\n    - path: data_sources/mission003_sources.json\n      hash: md5\n      md5: dde593c45eb81ad426ada05fc701615a\n      size: 4553\n    - path: roleready_ai/acquisition.py\n      hash: md5\n      md5: b92d085552a8c62cef38004c6e43f7ea\n      size: 5236\n    - path: roleready_ai/corpus.py\n      hash: md5\n      md5: be3877a1fa5b5c02b976b8c64353dbe3\n      size: 16750\n    - path: roleready_ai/datasets.py\n      hash: md5\n      md5: e9dbe87856a0bb91aa5b2af8928971a2\n      size: 7995\n    - path: roleready_ai/taxonomy.py\n      hash: md5\n      md5: 999d325460afb866b4f58b4cabf74958\n      size: 3842\n    outs:\n    - path: data/mission003/processed\n      hash: md5\n      md5: f6ebae6e1bcc18ff1193d14b322f3533.dir\n      size: 32000542\n      nfiles: 4\n  build_index:\n    cmd: python -m roleready_ai.indexing --corpus\n      data/mission003/processed/corpus.jsonl --out data/mission003/index\n      --device cuda --duplicate-threshold 0.94 --report\n      outputs/mission003/index-benchmark.json\n    deps:\n    - path: data/mission003/processed/corpus.jsonl\n      hash: md5\n      md5: cd5fe8afb6d08f5d914695d3f5841039\n      size: 30749193\n    - path: roleready_ai/corpus.py\n      hash: md5\n      md5: be3877a1fa5b5c02b976b8c64353dbe3\n      size: 16750\n    - path: roleready_ai/indexing.py\n      hash: md5\n      md5: 50e7746028c4b66b34ed1570427bd6fb\n      size: 10406\n    - path: roleready_ai/retrieval.py\n      hash: md5\n      md5: cde436f891d1b628dfec030adb43b708\n      size: 14437\n    - path: roleready_ai/taxonomy.py\n      hash: md5\n      md5: 999d325460afb866b4f58b4cabf74958\n      size: 3842\n    params:\n      data_sources/mission003_params.json:\n        index.device: cuda\n        index.semantic_duplicate_threshold: 0.94\n    outs:\n    - path: data/mission003/index\n      hash: md5\n      md5: 1ad5980184b93406ac82fc89daf87d36.dir\n      size: 63105122\n      nfiles: 3\n",
+    "ai/data/mission003/raw.dvc": "outs:\n- md5: 300f90349f72a672271ab7e4153f3512.dir\n  size: 29246452\n  nfiles: 8\n  hash: md5\n  path: raw\n",
+    "ai/data/mission003/retrieval_runs.dvc": "outs:\n- md5: 5833a558a6a21d5609665f4001ff72d8.dir\n  size: 3710300\n  nfiles: 6\n  hash: md5\n  path: retrieval_runs\n"
+  },
+  "settings": {
+    "model": "roleready-qwen35-4b:8k",
+    "model_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "serving_top_k": 20,
+    "presence_penalty": 1.5,
+    "num_ctx": 8192,
+    "max_tokens": 4096,
+    "reasoning_effort": "none",
+    "timeout_seconds": 600,
+    "max_attempts": 2,
+    "retrieval_k": 5,
+    "seeds": [
+      17,
+      29,
+      43
+    ],
+    "schedule_seed": 20261122,
+    "bootstrap_seed": 314159,
+    "bootstrap_resamples": 10000,
+    "minimum_paired_scenarios": 30
+  },
+  "seed_supported": true,
+  "endpoint": "http://127.0.0.1:11434/v1",
+  "ollama_version": "0.40.17",
+  "serving_parameters": "num_predict                    4096\npresence_penalty               1.5\ntemperature                    0.2\ntop_k                          20\ntop_p                          0.95\nnum_ctx                        8192",
+  "model_details": {
+    "parent_model": "qwen3.5:4b-q4_K_M",
+    "format": "gguf",
+    "family": "qwen35",
+    "families": [
+      "qwen35"
+    ],
+    "parameter_size": "4.2B",
+    "quantization_level": "Q4_K_M",
+    "runner": "llamacpp"
+  },
+  "bge_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "prompt_sha256": "1c18a6fcaf40ca1ed5e89282dc424de56405d2c111614d71b282ef9d1fe8fd2c",
+  "schema_sha256": "5b903a621f90e759d6c44b78b6c5729996b2b7aabaecf5acdc5e3dbb9a457065",
+  "schedule": [
+    {
+      "ordinal": 0,
+      "scenario_id": "abl-08-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-08-senior-17-none"
+    },
+    {
+      "ordinal": 1,
+      "scenario_id": "abl-08-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-08-senior-17-lexical"
+    },
+    {
+      "ordinal": 2,
+      "scenario_id": "abl-08-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 3,
+      "scenario_id": "abl-04-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 4,
+      "scenario_id": "abl-04-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-04-junior-43-none"
+    },
+    {
+      "ordinal": 5,
+      "scenario_id": "abl-04-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-04-junior-43-lexical"
+    },
+    {
+      "ordinal": 6,
+      "scenario_id": "abl-02-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 7,
+      "scenario_id": "abl-02-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-02-junior-17-none"
+    },
+    {
+      "ordinal": 8,
+      "scenario_id": "abl-02-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-02-junior-17-lexical"
+    },
+    {
+      "ordinal": 9,
+      "scenario_id": "abl-06-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-06-entry-43-lexical"
+    },
+    {
+      "ordinal": 10,
+      "scenario_id": "abl-06-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-06-entry-43-none"
+    },
+    {
+      "ordinal": 11,
+      "scenario_id": "abl-06-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 12,
+      "scenario_id": "abl-01-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 13,
+      "scenario_id": "abl-01-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-01-senior-17-lexical"
+    },
+    {
+      "ordinal": 14,
+      "scenario_id": "abl-01-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-01-senior-17-none"
+    },
+    {
+      "ordinal": 15,
+      "scenario_id": "abl-08-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 16,
+      "scenario_id": "abl-08-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-08-junior-17-lexical"
+    },
+    {
+      "ordinal": 17,
+      "scenario_id": "abl-08-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-08-junior-17-none"
+    },
+    {
+      "ordinal": 18,
+      "scenario_id": "abl-07-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-07-junior-29-lexical"
+    },
+    {
+      "ordinal": 19,
+      "scenario_id": "abl-07-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-07-junior-29-none"
+    },
+    {
+      "ordinal": 20,
+      "scenario_id": "abl-07-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 21,
+      "scenario_id": "abl-03-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 22,
+      "scenario_id": "abl-03-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-03-entry-43-lexical"
+    },
+    {
+      "ordinal": 23,
+      "scenario_id": "abl-03-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-03-entry-43-none"
+    },
+    {
+      "ordinal": 24,
+      "scenario_id": "abl-03-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-03-entry-17-lexical"
+    },
+    {
+      "ordinal": 25,
+      "scenario_id": "abl-03-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-03-entry-17-none"
+    },
+    {
+      "ordinal": 26,
+      "scenario_id": "abl-03-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 27,
+      "scenario_id": "abl-05-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 28,
+      "scenario_id": "abl-05-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-05-senior-43-none"
+    },
+    {
+      "ordinal": 29,
+      "scenario_id": "abl-05-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-05-senior-43-lexical"
+    },
+    {
+      "ordinal": 30,
+      "scenario_id": "abl-04-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-04-junior-29-none"
+    },
+    {
+      "ordinal": 31,
+      "scenario_id": "abl-04-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 32,
+      "scenario_id": "abl-04-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-04-junior-29-lexical"
+    },
+    {
+      "ordinal": 33,
+      "scenario_id": "abl-01-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-01-entry-29-lexical"
+    },
+    {
+      "ordinal": 34,
+      "scenario_id": "abl-01-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-01-entry-29-none"
+    },
+    {
+      "ordinal": 35,
+      "scenario_id": "abl-01-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 36,
+      "scenario_id": "abl-06-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 37,
+      "scenario_id": "abl-06-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-06-senior-17-none"
+    },
+    {
+      "ordinal": 38,
+      "scenario_id": "abl-06-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-06-senior-17-lexical"
+    },
+    {
+      "ordinal": 39,
+      "scenario_id": "abl-07-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 40,
+      "scenario_id": "abl-07-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-07-entry-43-lexical"
+    },
+    {
+      "ordinal": 41,
+      "scenario_id": "abl-07-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-07-entry-43-none"
+    },
+    {
+      "ordinal": 42,
+      "scenario_id": "abl-08-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-08-entry-17-none"
+    },
+    {
+      "ordinal": 43,
+      "scenario_id": "abl-08-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 44,
+      "scenario_id": "abl-08-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-08-entry-17-lexical"
+    },
+    {
+      "ordinal": 45,
+      "scenario_id": "abl-03-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-03-mid-43-none"
+    },
+    {
+      "ordinal": 46,
+      "scenario_id": "abl-03-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 47,
+      "scenario_id": "abl-03-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-03-mid-43-lexical"
+    },
+    {
+      "ordinal": 48,
+      "scenario_id": "abl-02-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-02-mid-43-none"
+    },
+    {
+      "ordinal": 49,
+      "scenario_id": "abl-02-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-02-mid-43-lexical"
+    },
+    {
+      "ordinal": 50,
+      "scenario_id": "abl-02-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 51,
+      "scenario_id": "abl-06-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-06-mid-43-lexical"
+    },
+    {
+      "ordinal": 52,
+      "scenario_id": "abl-06-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-06-mid-43-none"
+    },
+    {
+      "ordinal": 53,
+      "scenario_id": "abl-06-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 54,
+      "scenario_id": "abl-02-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-02-entry-17-lexical"
+    },
+    {
+      "ordinal": 55,
+      "scenario_id": "abl-02-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 56,
+      "scenario_id": "abl-02-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-02-entry-17-none"
+    },
+    {
+      "ordinal": 57,
+      "scenario_id": "abl-01-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-01-entry-17-lexical"
+    },
+    {
+      "ordinal": 58,
+      "scenario_id": "abl-01-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-01-entry-17-none"
+    },
+    {
+      "ordinal": 59,
+      "scenario_id": "abl-01-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 60,
+      "scenario_id": "abl-08-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 61,
+      "scenario_id": "abl-08-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-08-junior-43-none"
+    },
+    {
+      "ordinal": 62,
+      "scenario_id": "abl-08-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-08-junior-43-lexical"
+    },
+    {
+      "ordinal": 63,
+      "scenario_id": "abl-02-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-02-senior-43-lexical"
+    },
+    {
+      "ordinal": 64,
+      "scenario_id": "abl-02-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 65,
+      "scenario_id": "abl-02-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-02-senior-43-none"
+    },
+    {
+      "ordinal": 66,
+      "scenario_id": "abl-06-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-06-senior-29-lexical"
+    },
+    {
+      "ordinal": 67,
+      "scenario_id": "abl-06-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-06-senior-29-none"
+    },
+    {
+      "ordinal": 68,
+      "scenario_id": "abl-06-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 69,
+      "scenario_id": "abl-04-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-04-junior-17-none"
+    },
+    {
+      "ordinal": 70,
+      "scenario_id": "abl-04-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-04-junior-17-lexical"
+    },
+    {
+      "ordinal": 71,
+      "scenario_id": "abl-04-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 72,
+      "scenario_id": "abl-02-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-02-mid-17-lexical"
+    },
+    {
+      "ordinal": 73,
+      "scenario_id": "abl-02-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-02-mid-17-none"
+    },
+    {
+      "ordinal": 74,
+      "scenario_id": "abl-02-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 75,
+      "scenario_id": "abl-05-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 76,
+      "scenario_id": "abl-05-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-05-junior-29-none"
+    },
+    {
+      "ordinal": 77,
+      "scenario_id": "abl-05-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-05-junior-29-lexical"
+    },
+    {
+      "ordinal": 78,
+      "scenario_id": "abl-06-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-06-entry-29-none"
+    },
+    {
+      "ordinal": 79,
+      "scenario_id": "abl-06-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-06-entry-29-lexical"
+    },
+    {
+      "ordinal": 80,
+      "scenario_id": "abl-06-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 81,
+      "scenario_id": "abl-07-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 82,
+      "scenario_id": "abl-07-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-07-junior-17-none"
+    },
+    {
+      "ordinal": 83,
+      "scenario_id": "abl-07-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-07-junior-17-lexical"
+    },
+    {
+      "ordinal": 84,
+      "scenario_id": "abl-08-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-08-junior-29-lexical"
+    },
+    {
+      "ordinal": 85,
+      "scenario_id": "abl-08-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-08-junior-29-none"
+    },
+    {
+      "ordinal": 86,
+      "scenario_id": "abl-08-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 87,
+      "scenario_id": "abl-06-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-06-junior-43-none"
+    },
+    {
+      "ordinal": 88,
+      "scenario_id": "abl-06-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-06-junior-43-lexical"
+    },
+    {
+      "ordinal": 89,
+      "scenario_id": "abl-06-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 90,
+      "scenario_id": "abl-01-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-01-senior-29-none"
+    },
+    {
+      "ordinal": 91,
+      "scenario_id": "abl-01-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-01-senior-29-lexical"
+    },
+    {
+      "ordinal": 92,
+      "scenario_id": "abl-01-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 93,
+      "scenario_id": "abl-07-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-07-senior-43-lexical"
+    },
+    {
+      "ordinal": 94,
+      "scenario_id": "abl-07-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 95,
+      "scenario_id": "abl-07-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-07-senior-43-none"
+    },
+    {
+      "ordinal": 96,
+      "scenario_id": "abl-01-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-01-junior-43-lexical"
+    },
+    {
+      "ordinal": 97,
+      "scenario_id": "abl-01-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 98,
+      "scenario_id": "abl-01-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-01-junior-43-none"
+    },
+    {
+      "ordinal": 99,
+      "scenario_id": "abl-05-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 100,
+      "scenario_id": "abl-05-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-05-mid-43-none"
+    },
+    {
+      "ordinal": 101,
+      "scenario_id": "abl-05-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-05-mid-43-lexical"
+    },
+    {
+      "ordinal": 102,
+      "scenario_id": "abl-05-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-05-senior-17-lexical"
+    },
+    {
+      "ordinal": 103,
+      "scenario_id": "abl-05-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 104,
+      "scenario_id": "abl-05-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-05-senior-17-none"
+    },
+    {
+      "ordinal": 105,
+      "scenario_id": "abl-03-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-03-junior-17-lexical"
+    },
+    {
+      "ordinal": 106,
+      "scenario_id": "abl-03-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 107,
+      "scenario_id": "abl-03-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-03-junior-17-none"
+    },
+    {
+      "ordinal": 108,
+      "scenario_id": "abl-01-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-01-mid-43-lexical"
+    },
+    {
+      "ordinal": 109,
+      "scenario_id": "abl-01-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 110,
+      "scenario_id": "abl-01-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-01-mid-43-none"
+    },
+    {
+      "ordinal": 111,
+      "scenario_id": "abl-06-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-06-senior-43-none"
+    },
+    {
+      "ordinal": 112,
+      "scenario_id": "abl-06-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-06-senior-43-lexical"
+    },
+    {
+      "ordinal": 113,
+      "scenario_id": "abl-06-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 114,
+      "scenario_id": "abl-03-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-03-senior-29-none"
+    },
+    {
+      "ordinal": 115,
+      "scenario_id": "abl-03-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-03-senior-29-lexical"
+    },
+    {
+      "ordinal": 116,
+      "scenario_id": "abl-03-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 117,
+      "scenario_id": "abl-04-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-04-mid-43-lexical"
+    },
+    {
+      "ordinal": 118,
+      "scenario_id": "abl-04-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-04-mid-43-none"
+    },
+    {
+      "ordinal": 119,
+      "scenario_id": "abl-04-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 120,
+      "scenario_id": "abl-05-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-05-junior-43-lexical"
+    },
+    {
+      "ordinal": 121,
+      "scenario_id": "abl-05-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-05-junior-43-none"
+    },
+    {
+      "ordinal": 122,
+      "scenario_id": "abl-05-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 123,
+      "scenario_id": "abl-05-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-05-senior-29-none"
+    },
+    {
+      "ordinal": 124,
+      "scenario_id": "abl-05-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 125,
+      "scenario_id": "abl-05-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-05-senior-29-lexical"
+    },
+    {
+      "ordinal": 126,
+      "scenario_id": "abl-02-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-02-mid-29-none"
+    },
+    {
+      "ordinal": 127,
+      "scenario_id": "abl-02-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-02-mid-29-lexical"
+    },
+    {
+      "ordinal": 128,
+      "scenario_id": "abl-02-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 129,
+      "scenario_id": "abl-08-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-08-entry-43-none"
+    },
+    {
+      "ordinal": 130,
+      "scenario_id": "abl-08-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 131,
+      "scenario_id": "abl-08-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-08-entry-43-lexical"
+    },
+    {
+      "ordinal": 132,
+      "scenario_id": "abl-04-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 133,
+      "scenario_id": "abl-04-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-04-senior-17-none"
+    },
+    {
+      "ordinal": 134,
+      "scenario_id": "abl-04-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-04-senior-17-lexical"
+    },
+    {
+      "ordinal": 135,
+      "scenario_id": "abl-01-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-01-senior-43-lexical"
+    },
+    {
+      "ordinal": 136,
+      "scenario_id": "abl-01-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-01-senior-43-none"
+    },
+    {
+      "ordinal": 137,
+      "scenario_id": "abl-01-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 138,
+      "scenario_id": "abl-07-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 139,
+      "scenario_id": "abl-07-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-07-mid-29-lexical"
+    },
+    {
+      "ordinal": 140,
+      "scenario_id": "abl-07-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-07-mid-29-none"
+    },
+    {
+      "ordinal": 141,
+      "scenario_id": "abl-02-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 142,
+      "scenario_id": "abl-02-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-02-senior-29-none"
+    },
+    {
+      "ordinal": 143,
+      "scenario_id": "abl-02-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-02-senior-29-lexical"
+    },
+    {
+      "ordinal": 144,
+      "scenario_id": "abl-05-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-05-entry-17-none"
+    },
+    {
+      "ordinal": 145,
+      "scenario_id": "abl-05-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 146,
+      "scenario_id": "abl-05-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-05-entry-17-lexical"
+    },
+    {
+      "ordinal": 147,
+      "scenario_id": "abl-08-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-08-senior-29-none"
+    },
+    {
+      "ordinal": 148,
+      "scenario_id": "abl-08-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 149,
+      "scenario_id": "abl-08-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-08-senior-29-lexical"
+    },
+    {
+      "ordinal": 150,
+      "scenario_id": "abl-01-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-01-mid-17-none"
+    },
+    {
+      "ordinal": 151,
+      "scenario_id": "abl-01-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-01-mid-17-lexical"
+    },
+    {
+      "ordinal": 152,
+      "scenario_id": "abl-01-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 153,
+      "scenario_id": "abl-01-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-01-junior-17-lexical"
+    },
+    {
+      "ordinal": 154,
+      "scenario_id": "abl-01-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-01-junior-17-none"
+    },
+    {
+      "ordinal": 155,
+      "scenario_id": "abl-01-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 156,
+      "scenario_id": "abl-04-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-04-mid-17-lexical"
+    },
+    {
+      "ordinal": 157,
+      "scenario_id": "abl-04-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 158,
+      "scenario_id": "abl-04-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-04-mid-17-none"
+    },
+    {
+      "ordinal": 159,
+      "scenario_id": "abl-02-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 160,
+      "scenario_id": "abl-02-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-02-junior-29-none"
+    },
+    {
+      "ordinal": 161,
+      "scenario_id": "abl-02-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-02-junior-29-lexical"
+    },
+    {
+      "ordinal": 162,
+      "scenario_id": "abl-03-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-03-entry-29-none"
+    },
+    {
+      "ordinal": 163,
+      "scenario_id": "abl-03-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-03-entry-29-lexical"
+    },
+    {
+      "ordinal": 164,
+      "scenario_id": "abl-03-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 165,
+      "scenario_id": "abl-07-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-07-junior-43-none"
+    },
+    {
+      "ordinal": 166,
+      "scenario_id": "abl-07-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 167,
+      "scenario_id": "abl-07-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-07-junior-43-lexical"
+    },
+    {
+      "ordinal": 168,
+      "scenario_id": "abl-08-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-08-mid-17-none"
+    },
+    {
+      "ordinal": 169,
+      "scenario_id": "abl-08-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 170,
+      "scenario_id": "abl-08-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-08-mid-17-lexical"
+    },
+    {
+      "ordinal": 171,
+      "scenario_id": "abl-02-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-02-entry-29-lexical"
+    },
+    {
+      "ordinal": 172,
+      "scenario_id": "abl-02-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 173,
+      "scenario_id": "abl-02-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-02-entry-29-none"
+    },
+    {
+      "ordinal": 174,
+      "scenario_id": "abl-05-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-05-mid-17-none"
+    },
+    {
+      "ordinal": 175,
+      "scenario_id": "abl-05-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-05-mid-17-lexical"
+    },
+    {
+      "ordinal": 176,
+      "scenario_id": "abl-05-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 177,
+      "scenario_id": "abl-03-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-03-mid-29-lexical"
+    },
+    {
+      "ordinal": 178,
+      "scenario_id": "abl-03-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 179,
+      "scenario_id": "abl-03-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-03-mid-29-none"
+    },
+    {
+      "ordinal": 180,
+      "scenario_id": "abl-08-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 181,
+      "scenario_id": "abl-08-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-08-senior-43-lexical"
+    },
+    {
+      "ordinal": 182,
+      "scenario_id": "abl-08-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-08-senior-43-none"
+    },
+    {
+      "ordinal": 183,
+      "scenario_id": "abl-02-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-02-entry-43-lexical"
+    },
+    {
+      "ordinal": 184,
+      "scenario_id": "abl-02-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 185,
+      "scenario_id": "abl-02-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-02-entry-43-none"
+    },
+    {
+      "ordinal": 186,
+      "scenario_id": "abl-04-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 187,
+      "scenario_id": "abl-04-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-04-entry-29-lexical"
+    },
+    {
+      "ordinal": 188,
+      "scenario_id": "abl-04-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-04-entry-29-none"
+    },
+    {
+      "ordinal": 189,
+      "scenario_id": "abl-03-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-03-senior-43-lexical"
+    },
+    {
+      "ordinal": 190,
+      "scenario_id": "abl-03-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-03-senior-43-none"
+    },
+    {
+      "ordinal": 191,
+      "scenario_id": "abl-03-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 192,
+      "scenario_id": "abl-03-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 193,
+      "scenario_id": "abl-03-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-03-junior-29-none"
+    },
+    {
+      "ordinal": 194,
+      "scenario_id": "abl-03-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-03-junior-29-lexical"
+    },
+    {
+      "ordinal": 195,
+      "scenario_id": "abl-07-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 196,
+      "scenario_id": "abl-07-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-07-senior-29-lexical"
+    },
+    {
+      "ordinal": 197,
+      "scenario_id": "abl-07-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-07-senior-29-none"
+    },
+    {
+      "ordinal": 198,
+      "scenario_id": "abl-04-senior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-senior-43-bge-faiss"
+    },
+    {
+      "ordinal": 199,
+      "scenario_id": "abl-04-senior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-04-senior-43-lexical"
+    },
+    {
+      "ordinal": 200,
+      "scenario_id": "abl-04-senior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-04-senior-43-none"
+    },
+    {
+      "ordinal": 201,
+      "scenario_id": "abl-07-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-07-entry-29-none"
+    },
+    {
+      "ordinal": 202,
+      "scenario_id": "abl-07-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 203,
+      "scenario_id": "abl-07-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-07-entry-29-lexical"
+    },
+    {
+      "ordinal": 204,
+      "scenario_id": "abl-05-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 205,
+      "scenario_id": "abl-05-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-05-entry-43-none"
+    },
+    {
+      "ordinal": 206,
+      "scenario_id": "abl-05-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-05-entry-43-lexical"
+    },
+    {
+      "ordinal": 207,
+      "scenario_id": "abl-02-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 208,
+      "scenario_id": "abl-02-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-02-junior-43-lexical"
+    },
+    {
+      "ordinal": 209,
+      "scenario_id": "abl-02-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-02-junior-43-none"
+    },
+    {
+      "ordinal": 210,
+      "scenario_id": "abl-04-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-04-mid-29-lexical"
+    },
+    {
+      "ordinal": 211,
+      "scenario_id": "abl-04-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-04-mid-29-none"
+    },
+    {
+      "ordinal": 212,
+      "scenario_id": "abl-04-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 213,
+      "scenario_id": "abl-04-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-04-entry-17-none"
+    },
+    {
+      "ordinal": 214,
+      "scenario_id": "abl-04-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 215,
+      "scenario_id": "abl-04-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-04-entry-17-lexical"
+    },
+    {
+      "ordinal": 216,
+      "scenario_id": "abl-06-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 217,
+      "scenario_id": "abl-06-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-06-entry-17-lexical"
+    },
+    {
+      "ordinal": 218,
+      "scenario_id": "abl-06-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-06-entry-17-none"
+    },
+    {
+      "ordinal": 219,
+      "scenario_id": "abl-06-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-06-mid-17-lexical"
+    },
+    {
+      "ordinal": 220,
+      "scenario_id": "abl-06-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 221,
+      "scenario_id": "abl-06-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-06-mid-17-none"
+    },
+    {
+      "ordinal": 222,
+      "scenario_id": "abl-03-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-03-senior-17-none"
+    },
+    {
+      "ordinal": 223,
+      "scenario_id": "abl-03-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 224,
+      "scenario_id": "abl-03-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-03-senior-17-lexical"
+    },
+    {
+      "ordinal": 225,
+      "scenario_id": "abl-06-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-06-mid-29-none"
+    },
+    {
+      "ordinal": 226,
+      "scenario_id": "abl-06-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 227,
+      "scenario_id": "abl-06-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-06-mid-29-lexical"
+    },
+    {
+      "ordinal": 228,
+      "scenario_id": "abl-05-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-05-junior-17-lexical"
+    },
+    {
+      "ordinal": 229,
+      "scenario_id": "abl-05-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 230,
+      "scenario_id": "abl-05-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-05-junior-17-none"
+    },
+    {
+      "ordinal": 231,
+      "scenario_id": "abl-04-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 232,
+      "scenario_id": "abl-04-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-04-entry-43-lexical"
+    },
+    {
+      "ordinal": 233,
+      "scenario_id": "abl-04-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-04-entry-43-none"
+    },
+    {
+      "ordinal": 234,
+      "scenario_id": "abl-04-senior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-04-senior-29-none"
+    },
+    {
+      "ordinal": 235,
+      "scenario_id": "abl-04-senior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-04-senior-29-lexical"
+    },
+    {
+      "ordinal": 236,
+      "scenario_id": "abl-04-senior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-04-senior-29-bge-faiss"
+    },
+    {
+      "ordinal": 237,
+      "scenario_id": "abl-03-junior",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-junior-43-bge-faiss"
+    },
+    {
+      "ordinal": 238,
+      "scenario_id": "abl-03-junior",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-03-junior-43-none"
+    },
+    {
+      "ordinal": 239,
+      "scenario_id": "abl-03-junior",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-03-junior-43-lexical"
+    },
+    {
+      "ordinal": 240,
+      "scenario_id": "abl-07-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-07-senior-17-lexical"
+    },
+    {
+      "ordinal": 241,
+      "scenario_id": "abl-07-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 242,
+      "scenario_id": "abl-07-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-07-senior-17-none"
+    },
+    {
+      "ordinal": 243,
+      "scenario_id": "abl-06-junior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-junior-17-bge-faiss"
+    },
+    {
+      "ordinal": 244,
+      "scenario_id": "abl-06-junior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-06-junior-17-lexical"
+    },
+    {
+      "ordinal": 245,
+      "scenario_id": "abl-06-junior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-06-junior-17-none"
+    },
+    {
+      "ordinal": 246,
+      "scenario_id": "abl-05-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-05-mid-29-none"
+    },
+    {
+      "ordinal": 247,
+      "scenario_id": "abl-05-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-05-mid-29-lexical"
+    },
+    {
+      "ordinal": 248,
+      "scenario_id": "abl-05-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 249,
+      "scenario_id": "abl-02-senior",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-02-senior-17-none"
+    },
+    {
+      "ordinal": 250,
+      "scenario_id": "abl-02-senior",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-02-senior-17-bge-faiss"
+    },
+    {
+      "ordinal": 251,
+      "scenario_id": "abl-02-senior",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-02-senior-17-lexical"
+    },
+    {
+      "ordinal": 252,
+      "scenario_id": "abl-01-entry",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-entry-43-bge-faiss"
+    },
+    {
+      "ordinal": 253,
+      "scenario_id": "abl-01-entry",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-01-entry-43-none"
+    },
+    {
+      "ordinal": 254,
+      "scenario_id": "abl-01-entry",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-01-entry-43-lexical"
+    },
+    {
+      "ordinal": 255,
+      "scenario_id": "abl-08-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-08-mid-29-lexical"
+    },
+    {
+      "ordinal": 256,
+      "scenario_id": "abl-08-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-08-mid-29-none"
+    },
+    {
+      "ordinal": 257,
+      "scenario_id": "abl-08-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 258,
+      "scenario_id": "abl-08-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 259,
+      "scenario_id": "abl-08-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-08-mid-43-none"
+    },
+    {
+      "ordinal": 260,
+      "scenario_id": "abl-08-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-08-mid-43-lexical"
+    },
+    {
+      "ordinal": 261,
+      "scenario_id": "abl-01-mid",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-mid-29-bge-faiss"
+    },
+    {
+      "ordinal": 262,
+      "scenario_id": "abl-01-mid",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-01-mid-29-lexical"
+    },
+    {
+      "ordinal": 263,
+      "scenario_id": "abl-01-mid",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-01-mid-29-none"
+    },
+    {
+      "ordinal": 264,
+      "scenario_id": "abl-01-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-01-junior-29-none"
+    },
+    {
+      "ordinal": 265,
+      "scenario_id": "abl-01-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-01-junior-29-lexical"
+    },
+    {
+      "ordinal": 266,
+      "scenario_id": "abl-01-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-01-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 267,
+      "scenario_id": "abl-07-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-07-mid-17-none"
+    },
+    {
+      "ordinal": 268,
+      "scenario_id": "abl-07-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 269,
+      "scenario_id": "abl-07-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-07-mid-17-lexical"
+    },
+    {
+      "ordinal": 270,
+      "scenario_id": "abl-08-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-08-entry-29-none"
+    },
+    {
+      "ordinal": 271,
+      "scenario_id": "abl-08-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-08-entry-29-lexical"
+    },
+    {
+      "ordinal": 272,
+      "scenario_id": "abl-08-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-08-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 273,
+      "scenario_id": "abl-05-entry",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-05-entry-29-bge-faiss"
+    },
+    {
+      "ordinal": 274,
+      "scenario_id": "abl-05-entry",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-05-entry-29-lexical"
+    },
+    {
+      "ordinal": 275,
+      "scenario_id": "abl-05-entry",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-05-entry-29-none"
+    },
+    {
+      "ordinal": 276,
+      "scenario_id": "abl-07-mid",
+      "seed": 43,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-mid-43-bge-faiss"
+    },
+    {
+      "ordinal": 277,
+      "scenario_id": "abl-07-mid",
+      "seed": 43,
+      "condition": "lexical",
+      "case_id": "abl-07-mid-43-lexical"
+    },
+    {
+      "ordinal": 278,
+      "scenario_id": "abl-07-mid",
+      "seed": 43,
+      "condition": "none",
+      "case_id": "abl-07-mid-43-none"
+    },
+    {
+      "ordinal": 279,
+      "scenario_id": "abl-03-mid",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-03-mid-17-none"
+    },
+    {
+      "ordinal": 280,
+      "scenario_id": "abl-03-mid",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-03-mid-17-bge-faiss"
+    },
+    {
+      "ordinal": 281,
+      "scenario_id": "abl-03-mid",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-03-mid-17-lexical"
+    },
+    {
+      "ordinal": 282,
+      "scenario_id": "abl-06-junior",
+      "seed": 29,
+      "condition": "lexical",
+      "case_id": "abl-06-junior-29-lexical"
+    },
+    {
+      "ordinal": 283,
+      "scenario_id": "abl-06-junior",
+      "seed": 29,
+      "condition": "bge-faiss",
+      "case_id": "abl-06-junior-29-bge-faiss"
+    },
+    {
+      "ordinal": 284,
+      "scenario_id": "abl-06-junior",
+      "seed": 29,
+      "condition": "none",
+      "case_id": "abl-06-junior-29-none"
+    },
+    {
+      "ordinal": 285,
+      "scenario_id": "abl-07-entry",
+      "seed": 17,
+      "condition": "lexical",
+      "case_id": "abl-07-entry-17-lexical"
+    },
+    {
+      "ordinal": 286,
+      "scenario_id": "abl-07-entry",
+      "seed": 17,
+      "condition": "bge-faiss",
+      "case_id": "abl-07-entry-17-bge-faiss"
+    },
+    {
+      "ordinal": 287,
+      "scenario_id": "abl-07-entry",
+      "seed": 17,
+      "condition": "none",
+      "case_id": "abl-07-entry-17-none"
+    }
+  ],
+  "review_status": "pending",
+  "quality_metrics": null,
+  "freeze_sha256": "fdb56e78d982493d9fff65b74e14efdca654e83167af7affefcf5937dd467801"
+}

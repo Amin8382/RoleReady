@@ -1,0 +1,6 @@
+outs:
+- md5: c63535e942583a1df0b83ebb7acf5e37.dir
+  size: 13704165
+  nfiles: 1135
+  hash: md5
+  path: personalized-v1

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Future human-approved technical reference, separate from question-generation RAG",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reference_id", "question_sha256", "question_text", "reference_answer", "provenance", "rubric_version", "review_status", "reviewer", "reviewed_at"],
+  "properties": {
+    "reference_id": {"type": "string", "minLength": 1},
+    "question_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "question_text": {"type": "string", "minLength": 12},
+    "reference_answer": {"type": "string", "minLength": 20},
+    "provenance": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "rubric_version": {"const": "1.0"},
+    "review_status": {"enum": ["draft", "human_approved", "rejected"]},
+    "reviewer": {"type": ["string", "null"]},
+    "reviewed_at": {"type": ["string", "null"]}
+  },
+  "allOf": [{"if": {"properties": {"review_status": {"const": "human_approved"}}}, "then": {"properties": {"reviewer": {"type": "string", "minLength": 1}, "reviewed_at": {"type": "string", "format": "date-time"}}}}]
+}

@@ -1,0 +1,422 @@
+{
+  "applicable_role_counts": {
+    "AI Engineer": 576,
+    "Application Security Engineer": 576,
+    "Backend Developer": 576,
+    "Blockchain Developer": 508,
+    "Business Intelligence Analyst": 487,
+    "Cloud Engineer": 576,
+    "Computer Vision Engineer": 496,
+    "Data Analyst": 576,
+    "Data Engineer": 508,
+    "Data Scientist": 495,
+    "Database Administrator": 519,
+    "DevOps Engineer": 576,
+    "Embedded Systems Developer": 576,
+    "Fraud Analyst": 576,
+    "Frontend Developer": 576,
+    "Full Stack Developer": 576,
+    "Game Developer": 497,
+    "IoT Solutions Engineer": 576,
+    "MLOps Engineer": 495,
+    "Machine Learning Engineer": 576,
+    "Mobile Developer": 576,
+    "NLP Engineer": 504,
+    "Platform Engineer": 506,
+    "QA Engineer": 576,
+    "Robotics Engineer": 576,
+    "Site Reliability Engineer": 576,
+    "Software Development Engineer in Test": 576,
+    "Solutions Architect": 507,
+    "Systems Analyst": 576,
+    "Test Automation Engineer": 1152
+  },
+  "artifacts": {
+    "corpus.jsonl": {
+      "bytes": 30749193,
+      "sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9"
+    },
+    "references.unreviewed.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rejections.jsonl": {
+      "bytes": 1237771,
+      "sha256": "85630a204f34b064b6c120a3660b814a23f5a305284b367a9db3e5b7f8441b72"
+    }
+  },
+  "limitations": [
+    "Publisher-declared licenses are not an independent audit of every underlying right.",
+    "Source role, difficulty and technical content remain unreviewed.",
+    "Exact normalization deduplication is not semantic deduplication.",
+    "AI/ML Engineer has two explicit normalized role labels; applicable-role counts are not disjoint.",
+    "Source download dates describe the first verified release acquisition, not later replay times."
+  ],
+  "primary_role_counts": {
+    "Application Security Engineer": 576,
+    "Backend Developer": 576,
+    "Blockchain Developer": 508,
+    "Business Intelligence Analyst": 487,
+    "Cloud Engineer": 576,
+    "Computer Vision Engineer": 496,
+    "Data Analyst": 576,
+    "Data Engineer": 508,
+    "Data Scientist": 495,
+    "Database Administrator": 519,
+    "DevOps Engineer": 576,
+    "Embedded Systems Developer": 576,
+    "Fraud Analyst": 576,
+    "Frontend Developer": 576,
+    "Full Stack Developer": 576,
+    "Game Developer": 497,
+    "IoT Solutions Engineer": 576,
+    "MLOps Engineer": 495,
+    "Machine Learning Engineer": 576,
+    "Mobile Developer": 576,
+    "NLP Engineer": 504,
+    "Platform Engineer": 506,
+    "QA Engineer": 576,
+    "Robotics Engineer": 576,
+    "Site Reliability Engineer": 576,
+    "Software Development Engineer in Test": 576,
+    "Solutions Architect": 507,
+    "Systems Analyst": 576,
+    "Test Automation Engineer": 1152
+  },
+  "purpose": "retrieval_corpus_not_sft_split",
+  "reserved_evaluation_question_keys": 90,
+  "retained_records": 16466,
+  "schema_version": "corpus-1.0",
+  "source_registry_sha256": "b44477ede55eb8ba438bf989b001d38aea34ebce84947371cc9d56757b4ccb32",
+  "sources": [
+    {
+      "authorship": "synthetic",
+      "curation": {
+        "evaluation_overlap": 0,
+        "exact_duplicate": 0,
+        "excluded_usage": 0,
+        "invalid": 0,
+        "out_of_scope": 3978,
+        "retained_unique_primary": 16466
+      },
+      "files": [
+        {
+          "bytes": 7930,
+          "path": "README.md",
+          "sha256": "bdbb2e3ad6d0934f7a04f373795a4baa361e5d6af5692d8645ba43dc201cfa25"
+        },
+        {
+          "bytes": 27776542,
+          "path": "interview_forge_v3_complete.csv",
+          "sha256": "fed39b9bca11b88eaf4697a15e2e64a0f8bf162ee3d49244904f10671396d3fc"
+        }
+      ],
+      "first_verified_download_utc": "2026-11-10T09:31:50.295639+00:00",
+      "license": "mit",
+      "license_evidence": "README.md YAML license: mit; repository has no separate LICENSE file",
+      "license_status": "publisher_declared_mit_card_verified",
+      "license_verified": true,
+      "limitations": [
+        "Generator is reported as mistral:latest without a fixed model revision.",
+        "MIT is a publisher declaration, not independent verification of all underlying rights.",
+        "Card describes answers, but the pinned CSV has no answer column.",
+        "Role and difficulty calibration and technical correctness are unreviewed."
+      ],
+      "publisher": "Davichick",
+      "repo_id": "Davichick/InterviewForge_GenDS",
+      "review_flags": {
+        "unknown_difficulty": 0
+      },
+      "revision": "25f0a5432554234fcd4cd86c90ab9ed5216a9efa",
+      "snapshot_audit": {
+        "column_types": {
+          "interview_stage": [
+            "str"
+          ],
+          "interviewer": [
+            "str"
+          ],
+          "keywords": [
+            "str"
+          ],
+          "question": [
+            "str"
+          ],
+          "question_category": [
+            "str"
+          ],
+          "question_level": [
+            "str"
+          ],
+          "role": [
+            "str"
+          ],
+          "sector": [
+            "str"
+          ]
+        },
+        "columns": [
+          "interview_stage",
+          "interviewer",
+          "keywords",
+          "question",
+          "question_category",
+          "question_level",
+          "role",
+          "sector"
+        ],
+        "duplicate_question_occurrences": 0,
+        "malformed_rows": 0,
+        "missing_values": {
+          "interview_stage": 0,
+          "interviewer": 0,
+          "keywords": 0,
+          "question": 0,
+          "question_category": 0,
+          "question_level": 0,
+          "role": 0,
+          "sector": 0
+        },
+        "raw_rows": 20444,
+        "unique_normalized_questions": 20444
+      },
+      "source_id": "interviewforge",
+      "upstream_split": "train",
+      "url": "https://huggingface.co/datasets/Davichick/InterviewForge_GenDS",
+      "usage": "retrieval_corpus"
+    },
+    {
+      "authorship": "mixed_or_unknown",
+      "curation": {
+        "evaluation_overlap": 0,
+        "exact_duplicate": 0,
+        "excluded_usage": 566,
+        "invalid": 0,
+        "out_of_scope": 0,
+        "retained_unique_primary": 0
+      },
+      "files": [
+        {
+          "bytes": 5308,
+          "path": "README.md",
+          "sha256": "cfe8e87fb11c6365fe236de9fb4e3d38856ed0776558084c063c2a05c47b4d31"
+        },
+        {
+          "bytes": 1376521,
+          "path": "ml_interview_sft.jsonl",
+          "sha256": "f2924fcb96329d07495d2e9c770f049f48f10d0ac50d42ee7016b92c1a3189d7"
+        }
+      ],
+      "first_verified_download_utc": "2026-11-10T09:31:55.574036+00:00",
+      "license": "apache-2.0",
+      "license_evidence": "README declares Apache 2.0; named upstream HTML/PDF documents have no verified links or licenses",
+      "license_status": "apache_declaration_upstream_rights_unverified",
+      "license_verified": false,
+      "limitations": [
+        "Excluded from retrieval and fine-tuning until upstream document rights are verified.",
+        "73 curated rows are publisher-claimed handcrafted; independent authorship is not verified.",
+        "Role and difficulty fields are absent."
+      ],
+      "publisher": "raghu298",
+      "repo_id": "raghu298/ml-interview-sft-dataset",
+      "review_flags": {},
+      "revision": "b83f86d352cbfa5b75111157deae8595d7c44e35",
+      "snapshot_audit": {
+        "column_types": {
+          "answer": [
+            "str"
+          ],
+          "messages": [
+            "list"
+          ],
+          "question": [
+            "str"
+          ],
+          "source": [
+            "str"
+          ],
+          "topic": [
+            "str"
+          ]
+        },
+        "columns": [
+          "answer",
+          "messages",
+          "question",
+          "source",
+          "topic"
+        ],
+        "duplicate_question_occurrences": 35,
+        "malformed_rows": 0,
+        "missing_values": {
+          "answer": 0,
+          "messages": 0,
+          "question": 0,
+          "source": 0,
+          "topic": 0
+        },
+        "raw_rows": 566,
+        "unique_normalized_questions": 531
+      },
+      "source_id": "ml_interview_sft",
+      "upstream_split": "train",
+      "url": "https://huggingface.co/datasets/raghu298/ml-interview-sft-dataset",
+      "usage": "quarantine"
+    },
+    {
+      "authorship": "synthetic",
+      "curation": {
+        "evaluation_overlap": 0,
+        "exact_duplicate": 0,
+        "excluded_usage": 30,
+        "invalid": 0,
+        "out_of_scope": 0,
+        "retained_unique_primary": 0
+      },
+      "files": [
+        {
+          "bytes": 10165,
+          "path": "README.md",
+          "sha256": "65d9b34da9b1a0fa3464c0398c77d0a05108d3f2630863a9a97e3a4bc4cdf119"
+        },
+        {
+          "bytes": 11357,
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "bytes": 5257,
+          "path": "docs/METHODOLOGY.md",
+          "sha256": "2996396e52c00a3c69879590c7c0f61a5244c6046683c253565afb6597b4ff83"
+        },
+        {
+          "bytes": 53372,
+          "path": "data/questions.jsonl",
+          "sha256": "0f63a0697bce6f6efe59c567ed093999efaab2bc0b0933048219c165c2a77d63"
+        }
+      ],
+      "first_verified_download_utc": "2026-11-10T09:31:57.891974+00:00",
+      "license": "apache-2.0",
+      "license_evidence": "LICENSE contains Apache License Version 2.0; README and methodology describe original synthetic prompts",
+      "license_status": "apache_license_file_verified",
+      "license_verified": true,
+      "limitations": [
+        "Evaluation-only even though the Hub exposes a train split.",
+        "No human-calibrated labels or independent expert review.",
+        "Authorship tool/process beyond the publisher synthetic declaration is unknown."
+      ],
+      "publisher": "Max00035",
+      "repo_id": "Max00035/ml-systems-interview-bench",
+      "review_flags": {},
+      "revision": "891a8edfcfea178790ceab6cee8fa51eda708af8",
+      "snapshot_audit": {
+        "column_types": {
+          "answer_dimensions": [
+            "list"
+          ],
+          "difficulty": [
+            "str"
+          ],
+          "domain": [
+            "str"
+          ],
+          "evaluation_rubric": [
+            "dict"
+          ],
+          "expected_concepts": [
+            "list"
+          ],
+          "follow_up_questions": [
+            "list"
+          ],
+          "id": [
+            "str"
+          ],
+          "max_score": [
+            "int"
+          ],
+          "question": [
+            "str"
+          ],
+          "question_type": [
+            "str"
+          ],
+          "reference_answer": [
+            "str"
+          ],
+          "skills": [
+            "list"
+          ],
+          "tags": [
+            "list"
+          ]
+        },
+        "columns": [
+          "answer_dimensions",
+          "difficulty",
+          "domain",
+          "evaluation_rubric",
+          "expected_concepts",
+          "follow_up_questions",
+          "id",
+          "max_score",
+          "question",
+          "question_type",
+          "reference_answer",
+          "skills",
+          "tags"
+        ],
+        "duplicate_question_occurrences": 0,
+        "malformed_rows": 0,
+        "missing_values": {
+          "answer_dimensions": 0,
+          "difficulty": 0,
+          "domain": 0,
+          "evaluation_rubric": 0,
+          "expected_concepts": 0,
+          "follow_up_questions": 0,
+          "id": 0,
+          "max_score": 0,
+          "question": 0,
+          "question_type": 0,
+          "reference_answer": 0,
+          "skills": 0,
+          "tags": 0
+        },
+        "raw_rows": 30,
+        "unique_normalized_questions": 30
+      },
+      "source_id": "ml_systems_bench",
+      "upstream_split": "train",
+      "url": "https://huggingface.co/datasets/Max00035/ml-systems-interview-bench",
+      "usage": "evaluation_only"
+    }
+  ],
+  "taxonomy_version": "roles-1.0",
+  "topic_counts": {
+    "Business Impact & Metrics": 1030,
+    "Coding & Problem Solving": 1034,
+    "Collaboration & Cross-Team Work": 1040,
+    "Communication & Soft Skills": 1023,
+    "Conflict Resolution": 1025,
+    "Culture Fit & Values": 1023,
+    "Debugging & Troubleshooting": 1030,
+    "Incident Response & Ownership": 1019,
+    "Innovation & Emerging Tech": 1021,
+    "Motivation & Career Goals": 1027,
+    "Prioritization Under Pressure": 1042,
+    "Salary & Expectations": 1033,
+    "Scalability & Growth Planning": 1027,
+    "System Design & Architecture": 1027,
+    "Technical Roadmap & Strategy": 1032,
+    "Tools & Frameworks": 1033
+  },
+  "transformation_code_sha256": {
+    "acquisition.py": "32b2970db690a11129dd6f2c8d1c7a291810290c4c8a6cb19f0e04dc0e0836f1",
+    "corpus.py": "5c131bf5b78edd83d33baa5d20c29be42bda701ef2f8176cedff2ea3c0f2053a",
+    "datasets.py": "6dcc63768dd7e44611d71388a708d1a447bb63d800b8de57ea2c9a6ab61cc882",
+    "taxonomy.py": "816caac1e10d1306b6c133b3aae7ff2818e676bd359e979710a7bc45dbfb3d52"
+  },
+  "transformation_version": "mission003-1.0",
+  "unreviewed_reference_answers": 0
+}

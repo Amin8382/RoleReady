@@ -1,0 +1,24 @@
+{
+  "version": "question-quality-1.0",
+  "independent_reviewers": 2,
+  "common_scale": {
+    "1": "Materially inappropriate or unsupported.",
+    "2": "Major weaknesses; limited useful alignment.",
+    "3": "Useful with meaningful limitations.",
+    "4": "Strong, with minor issues.",
+    "5": "Precise, well-supported and appropriate."
+  },
+  "dimensions": {
+    "relevance": "Does the question address a concrete requirement in this job?",
+    "personalization": "Is it usefully connected to literal CV evidence, without rewarding invented detail?",
+    "correctness": "Are question premises AND generated criteria technically sound? Generated criteria are unreviewed proposals, not authoritative answers.",
+    "difficulty": "Is the expected scope and reasoning proportionate to this role and experience level, regardless of the generated difficulty label?",
+    "diversity": "Across seven questions, are competencies distinct and sufficiently varied? Rate once per set.",
+    "unsupported_assumption": "0=no unsupported candidate-history/ability assumption; 1=one or more. Cite the offending text.",
+    "grounding": "For cited RAG questions only: does the cited source semantically support the question, beyond shared words? 1=unsupported through 5=directly supported."
+  },
+  "not_assessable": "Use no number and explain why; do not turn uncertainty into a low score. Technical correctness may be not assessable for nontechnical questions.",
+  "blinding": "Complete core.csv before opening grounding.csv. Do not discuss outputs with the other evaluator before submission.",
+  "no_rag": "Citation absence is not a defect for no-RAG. Grounding is not applicable.",
+  "approval": "Explicit reviewer/date/status required. Agent comments do not constitute human ratings."
+}

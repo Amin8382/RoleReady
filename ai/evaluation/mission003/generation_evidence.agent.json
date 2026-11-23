@@ -1,0 +1,575 @@
+{
+  "schema_version": "mission003-evidence-1.0",
+  "generation": {
+    "started_utc": "2026-11-10T10:20:58.440214+00:00",
+    "finished_utc": "2026-11-10T10:40:45.800008+00:00",
+    "model": "roleready-qwen35-4b:8k",
+    "model_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+    "server_version": "0.40.15",
+    "endpoint": "http://127.0.0.1:11434/v1/chat/completions",
+    "parameters": "temperature                    0.2\ntop_k                          20\ntop_p                          0.95\nnum_ctx                        8192\nnum_predict                    4096\npresence_penalty               1.5",
+    "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+    "scenarios_sha256": "e1ab7f563d020d040afebe0a13c6717ebaf3a5120bb4c252f0257fc2c2739ff2",
+    "retrieval_k": 5,
+    "timeout_seconds": 600,
+    "max_attempts": 2,
+    "structural_passes": 9,
+    "runs": [
+      {
+        "scenario_id": "m3-cycling-analyst",
+        "retrieval": "none",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 2,
+        "rejected_attempts": [
+          "Missing CV evidence must not be presented as missing ability"
+        ],
+        "total_generation_ms": 185290,
+        "request_latencies_ms": [
+          96712,
+          88527
+        ],
+        "peak_device_memory_used_mib": 6123,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-cycling-analyst",
+        "retrieval": "lexical",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 98855,
+        "request_latencies_ms": [
+          98753
+        ],
+        "peak_device_memory_used_mib": 6054,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [
+          "rrq-305d870a4ac9a96d48560e8c",
+          "rrq-65bb2448a6aebe85c066aa85",
+          "rrq-78f1c6e05f075d94932dfde6",
+          "rrq-7dd6e8947190b00b76bb06ef",
+          "rrq-e897727e6fc5769b3fa3036c"
+        ],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-cycling-analyst",
+        "retrieval": "bge-faiss",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 114831,
+        "request_latencies_ms": [
+          114425
+        ],
+        "peak_device_memory_used_mib": 6076,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [
+          "rrq-3e0f7185c2f800f877b4a1cb",
+          "rrq-450455e4680985530c93a62e",
+          "rrq-515fb05c104b437e0f01fe82",
+          "rrq-648a311da1aee91a8ffe15fc",
+          "rrq-7432b15c1506a9fa171a7f1b"
+        ],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-ticket-classifier",
+        "retrieval": "none",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 121070,
+        "request_latencies_ms": [
+          121038
+        ],
+        "peak_device_memory_used_mib": 7245,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-ticket-classifier",
+        "retrieval": "lexical",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 134606,
+        "request_latencies_ms": [
+          134508
+        ],
+        "peak_device_memory_used_mib": 7129,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [
+          "rrq-2d91f95e051ad8d15a4cfc02",
+          "rrq-309dd61a9ee9684233bd6e97",
+          "rrq-4e5938b70e8b56f403956361",
+          "rrq-5e075843c2482fe09506cc8b",
+          "rrq-8c706c00c9183af42a9f8702"
+        ],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-ticket-classifier",
+        "retrieval": "bge-faiss",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 118260,
+        "request_latencies_ms": [
+          118035
+        ],
+        "peak_device_memory_used_mib": 6581,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [
+          "rrq-4e5938b70e8b56f403956361",
+          "rrq-5f4d4c60af8721ac504f18de",
+          "rrq-681efc24bd8cb23a765248d0",
+          "rrq-7783c9c1031b6ae5b83fc03c",
+          "rrq-f10c0e72ec8f1c4944f27d69"
+        ],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-parcel-api",
+        "retrieval": "none",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 112930,
+        "request_latencies_ms": [
+          112886
+        ],
+        "peak_device_memory_used_mib": 6402,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-parcel-api",
+        "retrieval": "lexical",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 139457,
+        "request_latencies_ms": [
+          139296
+        ],
+        "peak_device_memory_used_mib": 6500,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [
+          "rrq-2801df1d5ad251a22ddbcdd1",
+          "rrq-5f2fdb74ef93f84368e0b6ef",
+          "rrq-8c65c10e7d77747d57377e69",
+          "rrq-8c896ed4337169b40ef2e753",
+          "rrq-fb810209342b1250b4b903bb"
+        ],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      },
+      {
+        "scenario_id": "m3-parcel-api",
+        "retrieval": "bge-faiss",
+        "status": "structural_pass",
+        "question_count": 7,
+        "attempts": 1,
+        "rejected_attempts": [],
+        "total_generation_ms": 161540,
+        "request_latencies_ms": [
+          161193
+        ],
+        "peak_device_memory_used_mib": 6617,
+        "peak_sampled_gpu_utilization_percent": 100,
+        "retrieved_ids": [
+          "rrq-1b4bbf0c3471d7390c1e410e",
+          "rrq-44ca591d73ece9044443544c",
+          "rrq-69d86e8c2557ad0b64d5e184",
+          "rrq-7bc1335cc7d0c62f14a38f46",
+          "rrq-ac7c02b05fbdeffb3cc9c747"
+        ],
+        "literal_evidence_valid": true,
+        "source_ids_valid": true,
+        "retrieved_text_and_ids_in_every_prompt": true
+      }
+    ],
+    "limitations": [
+      "One fixed synthetic batch; no repeated prompt tuning.",
+      "All criteria remain unreviewed; structural passes do not establish quality.",
+      "GPU samples are total-device nvidia-smi measurements, not isolated Qwen allocation.",
+      "OpenAI-compatible responses omit native load durations; per-request times include any model loading.",
+      "Warm-model status is not independently established for every request; do not report these as controlled warm-only latency."
+    ],
+    "verified_model_details_after_run": {
+      "parent_model": "qwen3.5:4b-q4_K_M",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.2B",
+      "quantization_level": "Q4_K_M",
+      "runner": "llamacpp"
+    },
+    "model_details_verification_note": "Read from the unchanged local tag after the completed batch; digest matched the run."
+  },
+  "retrieval_review": {
+    "status": "human_review_required",
+    "official_metrics": null,
+    "reviewed_query_count": 0,
+    "query_count": 32,
+    "unreviewed_queries": [
+      "m3-1-sql-metrics",
+      "m3-1-missingness",
+      "m3-1-dashboard",
+      "m3-1-report-scope",
+      "m3-2-imbalanced",
+      "m3-2-validation",
+      "m3-2-experiments",
+      "m3-2-explain",
+      "m3-3-streaming",
+      "m3-3-schema",
+      "m3-3-warehouse",
+      "m3-3-recovery",
+      "m3-4-features",
+      "m3-4-repro",
+      "m3-4-drift",
+      "m3-4-serving",
+      "m3-5-rag",
+      "m3-5-safety",
+      "m3-5-latency",
+      "m3-5-evaluation",
+      "m3-6-booking",
+      "m3-6-auth",
+      "m3-6-sql",
+      "m3-6-jobs",
+      "m3-7-tests",
+      "m3-7-design",
+      "m3-7-review",
+      "m3-7-debug",
+      "m3-8-registry",
+      "m3-8-ci",
+      "m3-8-monitor",
+      "m3-8-features"
+    ],
+    "per_query": [],
+    "limitations": [
+      "Human-review metadata is a declared approval workflow, not authenticated identity verification.",
+      "Recall/nDCG are relative to assessed pools, which may omit relevant corpus documents.",
+      "MRR is truncated at returned rank 10 and explicitly reported as MRR@10."
+    ]
+  },
+  "quality_review": {
+    "reviewer_type": "AI_agent",
+    "independent_human_review": false,
+    "questions_inspected": 63,
+    "source_relevance_and_technical_quality_gate": "open",
+    "cases": [
+      {
+        "scenario_id": "m3-cycling-analyst",
+        "retrieval": "none",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q2",
+            "finding": "Communication overlaps Q5/Q7, although clarity, visuals and limitation disclosure differ."
+          },
+          {
+            "question_id": "q4",
+            "finding": "Partitioning is an advanced suggestion and is not directly portable to the documented SQLite project."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Confidence intervals need a justified statistical model; they are not automatically suitable for all trip-data uncertainty."
+          },
+          {
+            "question_id": "q7",
+            "finding": "Sensor errors are examples to investigate, not documented facts about the candidate data."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-cycling-analyst",
+        "retrieval": "lexical",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q1",
+            "finding": "Cites a FinTech ML roadmap, not SQL validation."
+          },
+          {
+            "question_id": "q2",
+            "finding": "Combines prioritization and dbt learning; cited ML roadmap does not support dbt."
+          },
+          {
+            "question_id": "q3",
+            "finding": "Cited ML roadmap only weakly supports dashboard uncertainty."
+          },
+          {
+            "question_id": "q4",
+            "finding": "Hypothetical data-loss incident; citation is instead drone-model drift. Lost-data source was retrieved but not cited."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Six-month ML roadmap drifts from junior analytics; cited source concerns a two-day Spark/TensorFlow dispute."
+          },
+          {
+            "question_id": "q6",
+            "finding": "Source supports task conflict, but shifts job emphasis toward production incident leadership."
+          },
+          {
+            "question_id": "q7",
+            "finding": "Reporting-failure source aligns with hypothetical communication, but overlaps Q3/Q6 in stakeholder emphasis."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-cycling-analyst",
+        "retrieval": "bge-faiss",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q1",
+            "finding": "Useful CV personalization, but citation is fleet-stream scaling. Limited historical data in criteria is not documented."
+          },
+          {
+            "question_id": "q2",
+            "finding": "Source supports prioritization/training, not dbt specifically; two competencies combined."
+          },
+          {
+            "question_id": "q3",
+            "finding": "Good job requirement, but citation is route-change negotiation rather than SQL validation."
+          },
+          {
+            "question_id": "q4",
+            "finding": "Hypothetical peer help aligns with source; junior mentoring may be a stretch for this entry-level job."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Delivery inefficiencies are imported from source rather than the city-bike scenario; related communication competency."
+          },
+          {
+            "question_id": "q6",
+            "finding": "Near-copy fleet-scaling scenario imports company context and overstates an easy difficulty for a junior analyst."
+          },
+          {
+            "question_id": "q7",
+            "finding": "Source aligns with delivery modeling but task drifts from documented job requirements and junior scope."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-ticket-classifier",
+        "retrieval": "none",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q2",
+            "finding": "Sensitivity/specificity should be adapted carefully to a multiclass ticket problem."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Candidate already packaged Docker; proposing containerization repeats a documented step rather than assessing the next step."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-ticket-classifier",
+        "retrieval": "lexical",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q1",
+            "finding": "Related broad ML source, but recipe roadmap is not specifically rare-class evaluation."
+          },
+          {
+            "question_id": "q2",
+            "finding": "Feature availability is appropriate; source is a broad real-time prediction scenario."
+          },
+          {
+            "question_id": "q3",
+            "finding": "Monitoring source is related; no-label condition is explicitly hypothetical."
+          },
+          {
+            "question_id": "q4",
+            "finding": "Scaling source is related but stresses streaming/TensorFlow Serving, not this local Docker endpoint."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Hypothetical production leadership and delegation exceed documented junior context; no past incident is asserted."
+          },
+          {
+            "question_id": "q6",
+            "finding": "Related broad source; adapting domain overlaps Q1 in retraining/evaluation."
+          },
+          {
+            "question_id": "q7",
+            "finding": "Relevant testing need, but vague new-domain/normalization constraints and indirect source support."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-ticket-classifier",
+        "retrieval": "bge-faiss",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q1",
+            "finding": "Source has broad streaming architecture, not prediction-time feature checks. Criteria saying validation uses only training data need correction."
+          },
+          {
+            "question_id": "q2",
+            "finding": "Rare-class metrics fit; stratification criterion ignores the documented temporal split and needs leakage-aware review."
+          },
+          {
+            "question_id": "q3",
+            "finding": "Question fits preprocessing tests; source is a broad anomaly-system design task, not testing."
+          },
+          {
+            "question_id": "q4",
+            "finding": "API requirement fits; broad source supports architecture only indirectly."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Reproducibility fits; source is anomaly-system resource prioritization, not experiment tracking."
+          },
+          {
+            "question_id": "q6",
+            "finding": "Broadly related source covers speed/accuracy tradeoffs and prioritization."
+          },
+          {
+            "question_id": "q7",
+            "finding": "Monitoring fits; source has broad ML pipeline context rather than explicit drift procedures."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-parcel-api",
+        "retrieval": "none",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q4",
+            "finding": "Immediate cache consistency requires explicit guarantees; implementation tradeoffs remain unreviewed."
+          },
+          {
+            "question_id": "q6",
+            "finding": "User IDs in logs require privacy/minimization review; no logging policy is supplied."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-parcel-api",
+        "retrieval": "lexical",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q1",
+            "finding": "Matchmaking scaling citation does not ground release/ownership tests. Missing-production qualifier is unnecessary."
+          },
+          {
+            "question_id": "q2",
+            "finding": "Security-change source does not ground SQL performance. Adding indexes conflicts with the no-schema-alteration criterion."
+          },
+          {
+            "question_id": "q3",
+            "finding": "Question resembles retrieved security-change source but cites a different API/UI-conflict source."
+          },
+          {
+            "question_id": "q4",
+            "finding": "Weak gaming-stability citation. Criteria constrain use of undocumented patterns rather than permit proposed designs fairly."
+          },
+          {
+            "question_id": "q5",
+            "finding": "ML-deployment collaboration source weakly supports notification retry design."
+          },
+          {
+            "question_id": "q6",
+            "finding": "API/UI-conflict source aligns, but job relevance is broader than requested concurrency/release tests."
+          },
+          {
+            "question_id": "q7",
+            "finding": "Matchmaking citation weakly supports testing; unfamiliar-tool condition is vague."
+          }
+        ]
+      },
+      {
+        "scenario_id": "m3-parcel-api",
+        "retrieval": "bge-faiss",
+        "no_obvious_fabricated_past_candidate_history_observed": true,
+        "no_candidate_first_person_question_observed": true,
+        "no_obvious_semantic_duplicate_pair_observed": true,
+        "notes": [
+          {
+            "question_id": "q1",
+            "finding": "Important technical error: request IDs track requests, not authorization/ownership. Source is performance collaboration, not concurrency safety."
+          },
+          {
+            "question_id": "q2",
+            "finding": "Related data-consistency source; Kubernetes exclusion is unnecessary. Existing ownership/pagination tests do not establish cache tests."
+          },
+          {
+            "question_id": "q3",
+            "finding": "Question fits retries, but source is data-loss/team-conflict rather than notification testing."
+          },
+          {
+            "question_id": "q4",
+            "finding": "Hypothetical late-testing blocker directly aligns with source; easy/medium calibration still needs human review."
+          },
+          {
+            "question_id": "q5",
+            "finding": "Citation points to gaming architecture instead of the retrieved underperforming-colleague source; generic data-integrity advice."
+          },
+          {
+            "question_id": "q6",
+            "finding": "Performance-collaboration source weakly supports asynchronous logs; unexplained production-evidence qualifier."
+          },
+          {
+            "question_id": "q7",
+            "finding": "ERP inventory context comes from source, not the parcel API job; hypothetically framed but job drift remains."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,751 @@
+{
+  "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+  "queries_sha256": "c0849dc1dbac938a51cbc6d22922b3c0b30976aa8b50f58008b7a6d8a3fc1f97",
+  "query_count": 32,
+  "roles": [
+    "AI Engineer",
+    "Backend Developer",
+    "Data Analyst",
+    "Data Engineer",
+    "Data Scientist",
+    "MLOps Engineer",
+    "Machine Learning Engineer",
+    "Software Engineer"
+  ],
+  "model": {
+    "optional_import_ms": 23973.178799999005,
+    "encoder_load_ms": 855.9022999979788,
+    "model": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "device": "cpu",
+    "weights_sha256": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+    "maximum_sequence_tokens": 512
+  },
+  "repeats_per_query": 3,
+  "retrieval_depth": 10,
+  "timings": {
+    "lexical": [
+      {
+        "query_id": "m3-1-sql-metrics",
+        "role": "Data Analyst",
+        "latency_ms": [
+          47.21889999927953,
+          37.42939999938244,
+          43.556999997235835
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-1-missingness",
+        "role": "Data Analyst",
+        "latency_ms": [
+          49.93870000180323,
+          46.54099999606842,
+          37.24269999656826
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-1-dashboard",
+        "role": "Data Analyst",
+        "latency_ms": [
+          46.3404999973136,
+          46.629600001324434,
+          35.541199998988304
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-1-report-scope",
+        "role": "Data Analyst",
+        "latency_ms": [
+          47.469299999647774,
+          49.84179999883054,
+          42.18379999656463
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-imbalanced",
+        "role": "Data Scientist",
+        "latency_ms": [
+          44.69979999703355,
+          43.54839999723481,
+          42.06139999587322
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-validation",
+        "role": "Data Scientist",
+        "latency_ms": [
+          42.85280000476632,
+          41.30350000195904,
+          38.07249999954365
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-experiments",
+        "role": "Data Scientist",
+        "latency_ms": [
+          45.26310000073863,
+          44.64469999948051,
+          39.7612000015215
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-explain",
+        "role": "Data Scientist",
+        "latency_ms": [
+          44.696400000248104,
+          44.74859999754699,
+          36.01139999955194
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-streaming",
+        "role": "Data Engineer",
+        "latency_ms": [
+          43.157500003871974,
+          41.166799994243775,
+          37.34460000123363
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-schema",
+        "role": "Data Engineer",
+        "latency_ms": [
+          43.86599999997998,
+          43.18059999786783,
+          34.21459999663057
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-warehouse",
+        "role": "Data Engineer",
+        "latency_ms": [
+          44.12259999662638,
+          43.85370000090916,
+          39.07929999695625
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-recovery",
+        "role": "Data Engineer",
+        "latency_ms": [
+          44.584700000996236,
+          44.055200000002515,
+          39.84739999577869
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-features",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          48.47840000002179,
+          46.09850000269944,
+          36.13510000286624
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-repro",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          47.011700000439305,
+          48.72859999886714,
+          42.56840000016382
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-drift",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          49.431499995989725,
+          48.17650000040885,
+          41.12390000227606
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-serving",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          47.68850000255043,
+          47.38770000403747,
+          45.56550000415882
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-rag",
+        "role": "AI Engineer",
+        "latency_ms": [
+          70.52680000197142,
+          60.68260000029113,
+          60.99529999482911
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-safety",
+        "role": "AI Engineer",
+        "latency_ms": [
+          66.98730000061914,
+          60.99940000422066,
+          59.71449999924516
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-latency",
+        "role": "AI Engineer",
+        "latency_ms": [
+          71.44549999793526,
+          68.33039999764878,
+          56.6975999972783
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-evaluation",
+        "role": "AI Engineer",
+        "latency_ms": [
+          71.3224999999511,
+          61.295700004848186,
+          61.37060000037309
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-booking",
+        "role": "Backend Developer",
+        "latency_ms": [
+          46.19809999712743,
+          45.88790000707377,
+          39.88689999823691
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-auth",
+        "role": "Backend Developer",
+        "latency_ms": [
+          47.4750000066706,
+          46.35949999646982,
+          34.39940000680508
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-sql",
+        "role": "Backend Developer",
+        "latency_ms": [
+          48.204500002611894,
+          47.179199995298404,
+          45.64559999562334
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-jobs",
+        "role": "Backend Developer",
+        "latency_ms": [
+          48.47889999655308,
+          46.6039999955683,
+          39.376000000629574
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-tests",
+        "role": "Software Engineer",
+        "latency_ms": [
+          452.31719999719644,
+          151.2051999961841,
+          148.52889999747276
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-design",
+        "role": "Software Engineer",
+        "latency_ms": [
+          189.89880000299308,
+          139.04639999964274,
+          151.51780000451254
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-review",
+        "role": "Software Engineer",
+        "latency_ms": [
+          176.8545999948401,
+          132.37360000493936,
+          149.56720000191126
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-debug",
+        "role": "Software Engineer",
+        "latency_ms": [
+          169.64130000269506,
+          133.78889999876264,
+          154.61140000115847
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-registry",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          44.887799995194655,
+          44.36830000486225,
+          42.260199996235315
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-ci",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          43.304700004227925,
+          44.287899996561464,
+          44.84239999874262
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-monitor",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          42.905400005111005,
+          44.94049999630079,
+          41.036199996597134
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-features",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          43.65140000300016,
+          43.9565999986371,
+          36.76679999625776
+        ],
+        "returned": 10
+      }
+    ],
+    "bge-faiss": [
+      {
+        "query_id": "m3-1-sql-metrics",
+        "role": "Data Analyst",
+        "latency_ms": [
+          270.17350000096485,
+          88.40100000088569,
+          68.37069999892265
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-1-missingness",
+        "role": "Data Analyst",
+        "latency_ms": [
+          38.139699994644616,
+          42.814299995370675,
+          45.09949999919627
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-1-dashboard",
+        "role": "Data Analyst",
+        "latency_ms": [
+          41.042899996682536,
+          53.752799998619594,
+          48.97080000228016
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-1-report-scope",
+        "role": "Data Analyst",
+        "latency_ms": [
+          42.24719999911031,
+          57.53740000363905,
+          56.379699999524746
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-imbalanced",
+        "role": "Data Scientist",
+        "latency_ms": [
+          37.7029000010225,
+          50.60810000577476,
+          48.53909999656025
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-validation",
+        "role": "Data Scientist",
+        "latency_ms": [
+          40.036499995039776,
+          47.694100001535844,
+          47.744600000442006
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-experiments",
+        "role": "Data Scientist",
+        "latency_ms": [
+          39.436499995645136,
+          46.49559999961639,
+          45.93069999828003
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-2-explain",
+        "role": "Data Scientist",
+        "latency_ms": [
+          39.7062999982154,
+          42.06359999807319,
+          42.951899995387066
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-streaming",
+        "role": "Data Engineer",
+        "latency_ms": [
+          41.80310000083409,
+          55.443700002797414,
+          47.33259999920847
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-schema",
+        "role": "Data Engineer",
+        "latency_ms": [
+          41.233800002373755,
+          49.76400000305148,
+          49.93169999943348
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-warehouse",
+        "role": "Data Engineer",
+        "latency_ms": [
+          41.16829999838956,
+          52.93340000207536,
+          53.94549999618903
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-3-recovery",
+        "role": "Data Engineer",
+        "latency_ms": [
+          38.72180000325898,
+          45.581999998830725,
+          46.50250000122469
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-features",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          39.934899999934714,
+          46.93740000220714,
+          53.24409999593627
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-repro",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          42.762900004163384,
+          58.52809999487363,
+          48.06359999929555
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-drift",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          41.20359999797074,
+          50.77219999657245,
+          52.68480000086129
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-4-serving",
+        "role": "Machine Learning Engineer",
+        "latency_ms": [
+          58.74190000031376,
+          58.63880000106292,
+          47.37079999904381
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-rag",
+        "role": "AI Engineer",
+        "latency_ms": [
+          42.160600001807325,
+          46.48019999876851,
+          49.11899999569869
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-safety",
+        "role": "AI Engineer",
+        "latency_ms": [
+          39.21319999790285,
+          53.10000000463333,
+          53.43259999790462
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-latency",
+        "role": "AI Engineer",
+        "latency_ms": [
+          38.06520000216551,
+          54.81780000263825,
+          49.520300002768636
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-5-evaluation",
+        "role": "AI Engineer",
+        "latency_ms": [
+          39.840500001446344,
+          51.219499997387175,
+          51.12379999627592
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-booking",
+        "role": "Backend Developer",
+        "latency_ms": [
+          42.28480000165291,
+          55.9510999955819,
+          51.54709999624174
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-auth",
+        "role": "Backend Developer",
+        "latency_ms": [
+          38.20550000091316,
+          50.26709999947343,
+          46.179899996786844
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-sql",
+        "role": "Backend Developer",
+        "latency_ms": [
+          44.85950000525918,
+          54.21519999799784,
+          51.49370000435738
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-6-jobs",
+        "role": "Backend Developer",
+        "latency_ms": [
+          44.36079999868525,
+          50.49779999535531,
+          49.42830000072718
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-tests",
+        "role": "Software Engineer",
+        "latency_ms": [
+          178.63750000105938,
+          110.57439999422058,
+          86.81639999849722
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-design",
+        "role": "Software Engineer",
+        "latency_ms": [
+          171.52200000418816,
+          61.494900000980124,
+          115.40719999902649
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-review",
+        "role": "Software Engineer",
+        "latency_ms": [
+          196.05389999924228,
+          65.2260999995633,
+          78.536000000895
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-7-debug",
+        "role": "Software Engineer",
+        "latency_ms": [
+          186.13660000119125,
+          62.298099997860845,
+          93.55629999481607
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-registry",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          42.17229999630945,
+          50.906700002087746,
+          49.569100003282074
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-ci",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          47.27590000402415,
+          44.85949999798322,
+          43.128599994815886
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-monitor",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          43.36889999831328,
+          49.983199998678174,
+          48.54479999630712
+        ],
+        "returned": 10
+      },
+      {
+        "query_id": "m3-8-features",
+        "role": "MLOps Engineer",
+        "latency_ms": [
+          39.88219999882858,
+          50.36600000312319,
+          47.93459999928018
+        ],
+        "returned": 10
+      }
+    ]
+  },
+  "latency_summary": {
+    "lexical": {
+      "median_ms": 45.60554999989108,
+      "p95_ms": 154.61140000115847,
+      "min_ms": 34.21459999663057,
+      "max_ms": 452.31719999719644
+    },
+    "bge-faiss": {
+      "median_ms": 49.04489999898942,
+      "p95_ms": 171.52200000418816,
+      "min_ms": 37.7029000010225,
+      "max_ms": 270.17350000096485
+    }
+  },
+  "label_review": {
+    "status": "human_review_required",
+    "official_metrics": null,
+    "reviewed_query_count": 0,
+    "query_count": 32,
+    "unreviewed_queries": [
+      "m3-1-sql-metrics",
+      "m3-1-missingness",
+      "m3-1-dashboard",
+      "m3-1-report-scope",
+      "m3-2-imbalanced",
+      "m3-2-validation",
+      "m3-2-experiments",
+      "m3-2-explain",
+      "m3-3-streaming",
+      "m3-3-schema",
+      "m3-3-warehouse",
+      "m3-3-recovery",
+      "m3-4-features",
+      "m3-4-repro",
+      "m3-4-drift",
+      "m3-4-serving",
+      "m3-5-rag",
+      "m3-5-safety",
+      "m3-5-latency",
+      "m3-5-evaluation",
+      "m3-6-booking",
+      "m3-6-auth",
+      "m3-6-sql",
+      "m3-6-jobs",
+      "m3-7-tests",
+      "m3-7-design",
+      "m3-7-review",
+      "m3-7-debug",
+      "m3-8-registry",
+      "m3-8-ci",
+      "m3-8-monitor",
+      "m3-8-features"
+    ],
+    "per_query": [],
+    "limitations": [
+      "Human-review metadata is a declared approval workflow, not authenticated identity verification.",
+      "Recall/nDCG are relative to assessed pools, which may omit relevant corpus documents.",
+      "MRR is truncated at returned rank 10 and explicitly reported as MRR@10."
+    ]
+  },
+  "query_pool_pairs": 607,
+  "human_reviewed_pairs": 0,
+  "coverage": {
+    "lexical": {
+      "queries_with_results": 32,
+      "queries_with_ten_results": 32
+    },
+    "bge-faiss": {
+      "queries_with_results": 32,
+      "queries_with_ten_results": 32
+    }
+  },
+  "limitations": [
+    "No human-reviewed relevance ground truth is available; quality metrics are withheld.",
+    "Nonempty results and valid IDs do not prove semantic relevance.",
+    "Latency includes query encoding/scoring/role filtering but excludes model/index loading.",
+    "The first query may include warm-up effects; repeats are local observations, not a controlled hardware comparison."
+  ],
+  "sampled_peak_rss_bytes": 1250095104
+}

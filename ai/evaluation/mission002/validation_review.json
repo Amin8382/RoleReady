@@ -1,0 +1,705 @@
+{
+  "recorded_directory": "attempt-15",
+  "independent_human_validation": false,
+  "review_kind": "Agent inspection, separate from structural validation and similarity heuristics.",
+  "overall_status": "Structural/runtime validation passes; qualitative and scoring-reference gates remain open.",
+  "structural_results": {
+    "successful_cases": 6,
+    "cases": 6,
+    "accepted_questions": 42,
+    "literal_evidence_anchors": 84,
+    "total_model_requests": 8,
+    "accepted_generations": 6,
+    "rejected_attempts": 2,
+    "first_attempt_successful_cases": 4
+  },
+  "case_reviews": [
+    {
+      "scenario_id": "junior-data-analyst",
+      "retrieval": "lexical",
+      "reviewer": "Codex agent inspection of all seven question texts, literal rationales and criteria against synthetic inputs.",
+      "structural_status": "pass",
+      "qualitative_status": "Findings recorded; no overall qualitative sign-off or scoring-reference approval.",
+      "observations": {
+        "no_fabricated_cv_experience_observed": true,
+        "no_past_incident_attributed_to_candidate_without_cv_evidence_observed": true,
+        "no_first_person_candidate_question_observed": true,
+        "literal_evidence_unchanged": true,
+        "source_membership_valid": true,
+        "primary_source_topic_review": "Plausible question-bank inspiration; not proof of criterion correctness",
+        "semantic_duplicate_review": "No obvious duplicates found; related themes and close pairs remain review findings, not a proof of distinctness.",
+        "past_experience_review": "No criterion asserting an undocumented prior action found; other fairness/technical limitations remain.",
+        "difficulty_review": "Easy/medium scope broadly suitable for junior practice; labels are uncalibrated."
+      },
+      "competency_coverage": [
+        "Learning new tools",
+        "Data quality",
+        "Data quality",
+        "SQL",
+        "Communication",
+        "Prioritization",
+        "Collaboration"
+      ],
+      "difficulty_counts": {
+        "medium": 7
+      },
+      "questions": [
+        {
+          "question_id": "q1",
+          "review_note": "Documented 5000-row work becomes a hypothetical five-million-row task; the unnamed unfamiliar tool and installation-focused criteria are vague."
+        },
+        {
+          "question_id": "q2",
+          "review_note": "Missingness/trend interpretation differs from row investigation; seasonality is not necessarily an artifact, so the criterion needs review."
+        },
+        {
+          "question_id": "q3",
+          "review_note": "New gaps are explicitly conditional; no past cleaning failure is attributed to the candidate."
+        },
+        {
+          "question_id": "q4",
+          "review_note": "Different table schemas are hypothetical; SQL calculation differs from missingness investigation."
+        },
+        {
+          "question_id": "q5",
+          "review_note": "Dashboard design uses documented presentation/metric context without claiming professional stakeholder work."
+        },
+        {
+          "question_id": "q6",
+          "review_note": "Team conflict is conditional; prioritization is distinct from technical data checks."
+        },
+        {
+          "question_id": "q7",
+          "review_note": "Future disagreement resolution does not invent a past conflict; criteria are generic."
+        }
+      ]
+    },
+    {
+      "scenario_id": "machine-learning-engineer",
+      "retrieval": "lexical",
+      "reviewer": "Codex agent inspection of all seven question texts, literal rationales and criteria against synthetic inputs.",
+      "structural_status": "pass",
+      "qualitative_status": "Findings recorded; no overall qualitative sign-off or scoring-reference approval.",
+      "observations": {
+        "no_fabricated_cv_experience_observed": true,
+        "no_past_incident_attributed_to_candidate_without_cv_evidence_observed": true,
+        "no_first_person_candidate_question_observed": true,
+        "literal_evidence_unchanged": true,
+        "source_membership_valid": true,
+        "primary_source_topic_review": "Plausible question-bank inspiration; not proof of criterion correctness",
+        "semantic_duplicate_review": "No obvious duplicates found; related themes and close pairs remain review findings, not a proof of distinctness.",
+        "past_experience_review": "No criterion asserting an undocumented prior action found; other fairness/technical limitations remain.",
+        "difficulty_review": "Easy/medium scope broadly suitable for junior practice; labels are uncalibrated."
+      },
+      "competency_coverage": [
+        "reproducibility",
+        "data_leakage",
+        "model_evaluation",
+        "api_testing",
+        "drift_monitoring",
+        "prioritization",
+        "team_collaboration"
+      ],
+      "difficulty_counts": {
+        "medium": 5,
+        "easy": 2
+      },
+      "questions": [
+        {
+          "question_id": "q1",
+          "review_note": "Fraud project is documented; changed data is hypothetical. Seeds and versions alone do not guarantee identical results across environments."
+        },
+        {
+          "question_id": "q2",
+          "review_note": "Question is relevant; distribution comparisons alone do not prove absence of leakage, and fold-only transformation wording needs precision."
+        },
+        {
+          "question_id": "q3",
+          "review_note": "Prospective cost/threshold selection uses documented precision-recall context; F1 is not universally the correct business objective."
+        },
+        {
+          "question_id": "q4",
+          "review_note": "API test/versioning is relevant to documented local FastAPI/Docker; no prior production work is asserted."
+        },
+        {
+          "question_id": "q5",
+          "review_note": "Monitoring is prospective; raw criteria are incomplete and prediction-interval terminology needs review for a classifier."
+        },
+        {
+          "question_id": "q6",
+          "review_note": "Future prioritization is generic; small-team context is documented."
+        },
+        {
+          "question_id": "q7",
+          "review_note": "Future disagreement handling does not claim a past conflict."
+        }
+      ]
+    },
+    {
+      "scenario_id": "backend-developer",
+      "retrieval": "lexical",
+      "reviewer": "Codex agent inspection of all seven question texts, literal rationales and criteria against synthetic inputs.",
+      "structural_status": "pass",
+      "qualitative_status": "Findings recorded; no overall qualitative sign-off or scoring-reference approval.",
+      "observations": {
+        "no_fabricated_cv_experience_observed": true,
+        "no_past_incident_attributed_to_candidate_without_cv_evidence_observed": true,
+        "no_first_person_candidate_question_observed": true,
+        "literal_evidence_unchanged": true,
+        "source_membership_valid": true,
+        "primary_source_topic_review": "Weak alignment for q2/q4",
+        "semantic_duplicate_review": "No obvious duplicates found; related themes and close pairs remain review findings, not a proof of distinctness.",
+        "past_experience_review": "No criterion asserting an undocumented prior action found; other fairness/technical limitations remain.",
+        "difficulty_review": "Easy/medium scope broadly suitable for junior practice; labels are uncalibrated."
+      },
+      "competency_coverage": [
+        "System Design",
+        "Concurrency Control",
+        "Security",
+        "Performance Tuning",
+        "Test Strategy",
+        "Team Collaboration",
+        "Prioritization"
+      ],
+      "difficulty_counts": {
+        "medium": 4,
+        "easy": 3
+      },
+      "questions": [
+        {
+          "question_id": "q1",
+          "review_note": "Frequent changes and peak hours are conditional; caching differs from database query analysis."
+        },
+        {
+          "question_id": "q2",
+          "review_note": "Concurrency scenario is hypothetical, but syn-be-sql is the query-performance source, a weak primary citation for double-booking."
+        },
+        {
+          "question_id": "q3",
+          "review_note": "Cross-user access is hypothetical; JWT/booking context is documented. Implementation-specific dependency wording is prescriptive."
+        },
+        {
+          "question_id": "q4",
+          "review_note": "Two-second query delay is hypothetical, but syn-be-observe is the generic observability source rather than the query-performance source."
+        },
+        {
+          "question_id": "q5",
+          "review_note": "Hundreds of tests are a hypothetical constraint, not a claim about the CV project; CI/nightly choices are prescriptive."
+        },
+        {
+          "question_id": "q6",
+          "review_note": "Future teammate disagreement does not invent a past incident."
+        },
+        {
+          "question_id": "q7",
+          "review_note": "Clarification and first delivery of background work differ from implementing the caching task."
+        }
+      ]
+    },
+    {
+      "scenario_id": "junior-data-analyst",
+      "retrieval": "bge-faiss",
+      "reviewer": "Codex agent inspection of all seven question texts, literal rationales and criteria against synthetic inputs.",
+      "structural_status": "pass",
+      "qualitative_status": "Findings recorded; no overall qualitative sign-off or scoring-reference approval.",
+      "observations": {
+        "no_fabricated_cv_experience_observed": true,
+        "no_past_incident_attributed_to_candidate_without_cv_evidence_observed": true,
+        "no_first_person_candidate_question_observed": true,
+        "literal_evidence_unchanged": true,
+        "source_membership_valid": true,
+        "primary_source_topic_review": "Plausible question-bank inspiration; not proof of criterion correctness",
+        "semantic_duplicate_review": "No obvious duplicates found; related themes and close pairs remain review findings, not a proof of distinctness.",
+        "past_experience_review": "No criterion asserting an undocumented prior action found; other fairness/technical limitations remain.",
+        "difficulty_review": "Easy/medium scope broadly suitable for junior practice; labels are uncalibrated."
+      },
+      "competency_coverage": [
+        "Data Validation",
+        "Data Quality",
+        "Data Analysis",
+        "Tool Learning",
+        "Reporting Maintenance",
+        "Prioritization",
+        "Testing Strategy"
+      ],
+      "difficulty_counts": {
+        "medium": 5,
+        "easy": 2
+      },
+      "questions": [
+        {
+          "question_id": "q1",
+          "review_note": "SQL question is relevant, but the criterion that aggregated sums should match source row counts is dimensionally wrong for ordinary sales amounts."
+        },
+        {
+          "question_id": "q2",
+          "review_note": "Generic cleaning investigation is prospective, not a CV incident; related to q3 but a different task."
+        },
+        {
+          "question_id": "q3",
+          "review_note": "Trend interpretation after missingness differs from detecting and documenting missing records; close similarity warrants human review."
+        },
+        {
+          "question_id": "q4",
+          "review_note": "Learning an unfamiliar tool is hypothetical, with neutral missing-documentation evidence."
+        },
+        {
+          "question_id": "q5",
+          "review_note": "Power BI is documented; changes in source schemas are a hypothetical maintenance task."
+        },
+        {
+          "question_id": "q6",
+          "review_note": "Future scope negotiation is generic and uses a broad CV anchor."
+        },
+        {
+          "question_id": "q7",
+          "review_note": "Release checks differ from exploratory investigation; criteria are high level."
+        }
+      ]
+    },
+    {
+      "scenario_id": "machine-learning-engineer",
+      "retrieval": "bge-faiss",
+      "reviewer": "Codex agent inspection of all seven question texts, literal rationales and criteria against synthetic inputs.",
+      "structural_status": "pass",
+      "qualitative_status": "Findings recorded; no overall qualitative sign-off or scoring-reference approval.",
+      "observations": {
+        "no_fabricated_cv_experience_observed": true,
+        "no_past_incident_attributed_to_candidate_without_cv_evidence_observed": true,
+        "no_first_person_candidate_question_observed": true,
+        "literal_evidence_unchanged": true,
+        "source_membership_valid": true,
+        "primary_source_topic_review": "Plausible question-bank inspiration; not proof of criterion correctness",
+        "semantic_duplicate_review": "No obvious duplicates found; related themes and close pairs remain review findings, not a proof of distinctness.",
+        "past_experience_review": "No criterion asserting an undocumented prior action found; other fairness/technical limitations remain.",
+        "difficulty_review": "Easy/medium scope broadly suitable for junior practice; labels are uncalibrated."
+      },
+      "competency_coverage": [
+        "Reproducibility",
+        "API Design",
+        "Model Evaluation",
+        "Data Leakage Prevention",
+        "Drift Detection",
+        "Prioritization",
+        "Testing"
+      ],
+      "difficulty_counts": {
+        "medium": 5,
+        "easy": 2
+      },
+      "questions": [
+        {
+          "question_id": "q1",
+          "review_note": "Documented fraud/Python context becomes a hypothetical dependency upgrade, without inventing a past failure."
+        },
+        {
+          "question_id": "q2",
+          "review_note": "Traffic spike is explicitly conditional; no prior production service is claimed."
+        },
+        {
+          "question_id": "q3",
+          "review_note": "False-negative cost is hypothetical; business threshold selection is relevant to documented error analysis."
+        },
+        {
+          "question_id": "q4",
+          "review_note": "Prediction-time availability is now checked in the correct direction; available transaction history is not itself leakage, so the question premise remains ambiguous."
+        },
+        {
+          "question_id": "q5",
+          "review_note": "Unexpected AWS performance drop is introduced with if, not attributed to prior CV deployment."
+        },
+        {
+          "question_id": "q6",
+          "review_note": "Future fraud-feature prioritization is relevant, with a broad graduate-only evidence anchor."
+        },
+        {
+          "question_id": "q7",
+          "review_note": "Future unit-test selection differs from API traffic design; no prior test implementation is asserted."
+        }
+      ]
+    },
+    {
+      "scenario_id": "backend-developer",
+      "retrieval": "bge-faiss",
+      "reviewer": "Codex agent inspection of all seven question texts, literal rationales and criteria against synthetic inputs.",
+      "structural_status": "pass",
+      "qualitative_status": "Findings recorded; no overall qualitative sign-off or scoring-reference approval.",
+      "observations": {
+        "no_fabricated_cv_experience_observed": true,
+        "no_past_incident_attributed_to_candidate_without_cv_evidence_observed": true,
+        "no_first_person_candidate_question_observed": true,
+        "literal_evidence_unchanged": true,
+        "source_membership_valid": true,
+        "primary_source_topic_review": "Plausible question-bank inspiration; not proof of criterion correctness",
+        "semantic_duplicate_review": "No obvious duplicates found; related themes and close pairs remain review findings, not a proof of distinctness.",
+        "past_experience_review": "No criterion asserting an undocumented prior action found; other fairness/technical limitations remain.",
+        "difficulty_review": "Easy/medium scope broadly suitable for junior practice; labels are uncalibrated."
+      },
+      "competency_coverage": [
+        "Concurrency Control",
+        "Caching Strategy",
+        "Authentication Testing",
+        "Observability",
+        "Query Optimization",
+        "Prioritization",
+        "Team Collaboration"
+      ],
+      "difficulty_counts": {
+        "medium": 3,
+        "easy": 4
+      },
+      "questions": [
+        {
+          "question_id": "q1",
+          "review_note": "Question is relevant, but UNIQUE(user,time_slot) does not prevent different users taking the same exclusive slot. Scoring blocker."
+        },
+        {
+          "question_id": "q2",
+          "review_note": "Caching is a proposed feature and differs from SQL tuning."
+        },
+        {
+          "question_id": "q3",
+          "review_note": "JWT is documented, but a specific middleware architecture is hypothetical rather than evidenced implementation detail."
+        },
+        {
+          "question_id": "q4",
+          "review_note": "The generic 500-error diagnostic is an interview scenario, not a stated CV incident."
+        },
+        {
+          "question_id": "q5",
+          "review_note": "Query analysis is hypothetical; criteria are prescriptive rather than reviewed references."
+        },
+        {
+          "question_id": "q6",
+          "review_note": "Generic prioritization is prospective, but prohibiting claims of scaling experience could unfairly penalize genuine experience absent from the CV."
+        },
+        {
+          "question_id": "q7",
+          "review_note": "Future booking-conflict disagreement does not invent a past conflict; meta-instructions about Kubernetes are not useful answer criteria."
+        }
+      ]
+    }
+  ],
+  "remaining_quality_findings": [
+    {
+      "severity": "scoring_blocker",
+      "case": "junior-data-analyst/bge-faiss/q1",
+      "finding": "Comparing aggregated sales sums to source row counts is generally a units error; this criterion must not be used as a scoring reference."
+    },
+    {
+      "severity": "scoring_blocker",
+      "case": "backend-developer/bge-faiss/q1",
+      "finding": "UNIQUE(user,time_slot) permits different users to reserve the same exclusive slot. The constrained resource/time key must be established before prescribing a constraint."
+    },
+    {
+      "severity": "grounding_review_required",
+      "case": "backend-developer/lexical/q2,q4",
+      "finding": "IDs are retrieved and valid, but query-performance/observability source topics are weakly aligned with the generated concurrency/query-analysis questions."
+    },
+    {
+      "severity": "fairness_review_required",
+      "case": "backend-developer/bge-faiss/q6,q7",
+      "finding": "Criteria should not prohibit genuine experience merely because it is absent from the CV. Meta-instructions about not claiming scaling/Kubernetes experience are unsuitable scoring checks."
+    },
+    {
+      "severity": "technical_review_required",
+      "finding": "Other criteria remain prescriptive or imprecise: seasonal patterns versus artifacts, reproducibility guarantees, leakage detection from distributions, and classifier monitoring terminology."
+    },
+    {
+      "severity": "limitation",
+      "finding": "Some texts and anchors remain generic or weakly connected. The prompt goal of three explicit project details is not consistently achieved. Coverage is broad, not exhaustive."
+    },
+    {
+      "severity": "limitation",
+      "finding": "Difficulty and semantic similarity are uncalibrated. Data Analyst/BGE q2/q3 are closely related (current cosine 0.85628; exact metrics are in runtime_summary.json); no human quality claim is made."
+    }
+  ],
+  "earlier_review_history": {
+    "review_type": "Agent inspection of completed runs; not independent human validation.",
+    "earlier_runs_not_accepted_for_final_delivery": [
+      {
+        "directory": "attempt-07",
+        "scenario_id": "junior-data-analyst",
+        "retrieval": "lexical",
+        "issue": "Assumes absence of professional experience from missing CV documentation.",
+        "original_question": {
+          "question_id": "q5",
+          "text": "How would you learn an unfamiliar data transformation tool like dbt and verify your first changes without prior professional experience?",
+          "target_skill": "Technical Adaptability",
+          "difficulty": "hard",
+          "reason_for_asking": "CV: [My CV does not document professional cloud or dbt experience]; Job: [The team also uses dbt]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "Outline a step-by-step learning plan for a new transformation tool.",
+            "Describe how you would test transformations in a safe environment.",
+            "Explain how you would document your findings for team review."
+          ],
+          "source_ids": [
+            "syn-da-learning"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-07",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "bge-faiss",
+        "issue": "Criterion presumes monitoring signals were tested in coursework; not supported by CV.",
+        "original_question": {
+          "question_id": "q4",
+          "text": "How would you design and test a machine learning inference API for production use?",
+          "target_skill": "API Design",
+          "difficulty": "hard",
+          "reason_for_asking": "CV: [I exposed the model through a local FastAPI endpoint and packaged it with Docker]; Job: [design inference APIs and monitor model drift]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "Outline how you would extend the local FastAPI setup for production scaling",
+            "Discuss additional monitoring signals beyond those tested in the course project"
+          ],
+          "source_ids": [
+            "syn-ml-api"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-08",
+        "scenario_id": "junior-data-analyst",
+        "retrieval": "lexical",
+        "issue": "Routine SQL test selection labeled hard.",
+        "original_question": {
+          "question_id": "q7",
+          "text": "How would you choose tests that give useful confidence before a release if you were working with SQL joins and aggregations?",
+          "target_skill": "Quality Assurance Strategy",
+          "difficulty": "hard",
+          "reason_for_asking": "CV: [queried a SQLite database and built a Power BI dashboard]; Job: [A Junior Data Analyst will validate sales data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should identify specific edge cases in join logic that could lead to incorrect aggregations.",
+            "The answer should explain how to create automated checks for row counts and expected value ranges.",
+            "The answer should describe a comparison method against known baseline data or historical records."
+          ],
+          "source_ids": [
+            "syn-da-sql",
+            "syn-da-quality"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-08",
+        "scenario_id": "junior-data-analyst",
+        "retrieval": "bge-faiss",
+        "issue": "Generic collaboration question labeled hard.",
+        "original_question": {
+          "question_id": "q7",
+          "text": "Describe how you would resolve a technical disagreement in a small project team.",
+          "target_skill": "Collaboration",
+          "difficulty": "hard",
+          "reason_for_asking": "CV: [I documented the metric definitions and presented findings to a team of three classmates]; Job: [explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should focus on aligning technical decisions with business goals.",
+            "The answer should describe how to reach consensus without dismissing valid concerns."
+          ],
+          "source_ids": [
+            "syn-general-team"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-09",
+        "scenario_id": "junior-data-analyst",
+        "retrieval": "lexical",
+        "issue": "Question and criteria presume specific joins/aggregations were used; CV only documents querying SQLite.",
+        "original_question": {
+          "question_id": "q2",
+          "text": "When you queried a SQLite database to build a Power BI dashboard, what specific SQL joins and aggregations did you use to derive your key metrics?",
+          "target_skill": "SQL Fundamentals",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [queried a SQLite database and built a Power BI dashboard]; Job: [use SQL joins and aggregations]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should identify at least two types of joins used to combine tables.",
+            "The answer should explain which aggregation functions were necessary for the sales metric."
+          ],
+          "source_ids": [
+            "syn-da-sql"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-09",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "lexical",
+        "issue": "Criterion includes without prior experience despite no evidence of absence.",
+        "original_question": {
+          "question_id": "q4",
+          "text": "How would you plan the deployment of this model to AWS if production monitoring was not part of your previous coursework?",
+          "target_skill": "Deployment Planning",
+          "difficulty": "easy",
+          "reason_for_asking": "CV: [This CV does not document deployment to AWS or operating a production model monitoring service]; Job: [communicating tradeoffs and planning AWS deployment]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should list specific AWS services suitable for hosting a Python API without prior experience.",
+            "The answer should explain how to monitor model performance using cloud-native tools."
+          ],
+          "source_ids": [
+            "syn-ml-drift"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-10",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "lexical",
+        "issue": "Secondary drift citation does not substantively support the generic prioritization question.",
+        "original_question": {
+          "question_id": "q5",
+          "text": "How would you clarify an ambiguous request and prioritize a small first delivery?",
+          "target_skill": "Prioritization & Communication",
+          "difficulty": "easy",
+          "reason_for_asking": "CV: [This CV does not document deployment to AWS or operating a production model monitoring service]; Job: [communicating tradeoffs and planning AWS deployment]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should propose a method for identifying the most critical constraints in an unclear request.",
+            "The answer should describe how to define a minimal scope that delivers value quickly.",
+            "The answer should explain how to communicate potential risks associated with the proposed solution."
+          ],
+          "source_ids": [
+            "syn-general-priorities",
+            "syn-ml-drift"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-10",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "bge-faiss",
+        "issue": "Criterion incorrectly requests feature independence from the target; leakage concerns prediction-time availability, not absence of predictive correlation.",
+        "original_question": {
+          "question_id": "q2",
+          "text": "How would you prevent target leakage and choose a realistic validation split?",
+          "target_skill": "Data Integrity",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [I built a fraud classification course project in Python and scikit-learn]; Job: [prevent data leakage]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should specify techniques like time-based splitting or group IDs to avoid contamination.",
+            "The answer should explain how to verify that features are independent of the target label before training.",
+            "The answer should describe a method for checking data distribution shifts between splits."
+          ],
+          "source_ids": [
+            "syn-ml-leakage"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-11",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "lexical",
+        "issue": "The shared SQLite example contaminated a different role and received a weak reproducibility citation. Removed the concrete example from shared instructions.",
+        "original_question": {
+          "question_id": "q1",
+          "text": "How would you validate a new SQL join in SQLite for a follow-up analysis?",
+          "target_skill": "Data Validation",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [I built a fraud classification course project in Python and scikit-learn]; Job: [A Machine Learning Engineer will build reproducible feature pipelines]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should describe checking row counts before and after the join operation.",
+            "The answer should specify verifying that column types match between the two tables.",
+            "The answer should mention running a sample query to inspect unexpected null values."
+          ],
+          "source_ids": [
+            "syn-ml-reproduce"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-12",
+        "scenario_id": "backend-developer",
+        "retrieval": "lexical",
+        "issue": "Criterion requires how the current FastAPI implementation interacts with transactions; those implementation details are not supplied. Added a guard and regression.",
+        "original_question": {
+          "question_id": "q2",
+          "text": "How would you modify your existing FastAPI service to ensure that two concurrent requests cannot book the same appointment slot?",
+          "target_skill": "Concurrency Control",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [I built a FastAPI REST service with PostgreSQL]; Job: [handle concurrent booking requests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should recommend using database-level constraints or optimistic locking to prevent duplicate bookings.",
+            "The answer should explain how the current FastAPI implementation interacts with PostgreSQL transactions.",
+            "The answer should describe a fallback mechanism if a conflict occurs during the booking process."
+          ],
+          "source_ids": [
+            "syn-be-concurrency"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-14",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "lexical",
+        "issue": "Criteria incorrectly prohibit every target-aware feature method. Added a regression and clarified training-fold fitting.",
+        "original_question": {
+          "question_id": "q1",
+          "text": "How would you prevent target leakage when building reproducible feature pipelines for an imbalanced classifier?",
+          "target_skill": "Data Leakage Prevention",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [I built a fraud classification course project in Python and scikit-learn]; Job: [prevent data leakage]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should describe splitting features before target assignment without referencing future labels.",
+            "The answer should explain how to validate performance on a held-out set that mimics production distribution.",
+            "The answer should avoid any method that uses the target variable during feature engineering."
+          ],
+          "source_ids": [
+            "syn-ml-leakage"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-14",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "bge-faiss",
+        "issue": "Criterion inverts prediction-time availability. Added a regression and explicit positive availability guidance.",
+        "original_question": {
+          "question_id": "q2",
+          "text": "How would you prevent target leakage when choosing a realistic validation split for your imbalanced classifier?",
+          "target_skill": "Data Leakage Prevention",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [I built a fraud classification course project in Python and scikit-learn]; Job: [prevent data leakage]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should explain how to ensure the validation set does not contain information available at prediction time.",
+            "The answer should describe techniques for handling class imbalance when selecting the split size.",
+            "The answer should specify checks to verify that features used in the model were not derived from the target variable."
+          ],
+          "source_ids": [
+            "syn-ml-leakage"
+          ]
+        }
+      },
+      {
+        "directory": "attempt-14",
+        "scenario_id": "machine-learning-engineer",
+        "retrieval": "bge-faiss",
+        "issue": "Criterion conflates input-distribution metrics with concept drift. Added a regression and clarified the distinction.",
+        "original_question": {
+          "question_id": "q5",
+          "text": "How would you monitor for model drift after deployment and investigate its signals?",
+          "target_skill": "Model Monitoring",
+          "difficulty": "medium",
+          "reason_for_asking": "CV: [Two classmates reviewed my experiments]; Job: [evaluate imbalanced classifiers]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+          "reference_criteria": [
+            "The answer should identify specific data distribution metrics that indicate concept drift over time.",
+            "The answer should describe how to track performance degradation relative to historical baselines.",
+            "The answer should explain the process for triggering a retraining workflow when drift thresholds are exceeded."
+          ],
+          "source_ids": [
+            "syn-ml-drift"
+          ]
+        }
+      }
+    ],
+    "additional_findings": [
+      "attempt-08: all six sets included hard labels despite bounded junior scope; ML and BGE Data Analyst texts were mostly generic.",
+      "attempt-09: Data Analyst lexical q1/q5 overlapped on cleaning; Backend lexical q1/q5 overlapped on a hypothetical slow query.",
+      "attempt-09: ML/BGE q5 AWS planning cited generic prioritization; citation membership alone did not prove semantic grounding.",
+      "attempt-10: 5/6 structural passes; Data Analyst/BGE timed out at the explicit 240-second limit on battery. Error metadata and prompt are retained; no complete content was received.",
+      "attempt-11: 6/6 structural passes, with two first attempts rejected at finish_reason=length and 4096 tokens; bounded retries succeeded. Timing spans battery operation and a verified AC transition. Not selected because of prompt-example contamination.",
+      "attempt-12: 5/6 structural passes on AC. Data Analyst/BGE first attempt referred to previously validated definitions not documented in the CV; second used a benign prospective back to you phrase that an overly broad guard rejected. The guard was narrowed while past-work/current-implementation checks remain.",
+      "attempt-13: 5/6 structural passes. Data Analyst/BGE had an initial length rejection; its second response referred to previously cleaned 5000 rows and a previously queried SQLite database, both documented. Removed the overbroad previously-word ban while retaining unsupported deployment/test patterns and prospective answer framing.",
+      "attempt-14: 6/6 structural passes and all 42 inspected; no unsupported CV experience observed, but ML criteria had known technical misconceptions. Not selected for final delivery; full agent review and raw responses remain preserved under attempt-14."
+    ],
+    "preservation": "All raw prompts, responses, per-case reports and rejected attempts remain untouched under local ignored outputs/qwen-mission002/attempt-01 through attempt-14. The prior published attempt-07 samples also remain in Git commit e51bef5."
+  },
+  "conclusion": "Code and real runtime evidence are reviewable; this is not full qualitative completion. All criteria remain unreviewed and must not feed scoring without independent correction/review."
+}

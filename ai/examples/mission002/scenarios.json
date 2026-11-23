@@ -1,0 +1,23 @@
+[
+  {
+    "scenario_id": "junior-data-analyst",
+    "target_role": "Junior Data Analyst",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: a recent statistics graduate. In a university retail analytics project, I cleaned 5000 sales rows with Python and pandas, investigated missing values, queried a SQLite database and built a Power BI dashboard. I documented the metric definitions and presented findings to a team of three classmates. I also used Excel pivot tables. My CV does not document professional cloud or dbt experience.",
+    "job_description": "A Junior Data Analyst will validate sales data, use SQL joins and aggregations, maintain Power BI reports, explain business metrics to nontechnical stakeholders and collaborate on ambiguous reporting requests. Python and Excel are relevant. The team also uses dbt; assess how the candidate would learn it without presuming previous use."
+  },
+  {
+    "scenario_id": "machine-learning-engineer",
+    "target_role": "Machine Learning Engineer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: a computer science graduate. I built a fraud classification course project in Python and scikit-learn, used train/validation splits, compared precision and recall and performed false-positive error analysis. I exposed the model through a local FastAPI endpoint and packaged it with Docker. Two classmates reviewed my experiments. This CV does not document deployment to AWS or operating a production model monitoring service.",
+    "job_description": "A Machine Learning Engineer will build reproducible feature pipelines, prevent data leakage, evaluate imbalanced classifiers, design inference APIs and monitor model drift. The role includes CI tests, communicating tradeoffs and planning AWS deployment. Ask hypothetical design questions where production experience is not evidenced by the CV."
+  },
+  {
+    "scenario_id": "backend-developer",
+    "target_role": "Backend Developer",
+    "experience_level": "junior",
+    "cv_text": "Synthetic candidate: a junior developer. In a university appointment-booking project, I built a FastAPI REST service with PostgreSQL, implemented JWT login and wrote pytest tests for booking conflicts. I used Git pull requests with two teammates and added request logs to diagnose a failing endpoint. This CV does not document Kubernetes operations or high-volume production traffic.",
+    "job_description": "A Backend Developer will design reliable REST APIs, investigate PostgreSQL query performance, handle concurrent booking requests, validate authentication boundaries and write maintainable tests. The team needs clear code reviews, observable failures and a plan for background tasks and caching. Discuss scaling as a hypothetical problem without inventing past production experience."
+  }
+]

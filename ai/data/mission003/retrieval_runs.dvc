@@ -1,0 +1,6 @@
+outs:
+- md5: 5833a558a6a21d5609665f4001ff72d8.dir
+  size: 3710300
+  nfiles: 6
+  hash: md5
+  path: retrieval_runs

@@ -1,0 +1,116 @@
+{
+  "quality_status": "unreviewed_model_output",
+  "review_status": "agent_inspected_not_human_validated",
+  "technical_reference_criteria": "unreviewed_not_for_scoring",
+  "scenario_id": "m3-parcel-api",
+  "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+  "model": "roleready-qwen35-4b:8k",
+  "model_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+  "questions": [
+    {
+      "question_id": "q1",
+      "text": "How would you design a new endpoint for our parcel-status API to handle concurrent status updates while ensuring resource ownership protection?",
+      "target_skill": "API Design & Resource Safety",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I developed a parcel-status API with FastAPI and PostgreSQL for a university project]; Job: [A Backend Developer will protect API resource ownership]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe how to use request IDs or similar mechanisms to track ownership without assuming prior production traffic.",
+        "The answer should explain a locking strategy that prevents race conditions during status updates.",
+        "The answer should reference the existing PostgreSQL schema context rather than inventing new database technologies."
+      ],
+      "source_ids": [
+        "rrq-7bc1335cc7d0c62f14a38f46"
+      ]
+    },
+    {
+      "question_id": "q2",
+      "text": "What would you do if the team needs to implement cache invalidation for our parcel-status API, given that your current implementation does not document production traffic?",
+      "target_skill": "Cache Management & System Reliability",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I implemented JWT login]; Job: [The team also needs cache invalidation]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should propose a strategy for invalidating cache entries when status data changes.",
+        "The answer should discuss tradeoffs between consistency and availability without assuming undocumented Kubernetes deployments.",
+        "The answer should outline how to test cache behavior using the pytest checks you already wrote."
+      ],
+      "source_ids": [
+        "rrq-69d86e8c2557ad0b64d5e184"
+      ]
+    },
+    {
+      "question_id": "q3",
+      "text": "How would you approach writing reliable release tests for a feature that requires background notification retries?",
+      "target_skill": "Testing & Quality Assurance",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [wrote pytest checks for resource ownership and pagination and added request IDs to error logs]; Job: [handle concurrent status updates and write reliable release tests]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe how to simulate asynchronous notification delivery in your test suite.",
+        "The answer should explain how to verify retry logic without assuming prior production incidents.",
+        "The answer should mention integrating these tests into the CI pipeline using Git pull requests."
+      ],
+      "source_ids": [
+        "rrq-1b4bbf0c3471d7390c1e410e"
+      ]
+    },
+    {
+      "question_id": "q4",
+      "text": "What would you do if a colleague discovers a potential blocking issue in the backend code during late-stage testing?",
+      "target_skill": "Prioritization Under Pressure",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [Two teammates used Git pull requests to review changes]; Job: [Ask proposed design and collaboration questions without inventing prior production incidents or assuming that undocumented skills are absent]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should outline steps to verify the blocking issue before deciding on a fix.",
+        "The answer should describe how to communicate the risk to the team lead without assuming prior production incidents.",
+        "The answer should propose a mitigation plan that balances thoroughness with deadline pressure."
+      ],
+      "source_ids": [
+        "rrq-ac7c02b05fbdeffb3cc9c747"
+      ]
+    },
+    {
+      "question_id": "q5",
+      "text": "How would you ensure data integrity for sensitive user data if a colleague's component is underperforming and metrics tell a different story?",
+      "target_skill": "Data Integrity & Compliance",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I developed a parcel-status API with FastAPI and PostgreSQL for a university project]; Job: [A Backend Developer will protect API resource ownership]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe how to isolate the underperforming component to prevent data corruption.",
+        "The answer should explain how to validate data consistency without assuming undocumented skills.",
+        "The answer should propose a rollback strategy that protects against potential data loss."
+      ],
+      "source_ids": [
+        "rrq-44ca591d73ece9044443544c"
+      ]
+    },
+    {
+      "question_id": "q6",
+      "text": "What would you do if the team needs useful failure logs for our notification system, given that your CV does not document production traffic?",
+      "target_skill": "Observability & Logging",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [My CV does not document production traffic]; Job: [background notification retries and useful failure logs]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe how to implement structured logging for asynchronous tasks.",
+        "The answer should explain how to correlate logs with request IDs you already added.",
+        "The answer should propose a way to monitor log volume without assuming prior production incidents."
+      ],
+      "source_ids": [
+        "rrq-7bc1335cc7d0c62f14a38f46"
+      ]
+    },
+    {
+      "question_id": "q7",
+      "text": "How would you handle a situation where the team needs to integrate with an existing ERP system for inventory tracking?",
+      "target_skill": "System Integration & Scalability",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I implemented JWT login]; Job: [A Backend Developer will protect API resource ownership]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe how to authenticate and authorize requests to the external ERP system.",
+        "The answer should explain how to handle rate limiting or timeouts from the ERP integration.",
+        "The answer should propose a design that scales without assuming undocumented Kubernetes deployments."
+      ],
+      "source_ids": [
+        "rrq-69d86e8c2557ad0b64d5e184"
+      ]
+    }
+  ]
+}

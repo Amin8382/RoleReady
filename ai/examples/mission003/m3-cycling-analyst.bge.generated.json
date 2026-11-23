@@ -1,0 +1,116 @@
+{
+  "quality_status": "unreviewed_model_output",
+  "review_status": "agent_inspected_not_human_validated",
+  "technical_reference_criteria": "unreviewed_not_for_scoring",
+  "scenario_id": "m3-cycling-analyst",
+  "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+  "model": "roleready-qwen35-4b:8k",
+  "model_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+  "questions": [
+    {
+      "question_id": "q1",
+      "text": "How would you design a Power BI dashboard to visualize weekday usage patterns from the city-bike trip logs you cleaned with Python and pandas?",
+      "target_skill": "Visualization & Reporting",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [Synthetic candidate: a business analytics graduate]; Job: [maintain readable dashboards and explain uncertainty to nontechnical stakeholders]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe specific visualizations like line charts or heatmaps suitable for temporal usage data.",
+        "The answer should identify key metrics such as peak hours or station utilization rates derived from the cleaned logs.",
+        "The answer should explain how to annotate uncertainty in the dashboard given the limited historical dataset."
+      ],
+      "source_ids": [
+        "rrq-450455e4680985530c93a62e"
+      ]
+    },
+    {
+      "question_id": "q2",
+      "text": "What would you do if the team needs clear prioritization of reporting requests while you are learning dbt if it is unfamiliar?",
+      "target_skill": "Prioritization & Learning",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [My CV does not document paid analytics employment or professional dbt use]; Job: [The team needs clear prioritization of reporting requests and a careful plan for learning dbt if it is unfamiliar]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should propose a phased approach to learning dbt before attempting complex transformations.",
+        "The answer should outline criteria for prioritizing reporting requests based on business impact or data dependency.",
+        "The answer should suggest how to leverage existing SQL skills while transitioning to dbt."
+      ],
+      "source_ids": [
+        "rrq-7432b15c1506a9fa171a7f1b"
+      ]
+    },
+    {
+      "question_id": "q3",
+      "text": "How would you ensure data quality when validating trip and station data using SQL joins and aggregations?",
+      "target_skill": "Data Quality & Validation",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I cleaned trip logs with Python and pandas]; Job: [A Junior Data Analyst on a transport team will validate trip and station data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe specific checks for null values, duplicate records, or schema mismatches in the joined tables.",
+        "The answer should explain how to aggregate data to verify consistency between trip logs and station lookups.",
+        "The answer should propose a workflow for logging validation errors before finalizing the dataset."
+      ],
+      "source_ids": [
+        "rrq-3e0f7185c2f800f877b4a1cb"
+      ]
+    },
+    {
+      "question_id": "q4",
+      "text": "What would you do if a junior analyst is struggling to optimize a SQL query that affects the overall performance of your reporting pipeline?",
+      "target_skill": "Mentorship & Team Dynamics",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [I wrote a one-page note explaining metric definitions and limitations and discussed it with two classmates]; Job: [Discuss future tasks without inventing professional experience]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should suggest collaborative debugging steps rather than taking over the task immediately.",
+        "The answer should explain how to break down complex queries into smaller, testable components for learning.",
+        "The answer should propose a method for explaining performance bottlenecks in terms understandable by a junior analyst."
+      ],
+      "source_ids": [
+        "rrq-648a311da1aee91a8ffe15fc"
+      ]
+    },
+    {
+      "question_id": "q5",
+      "text": "How would you communicate the uncertainty in your analysis to nontechnical stakeholders when presenting findings on delivery inefficiencies?",
+      "target_skill": "Communication & Soft Skills",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I wrote a one-page note explaining metric definitions and limitations and discussed it with two classmates]; Job: [maintain readable dashboards and explain uncertainty to nontechnical stakeholders]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe methods for translating statistical uncertainty into business risk language.",
+        "The answer should propose visual cues or annotations that clearly indicate confidence levels in the data.",
+        "The answer should explain how to frame limitations as opportunities for further data collection."
+      ],
+      "source_ids": [
+        "rrq-3e0f7185c2f800f877b4a1cb"
+      ]
+    },
+    {
+      "question_id": "q6",
+      "text": "What would you do if the company plans to scale its real-time truck tracking system to manage a fleet of 10,000 vehicles?",
+      "target_skill": "Scalability & Growth Planning",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [In a university city-bike study]; Job: [A Junior Data Analyst on a transport team will validate trip and station data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should outline strategies for handling increased data volume such as partitioning or streaming ingestion.",
+        "The answer should identify metrics that become critical at scale, like latency or throughput per vehicle.",
+        "The answer should propose a phased migration plan from the current dataset size to the projected fleet size."
+      ],
+      "source_ids": [
+        "rrq-450455e4680985530c93a62e"
+      ]
+    },
+    {
+      "question_id": "q7",
+      "text": "How would you build a predictive analytics model to optimize delivery routes if the data includes historical times, vehicle types, and real-time traffic?",
+      "target_skill": "Modeling & Predictive Analytics",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I cleaned trip logs with Python and pandas]; Job: [A Junior Data Analyst on a transport team will validate trip and station data]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe a workflow for preparing features from historical and real-time data sources.",
+        "The answer should propose validation steps to ensure the model does not leak future traffic information.",
+        "The answer should explain how to interpret model outputs in the context of route optimization goals."
+      ],
+      "source_ids": [
+        "rrq-515fb05c104b437e0f01fe82"
+      ]
+    }
+  ]
+}

@@ -46,6 +46,8 @@ class QuestionRecord:
 
     @classmethod
     def from_dict(cls, payload: Mapping[str, object]) -> "QuestionRecord":
+        if payload.get("purpose") == "retrieval_corpus":
+            raise ValueError("A retrieval corpus is not an SFT/train-split bank; use load_corpus")
         return cls(
             record_id=str(payload["record_id"]),
             question=str(payload["question"]),

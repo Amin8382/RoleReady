@@ -1,0 +1,33 @@
+{
+  "version": "controlled-rag-ablation-1.0",
+  "primary_outcome": "mean human-rated job relevance",
+  "conditions": [
+    "none",
+    "lexical",
+    "bge-faiss"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "schedule_seed": 20261122,
+  "resamples": 10000,
+  "analysis_seed": 314159,
+  "independent_unit": "scenario",
+  "bootstrap": "role-stratified paired scenario percentile bootstrap",
+  "contrasts": [
+    "lexical-minus-none",
+    "bge-faiss-minus-none",
+    "bge-faiss-minus-lexical"
+  ],
+  "confidence_levels": [
+    0.95,
+    0.9833333333333333
+  ],
+  "minimum_fully_paired_scenarios": 30,
+  "missing_data": "No imputation; quality conditional on reviewed successful outputs. Report all failures and paired-subset coverage.",
+  "generalization": "Purposive synthetic scenario set, not a powered population study.",
+  "reference_policy": "No generated criterion, benchmark reference or source ID approves a scoring answer.",
+  "freeze_policy": "No prompt tuning or configuration change after freeze. Amendments require a new version and explicit disclosure."
+}

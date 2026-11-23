@@ -1,0 +1,84 @@
+{
+  "embedding": {
+    "optional_import_ms": 26408.918000000995,
+    "encoder_load_ms": 1456.022499995015,
+    "model": "BAAI/bge-small-en-v1.5",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "device": "cuda",
+    "weights_sha256": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+    "maximum_sequence_tokens": 512
+  },
+  "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+  "vectors": 16466,
+  "dimension": 384,
+  "index_type": "IndexFlatIP",
+  "normalization": "L2",
+  "embedding_text_format": "corpus-metadata-v1",
+  "embedding_text_tokens_max": 284,
+  "texts_truncated_at_encoder_limit": 0,
+  "timings": {
+    "embedding_ms": 128441.836900005,
+    "faiss_build_ms": 18.1315999943763,
+    "save_ms": 8151.923700002953,
+    "load_without_embedding_ms": 5296.333300000697,
+    "semantic_candidate_search_ms": 1424.8712999979034
+  },
+  "index_bytes": 25291821,
+  "metadata_bytes": 37799072,
+  "index_sha256": "ecc809be80eff1fd088997443d080003bf5ee0eff577e0d73c72c2593f8121f0",
+  "reload_mapping_verified": true,
+  "reload_probes": [
+    {
+      "query_record_id": "rrq-001132f9ef11d321c73f235b",
+      "returned_ids": [
+        "rrq-001132f9ef11d321c73f235b",
+        "rrq-6aec5430767830559b6058b6",
+        "rrq-f01cd04491199fa81676def9",
+        "rrq-3fd186146ab2c656d695d6fd",
+        "rrq-69aab27d4880690e65297d16"
+      ],
+      "self_in_top5": true
+    },
+    {
+      "query_record_id": "rrq-55694a261d03ad8bcbdb56fa",
+      "returned_ids": [
+        "rrq-55694a261d03ad8bcbdb56fa",
+        "rrq-bb587b9254d64a5044479737",
+        "rrq-c9d0a0a7fc480c207a0879a4",
+        "rrq-0aa017188af7a7fe54195709",
+        "rrq-8ded7dc175ac060a7415a7d4"
+      ],
+      "self_in_top5": true
+    },
+    {
+      "query_record_id": "rrq-a96d4e7d856aee198f86b00c",
+      "returned_ids": [
+        "rrq-a96d4e7d856aee198f86b00c",
+        "rrq-d39ff783189d92c8b459f2c6",
+        "rrq-ba5ac8901b49a80c2b029129",
+        "rrq-9ae8882d7f0a656ebc48d7b0",
+        "rrq-2b83c47f72e79346b3e25911"
+      ],
+      "self_in_top5": true
+    }
+  ],
+  "semantic_review": {
+    "threshold": 0.94,
+    "neighbors_per_document": 6,
+    "candidate_pairs": 89,
+    "removed": 0,
+    "limitation": "Top-neighbor candidates only, not exhaustive duplicate labeling or human review"
+  },
+  "torch_peak_allocated_bytes": 480751104,
+  "limitations": [
+    "Times are one local observation, not a statistically reliable benchmark.",
+    "RSS is sampled and includes model/library/corpus overhead.",
+    "CUDA allocation excludes other processes and non-PyTorch allocations.",
+    "Self-query reload probes verify persistence, not retrieval relevance."
+  ],
+  "process_memory": {
+    "start_rss_bytes": 24670208,
+    "sampled_peak_rss_bytes": 1687183360,
+    "final_rss_bytes": 1585758208
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "quality_status": "unreviewed_model_output",
+  "review_status": "agent_inspected_not_human_validated",
+  "technical_reference_criteria": "unreviewed_not_for_scoring",
+  "scenario_id": "m3-ticket-classifier",
+  "corpus_sha256": "f4e66cff619dca77d763b9529bcf46df985bf60a02d8ee5c4b65638af34d6cc9",
+  "model": "roleready-qwen35-4b:8k",
+  "model_digest": "27af9727272c8f96be4302b0283fa045132389692e9c86949081d18484d1cfb8",
+  "questions": [
+    {
+      "question_id": "q1",
+      "text": "How would you design a text-feature pipeline that checks prediction-time feature availability for your support-ticket classifier?",
+      "target_skill": "Data Preprocessing & Validation",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [Synthetic candidate: a software graduate]; Job: [check prediction-time feature availability]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe filtering features that are unavailable at inference time.",
+        "The answer should explain how to handle missing values without leaking future information.",
+        "The answer should propose a validation strategy that uses only training data."
+      ],
+      "source_ids": [
+        "rrq-4e5938b70e8b56f403956361"
+      ]
+    },
+    {
+      "question_id": "q2",
+      "text": "How would you evaluate rare ticket classes in your support-ticket classifier to ensure balanced performance?",
+      "target_skill": "Model Evaluation",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [I built a support-ticket classifier using TF-IDF and scikit-learn]; Job: [evaluate rare ticket classes and test inference APIs]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should define metrics like per-class recall or F1 score for minority classes.",
+        "The answer should explain how to stratify the dataset during evaluation.",
+        "The answer should avoid using labels from the test set in any preprocessing step."
+      ],
+      "source_ids": [
+        "rrq-5f4d4c60af8721ac504f18de"
+      ]
+    },
+    {
+      "question_id": "q3",
+      "text": "How would you write unit tests for your preprocessing steps to ensure the pipeline remains stable?",
+      "target_skill": "Testing & Quality Assurance",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [I wrote preprocessing tests]; Job: [reliable deployment proposals and clear communication of tradeoffs]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should specify test cases that cover edge inputs like empty strings or nulls.",
+        "The answer should describe how to verify output consistency across different data distributions.",
+        "The answer should mention integrating tests into a CI/CD workflow."
+      ],
+      "source_ids": [
+        "rrq-7783c9c1031b6ae5b83fc03c"
+      ]
+    },
+    {
+      "question_id": "q4",
+      "text": "How would you expose your model as an API to allow external systems to query predictions?",
+      "target_skill": "API Design & Deployment",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [exposed a local FastAPI endpoint and packaged it with Docker]; Job: [reliable deployment proposals and clear communication of tradeoffs]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should outline how to structure request/response payloads for clarity.",
+        "The answer should discuss error handling mechanisms for invalid inputs.",
+        "The answer should propose a strategy for monitoring API latency and availability."
+      ],
+      "source_ids": [
+        "rrq-4e5938b70e8b56f403956361"
+      ]
+    },
+    {
+      "question_id": "q5",
+      "text": "How would you document your experiment parameters to ensure reproducibility of your support-ticket classifier?",
+      "target_skill": "Experiment Management",
+      "difficulty": "easy",
+      "reason_for_asking": "CV: [I recorded experiment parameters in a CSV file and reviewed results with two teammates]; Job: [reliable deployment proposals and clear communication of tradeoffs]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should describe storing hyperparameters alongside model artifacts.",
+        "The answer should explain how to version control configuration files.",
+        "The answer should propose a method for tracking changes in experimental settings."
+      ],
+      "source_ids": [
+        "rrq-681efc24bd8cb23a765248d0"
+      ]
+    },
+    {
+      "question_id": "q6",
+      "text": "How would you communicate the tradeoffs between model complexity and inference speed to your team?",
+      "target_skill": "Communication & Collaboration",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [I recorded experiment parameters in a CSV file and reviewed results with two teammates]; Job: [reliable deployment proposals and clear communication of tradeoffs]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should provide examples of how model size impacts latency.",
+        "The answer should explain how to balance accuracy gains against computational cost.",
+        "The answer should suggest a framework for documenting these tradeoffs."
+      ],
+      "source_ids": [
+        "rrq-f10c0e72ec8f1c4944f27d69"
+      ]
+    },
+    {
+      "question_id": "q7",
+      "text": "How would you plan the monitoring strategy for your text-feature pipeline to detect performance degradation?",
+      "target_skill": "System Monitoring",
+      "difficulty": "medium",
+      "reason_for_asking": "CV: [This CV does not document operating a cloud production service]; Job: [The team needs monitoring plans]. Practice the job requirement using documented CV context; missing ability is not inferred.",
+      "reference_criteria": [
+        "The answer should identify key metrics like prediction drift or error rates.",
+        "The answer should propose alerting thresholds based on baseline performance.",
+        "The answer should explain how to visualize trends over time."
+      ],
+      "source_ids": [
+        "rrq-5f4d4c60af8721ac504f18de"
+      ]
+    }
+  ]
+}

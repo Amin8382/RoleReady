@@ -1,0 +1,5 @@
+# Same approved Q4_K_M weights; local serving parameters only.
+FROM qwen3.5:4b-q4_K_M
+PARAMETER num_ctx 8192
+PARAMETER num_predict 4096
+PARAMETER temperature 0.2

@@ -1,0 +1,18 @@
+{"record_id":"syn-da-sql","question":"How would you use joins and aggregation to compute a trustworthy sales metric?","role":"Data Analyst","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-da-quality","question":"How would you investigate missing values and inconsistent sales records?","role":"Data Analyst","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-da-dashboard","question":"How would you design and validate a dashboard for a nontechnical audience?","role":"Data Analyst","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-da-analysis","question":"How would you distinguish an apparent sales trend from a data artifact?","role":"Data Analyst","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-da-learning","question":"How would you learn an unfamiliar data transformation tool and verify your first changes?","role":"Data Analyst","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-ml-leakage","question":"How would you prevent target leakage and choose a realistic validation split?","role":"Machine Learning Engineer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-ml-metrics","question":"How would you choose a precision-recall operating point for an imbalanced classifier?","role":"Machine Learning Engineer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-ml-api","question":"How would you test and version a machine learning inference API?","role":"Machine Learning Engineer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-ml-drift","question":"Which signals would you monitor to investigate model drift after deployment?","role":"Machine Learning Engineer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-ml-reproduce","question":"How would you make a training pipeline reproducible and reviewable?","role":"Machine Learning Engineer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-be-concurrency","question":"How would you prevent two concurrent requests from booking the same appointment?","role":"Backend Developer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-be-sql","question":"How would you diagnose and improve a slow PostgreSQL query?","role":"Backend Developer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-be-security","question":"How would you test authentication and resource authorization for a REST API?","role":"Backend Developer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-be-observe","question":"How would you use request logs and metrics to investigate a failing endpoint?","role":"Backend Developer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-be-background","question":"When would you use background jobs or caching and how would you handle failures?","role":"Backend Developer","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-general-team","question":"Describe how you would resolve a technical disagreement in a small project team.","role":"general","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-general-priorities","question":"How would you clarify an ambiguous request and prioritize a small first delivery?","role":"general","source_id":"mission002-synthetic","split":"train"}
+{"record_id":"syn-general-testing","question":"How would you choose tests that give useful confidence before a release?","role":"general","source_id":"mission002-synthetic","split":"train"}
