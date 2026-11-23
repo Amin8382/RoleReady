@@ -108,6 +108,17 @@ and raw draft outputs out of Git. Once the dataset version is complete, snapshot
 it locally with the existing isolated DVC tool and retain the resulting pointer
 locally; no remote data push is configured or implied.
 
+For an unattended local snapshot after generation, run (from `ai/`):
+
+```powershell
+.venv311/Scripts/python.exe scripts/snapshot-sft-data.py --dataset data/fine_tuning/personalized-v1
+```
+
+This waits for completion and lock release, runs only local `dvc add`, and saves
+the pointer SHA-256 in `.runtime/training-data/dvc-snapshot.json`. It does not
+change any review status. Keep the generated `.dvc` pointer locally with the
+snapshot; no push to a DVC remote occurs.
+
 Data generation is not fine-tuning readiness: reviewed targets, model-training
 runtime/hardware checks and a frozen training/comparison protocol are still
 required before a training run. The existing quantized inference service remains
