@@ -1,6 +1,14 @@
-# Future supervised-learning data
+# Supervised-learning data preparation
 
-No fine-tuning data or training run is introduced by Mission 003.
+The new personalized question-generation pilot is prepared separately by
+`python -m roleready_training.data`. See `../../docs/PERSONALIZED_SFT_DATA.md`.
+It contains 256 fictional scenarios, partitioned by project family into
+192 train / 32 validation / 32 test inputs. Draft targets are NOT approved data.
+The exporter requires two explicit human approvals of each exact input+target.
+No fine-tuning is launched by preparation, and no generated criterion becomes
+a Prometheus reference answer. Bodies, journals and reviews remain ignored/local.
+
+The original Mission 003 did not introduce training data or a training run.
 
 This is a distinct, ignored destination for future reviewed, licensed instruction
 examples and their train/validation/test partitions. Keep CV/job-conditioned

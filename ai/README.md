@@ -1,5 +1,9 @@
 # RoleReady AI & Data
 
+[Personalized SFT preparation](docs/PERSONALIZED_SFT_DATA.md) provides a separate
+256-scenario synthetic pilot, project-family splits, local no-RAG teacher drafts
+and a two-human approval gate. Drafts are not training-ready or scoring references.
+
 The [controlled RAG ablation continuation](docs/MISSION_003_CONTROLLED_ABLATION.md)
 adds local MLflow, a frozen 32-scenario/three-seed comparison and blinded human
 review tooling. Historical demonstrations remain exploratory; quality metrics

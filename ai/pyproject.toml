@@ -24,10 +24,11 @@ roleready-readiness = "roleready_ai.readiness:main"
 roleready-audio = "roleready_ai.audio_cli:main"
 roleready-ablation = "roleready_ai.ablation:main"
 roleready-question-review = "roleready_ai.question_review:main"
+roleready-personalized-sft = "roleready_training.data:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["roleready_ai*"]
+include = ["roleready_ai*", "roleready_training*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
