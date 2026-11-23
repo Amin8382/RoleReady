@@ -53,3 +53,4 @@ ai/data/mission003/index/
 ai/data/mission003/retrieval_runs/
 ai/data/fine_tuning/*
 !ai/data/fine_tuning/README.md
+!ai/data/fine_tuning/*.dvc
